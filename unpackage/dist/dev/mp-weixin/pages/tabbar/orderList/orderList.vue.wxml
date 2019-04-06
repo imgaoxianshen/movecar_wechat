@@ -1,0 +1,12 @@
+<template name="1bd856ae"><view class="_view data-v-cced723a carcard-container"><block wx:if="{{orderList.length > 0}}"><view class="_view data-v-cced723a car-container"><block wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item"><view class="_view data-v-cced723a car-item"><view class="_view data-v-cced723a items"><view class="_view data-v-cced723a">订单编号： {{item.order_no}}</view><view class="_view data-v-cced723a item-price"><block wx:if="{{item.status == 0}}">
+								待付款
+							</block><block wx:if="{{item.status == 1}}">
+								已付款
+							</block><block wx:if="{{item.status == 2}}">
+								已发货
+							</block></view></view><view class="_view data-v-cced723a">
+						支付金额：<text class="_text data-v-cced723a item-price">￥{{item.price}}</text></view><view class="_view data-v-cced723a">
+						下单时间： {{item.create_time}}
+					</view><view class="_view data-v-cced723a">
+						地址： {{item.province + item.city + item.country + item.address +' '+ item.name +'收'}}
+					</view><view class="_view data-v-cced723a items"><view class="_view data-v-cced723a">运单编号： {{item.logisticNo == null ? '暂无' : item.logisticNo}}</view><view class="_view data-v-cced723a item-price"><block wx:if="{{item.status == 0}}"><button bindtap="handleProxy" class="_button data-v-cced723a item-button" data-eventid="{{'1bd856ae-0-'+index}}" data-comkey="{{$k}}">付款</button></block></view></view></view></block></view></block><block wx:else><view class="_view data-v-cced723a withoutList"><image class="_image data-v-cced723a card-image" src="{{order}}"></image><text class="_text data-v-cced723a">暂无订单信息</text></view></block></view></template>

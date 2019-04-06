@@ -1,0 +1,111 @@
+page.data-v-794f3fee {
+  overflow: hidden;
+}
+page .content.data-v-794f3fee {
+  width: 750rpx;
+}
+page .content .map.data-v-794f3fee {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.position.data-v-794f3fee {
+  position: absolute;
+  bottom: 400rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 100rpx;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 10rpx 10rpx #d1d1d1;
+          box-shadow: 0 10rpx 10rpx #d1d1d1;
+}
+.position .position-icon.data-v-794f3fee {
+  width: 60rpx;
+  height: 60rpx;
+}
+.deep.data-v-794f3fee {
+  position: absolute;
+  bottom: 0;
+  width: 1500rpx;
+  height: 1500rpx;
+  background-color: #fff;
+  -webkit-transform: translate(-25%, 75%);
+      -ms-transform: translate(-25%, 75%);
+          transform: translate(-25%, 75%);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 10rpx 10rpx #d1d1d1;
+          box-shadow: 0 10rpx 10rpx #d1d1d1;
+}
+.deep .saoma.data-v-794f3fee {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffda44;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+}
+.deep .saoma .saoma-icon.data-v-794f3fee {
+  width: 100rpx;
+  height: 100rpx;
+}
+.deep .saoma .saoma-text.data-v-794f3fee {
+  color: #000;
+}
+.deep .deep-button.data-v-794f3fee {
+  width: 700rpx;
+  background-color: #000;
+  color: #fff;
+  margin-top: 20rpx;
+  border-radius: 60rpx;
+}
+
