@@ -50,13 +50,12 @@
 /*每个页面公共css */ 
 
 page {
-  background-color: #f1f1f1 !important;
+  background-color: #efefef;
 }
 page text {
   font-size: 35rpx;
-  color: #9b9b9b;
 }
-page ._button {
+page button {
   background-color: #ffda44;
 }
 

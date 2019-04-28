@@ -19,6 +19,8 @@
 
 <script>
 	import {mapState,mapMutations} from 'vuex'
+	import {updateUserInfo} from 'common/js/requestUrl'
+	import {request,showToast} from 'common/js/common'
 	
 	export default {
 		data() {
@@ -30,11 +32,12 @@
 			console.log(res)
 		},
 		methods:{
-			...mapMutations(['getUserMessage']),
+			// ...mapMutations(['getUserMessage']),
 			getUserInfo: function(res){
 				let userInfo = res.detail.userInfo
 				if(userInfo){
-					this.getUserMessage(userInfo)
+					// this.getUserMessage(userInfo)
+					this.saveUserInfo(userInfo.nickName, userInfo.avatarUrl, userInfo.province)
 					this.switchIndex()
 				}
 			},
@@ -42,7 +45,17 @@
 				wx.switchTab({
 					url: '/pages/tabbar/tabbar-5/tabbar-5'
 				})
+			},
+			saveUserInfo(nickname, avatar, province){
+				request(updateUserInfo, {
+					nickname, 
+					avatar,
+					province
+				}, (res)=>{
+					
+				})
 			}
+			
 		}
 	}
 </script>

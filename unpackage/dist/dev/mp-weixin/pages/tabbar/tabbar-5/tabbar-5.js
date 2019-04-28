@@ -1,34 +1,34 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/tabbar/tabbar-5/tabbar-5"],{
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
-  \******************************************************************************************************************/
+/***/ "../../../../movecar_wechat/main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
+/*!******************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__(/*! uni-pages */ "../../../../Documents/HBuilderProjects/扫码挪车/pages.json");
+__webpack_require__(/*! uni-pages */ "../../../../movecar_wechat/pages.json");
 var _mpvuePageFactory = _interopRequireDefault(__webpack_require__(/*! mpvue-page-factory */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue-page-factory/index.js"));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 Page((0, _mpvuePageFactory.default)(_tabbar.default));
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue":
-/*!*********************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue ***!
-  \*********************************************************************************************/
+/***/ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue":
+/*!*********************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true& */ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true&");
-/* harmony import */ var _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=script&lang=js& */ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&");
+/* harmony import */ var _tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true& */ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true&");
+/* harmony import */ var _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=script&lang=js& */ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&");
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true& */ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true&");
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true& */ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true&");
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -39,76 +39,98 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "4b07e489",
+  "560df5f8",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue"
+component.options.__file = "movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************/
+/***/ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&");
 /* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true&":
-/*!*********************************************************************************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true& ***!
-  \*********************************************************************************************************************************************************/
+/***/ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true& ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader??ref--11-oneOf-1-2!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--11-oneOf-1-3!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/stylus-loader??ref--11-oneOf-1-4!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true&");
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_4b07e489_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader??ref--11-oneOf-1-2!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--11-oneOf-1-3!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/stylus-loader??ref--11-oneOf-1-4!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true&");
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_560df5f8_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true&":
-/*!****************************************************************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true& ***!
-  \****************************************************************************************************************************************/
+/***/ "../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true& ***!
+  \****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_4b07e489_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_560df5f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/nonotice.png":
-/*!***************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/icon/nonotice.png ***!
-  \***************************************************************************************/
+/***/ "../../../../movecar_wechat/static/img/icon/arrow-right.png":
+/*!******************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/arrow-right.png ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "../../../../movecar_wechat/static/img/icon/avatar.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/avatar.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "../../../../movecar_wechat/static/img/icon/nonotice.png":
+/*!***************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/nonotice.png ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -116,21 +138,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/qrcode.png":
-/*!*************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/icon/qrcode.png ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/white.jpg":
-/*!*******************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/white.jpg ***!
-  \*******************************************************************************/
+/***/ "../../../../movecar_wechat/static/img/white.jpg":
+/*!*******************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/white.jpg ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -138,10 +149,10 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QAiRXhpZgA
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -173,27 +184,62 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QAiRXhpZgA
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../Documents/HBuilderProjects/扫码挪车/common/js/requestUrl.js");
-var _common = __webpack_require__(/*! common/js/common */ "../../../../Documents/HBuilderProjects/扫码挪车/common/js/common.js");
-var _car = _interopRequireDefault(__webpack_require__(/*! static/img/car.png */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/car.png"));
-var _white = _interopRequireDefault(__webpack_require__(/*! static/img/white.jpg */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/white.jpg"));
-var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrcode.png */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/qrcode.png"));
-var _card = _interopRequireDefault(__webpack_require__(/*! static/img/icon/card.png */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/card.png"));
-var _order = _interopRequireDefault(__webpack_require__(/*! static/img/icon/order.png */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/order.png"));
-var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/nonotice.png */ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/nonotice.png"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../movecar_wechat/common/js/requestUrl.js");
+var _common = __webpack_require__(/*! common/js/common */ "../../../../movecar_wechat/common/js/common.js");
+var _avatar = _interopRequireDefault(__webpack_require__(/*! static/img/icon/avatar.png */ "../../../../movecar_wechat/static/img/icon/avatar.png"));
+var _arrowRight = _interopRequireDefault(__webpack_require__(/*! static/img/icon/arrow-right.png */ "../../../../movecar_wechat/static/img/icon/arrow-right.png"));
+var _white = _interopRequireDefault(__webpack_require__(/*! static/img/white.jpg */ "../../../../movecar_wechat/static/img/white.jpg"));
+var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrcode.png */ "../../../../movecar_wechat/static/img/icon/qrcode.png"));
+var _card = _interopRequireDefault(__webpack_require__(/*! static/img/icon/card.png */ "../../../../movecar_wechat/static/img/icon/card.png"));
+var _order = _interopRequireDefault(__webpack_require__(/*! static/img/icon/order.png */ "../../../../movecar_wechat/static/img/icon/order.png"));
+var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/nonotice.png */ "../../../../movecar_wechat/static/img/icon/nonotice.png"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 {
   data: function data() {
     return {
-      baseAvatar: _car.default,
+      nickName: 'x先生',
+      avatarUrl: null,
+      avatar: _avatar.default,
+      arrowRight: _arrowRight.default,
       white: _white.default,
       nonotice: _nonotice.default,
+      noticeStatus: true,
       itemList: [{
         text: "我的车牌",
         url: 'chepai',
         icon: _card.default,
-        navUrl: './car_card/car_card' },
+        navUrl: '../cardList/cardList' },
       {
         text: "我的二维码",
         navUrl: '../getCode/getCode',
@@ -201,18 +247,33 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
       {
         text: "我的订单",
         navUrl: '../orderList/orderList',
-        icon: _order.default }] };
+        icon: _order.default }],
+
+      otherList: [{
+        text: "联系客服",
+        url: 'chepai',
+        navUrl: './car_card/car_card' },
+      {
+        text: "关于我们",
+        url: 'chepai',
+        navUrl: './car_card/car_card' }] };
 
 
   },
-  computed: _objectSpread({},
-  (0, _vuex.mapState)(['userInfo'])),
-
+  onLoad: function onLoad() {
+    this.getUserInfo();
+  },
   methods: _objectSpread({},
   (0, _vuex.mapMutations)(['getUserMessage', 'loginOrLoginOut']), {
-    getUserInfo: function getUserInfo(res) {
-      var userInfo = res.detail.userInfo;
-      this.getUserMessage(userInfo);
+
+    getUserInfo: function getUserInfo() {var _this = this;
+      (0, _common.request)(_requestUrl.getUserInfo, {}, function (res) {
+        if (res.code == 200) {
+          _this.nickName = res.result.nickname;
+          _this.avatarUrl = res.result.avatar;
+          _this.noticeStatus = res.result.notice_status == 1 ? true : false;
+        }
+      });
     },
     itemClick: function itemClick(navUrl) {
       uni.navigateTo({
@@ -224,17 +285,19 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
       (0, _common.request)(_requestUrl.changeNoticeStatus, {
         status: status },
       function (res) {
-        console.log(res);
+        if (res.code == 200) {
+          (0, _common.showToast)('修改成功');
+        }
       });
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=4b07e489&lang=stylus&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=560df5f8&lang=stylus&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -242,10 +305,10 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true&":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=4b07e489&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=560df5f8&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -259,64 +322,107 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("view", [
     _c("view", { staticClass: "background" }),
-    _c("image", {
-      staticClass: "avatar",
-      attrs: {
-        src: _vm.userInfo.avatarUrl ? _vm.userInfo.avatarUrl : _vm.baseAvatar,
-        mode: "aspectFill"
-      }
-    }),
-    _c("view", { staticClass: "list" }, [
-      _c("image", {
-        staticClass: "white-background",
-        attrs: { src: _vm.white, mode: "aspectFill" }
-      }),
-      _c("view", { staticClass: "nickName" }, [
-        _vm._v(_vm._s(_vm.userInfo.nickName))
-      ]),
-      _c("view", { staticClass: "item-line" }, [
-        _c("view", { staticClass: "item-line-left" }, [
-          _c("image", {
-            staticClass: "item-line-image",
-            attrs: { src: _vm.nonotice }
-          }),
-          _c("text", [_vm._v("免打扰")])
+    _c(
+      "view",
+      { staticClass: "userInfo" },
+      [
+        _c("image", {
+          staticClass: "avatar",
+          attrs: {
+            src: _vm.avatarUrl ? _vm.avatarUrl : _vm.avatar,
+            mode: "aspectFill"
+          }
+        }),
+        _c("text", { staticClass: "avatar-name" }, [
+          _vm._v(_vm._s(_vm.nickName))
         ]),
-        _c("switch", {
-          attrs: { checked: "", color: "#FFDA44", eventid: "63935662-0" },
-          on: { change: _vm.switchChange }
-        })
-      ]),
-      _c(
-        "view",
-        { staticClass: "item-box" },
-        _vm._l(_vm.itemList, function(item, key) {
-          return _c("block", { key: key }, [
-            _c(
-              "view",
-              {
-                staticClass: "item",
-                attrs: { eventid: "63935662-1-" + key },
-                on: {
-                  click: function($event) {
-                    _vm.itemClick(item.navUrl)
-                  }
+        _c("text", { staticClass: "card-msg" }, [_vm._v("浙C·989HB")]),
+        _c(
+          "button",
+          {
+            staticClass: "avatar-button",
+            attrs: { type: "primary", plain: "true" }
+          },
+          [_vm._v("编辑资料")]
+        )
+      ],
+      1
+    ),
+    _c(
+      "view",
+      { staticClass: "tab" },
+      _vm._l(_vm.itemList, function(item, key) {
+        return _c("block", { key: key }, [
+          _c(
+            "view",
+            {
+              staticClass: "item",
+              attrs: { eventid: "7d21c7af-0-" + key },
+              on: {
+                click: function($event) {
+                  _vm.itemClick(item.navUrl)
                 }
-              },
-              [
-                _c("image", {
-                  staticClass: "itemIcon",
-                  attrs: { src: item.icon }
-                }),
-                _c("text", { staticClass: "itemName" }, [
-                  _vm._v(_vm._s(item.text))
-                ])
-              ]
-            )
+              }
+            },
+            [
+              _c("image", {
+                staticClass: "itemIcon",
+                attrs: { src: item.icon }
+              }),
+              _c("text", { staticClass: "itemName" }, [
+                _vm._v(_vm._s(item.text))
+              ])
+            ]
+          )
+        ])
+      })
+    ),
+    _c(
+      "view",
+      { staticClass: "other-tab" },
+      [
+        _c("view", { staticClass: "other-item" }, [
+          _c("text", { staticClass: "other-itemName" }, [_vm._v("消息免打扰")]),
+          _c("switch", {
+            attrs: {
+              checked: _vm.noticeStatus,
+              color: "#FFDA44",
+              eventid: "7d21c7af-1"
+            },
+            on: { change: _vm.switchChange }
+          })
+        ]),
+        _c("block", [
+          _c(
+            "view",
+            { staticClass: "other-item" },
+            [
+              _c(
+                "button",
+                {
+                  staticClass: "other-itemName",
+                  attrs: { "open-type": "contact" }
+                },
+                [_vm._v("联系客服")]
+              ),
+              _c("image", {
+                staticClass: "other-itemIcon",
+                attrs: { src: _vm.arrowRight }
+              })
+            ],
+            1
+          ),
+          _c("view", { staticClass: "other-item" }, [
+            _c("view", { staticClass: "other-itemName" }, [_vm._v("关于我们")]),
+            _c("image", {
+              staticClass: "other-itemIcon",
+              attrs: { src: _vm.arrowRight }
+            })
           ])
-        })
-      )
-    ])
+        ])
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -326,5 +432,5 @@ render._withStripped = true
 
 /***/ })
 
-},[["../../../../Documents/HBuilderProjects/扫码挪车/main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}","common/runtime","common/vendor"]]]);
+},[["../../../../movecar_wechat/main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}","common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../../.sourcemap/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js.map

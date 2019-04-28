@@ -14,7 +14,9 @@
     "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
     "pages/tabbar/tabbar-5/car_card/add_card/add_card",
     "pages/tabbar/getCode/getCode",
-    "pages/tabbar/callPhone/callPhone"
+    "pages/tabbar/callPhone/callPhone",
+    "pages/tabbar/cardList/cardList",
+    "pages/tabbar/addCard/addCard"
   ],
   "subPackages": [],
   "window": {
@@ -23,6 +25,7 @@
     "navigationBarBackgroundColor": "#FFDA44",
     "backgroundColor": "#FFFFFF"
   },
+  "usingComponents": {},
   "tabBar": {
     "borderStyle": "white",
     "backgroundColor": "#FFFFFF",

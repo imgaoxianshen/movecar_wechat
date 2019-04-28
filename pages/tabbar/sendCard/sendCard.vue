@@ -46,19 +46,23 @@
 		},
 		methods: {
 			chooseAddress(){
-				uni.chooseAddress({
-				  success:(res) => {
-					  this.name = res.userName
-					  this.province = res.cityName
-					  this.city = res.cityName
-					  this.county = res.countyName
-					  this.address = res.detailInfo
-					  this.phone = res.telNumber
-				  },
-				  fail: (res) => {
-					  console.log(res)
-				  }
-				})
+			  uni.chooseAddress({
+				success:(res) => {
+					console.log('success')
+				  this.name = res.userName
+				  this.province = res.cityName
+				  this.city = res.cityName
+				  this.county = res.countyName
+				  this.address = res.detailInfo
+				  this.phone = res.telNumber
+				},
+				fail(res){
+					console.log(res,'fail')
+				},
+				complete(res){
+					console.log(res, 'complete')
+				}
+			  })
 			},
 			placeOrderAndPay(){
 				request(placeOrderAndPay,{
@@ -92,6 +96,7 @@
 			submit(){
 				if(!this.address){
 					showToast('请先选择地址')
+					return
 				}
 				this.placeOrderAndPay()
 			}

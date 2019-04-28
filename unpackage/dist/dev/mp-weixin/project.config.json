@@ -4,12 +4,8 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
+		"urlCheck": true,
+		"newFeature": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
@@ -36,10 +32,9 @@
 			"current": 0,
 			"list": [
 				{
-					"id": 0,
-					"name": "111",
+					"id": -1,
+					"name": "asd",
 					"pathName": "pages/tabbar/callPhone/callPhone",
-					"query": "scene=2",
 					"scene": null
 				}
 			]

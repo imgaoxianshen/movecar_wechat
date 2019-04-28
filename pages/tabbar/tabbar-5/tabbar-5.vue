@@ -1,10 +1,40 @@
 <template>
 	<view>
 		<view class="background"></view>
-		<image class="avatar" :src="userInfo.avatarUrl?userInfo.avatarUrl:baseAvatar" mode="aspectFill"></image>
+		<view class="userInfo">
+			<image class="avatar" :src="avatarUrl?avatarUrl:avatar" mode="aspectFill"></image>
+			<text class="avatar-name">{{nickName}}</text>
+			<text class="card-msg">浙C·989HB</text>
+			<button class="avatar-button" type="primary" plain="true">编辑资料</button>
+		</view>
+		<view class="tab">
+			<block v-for="(item,key) in itemList" :key="key">
+				<view @click="itemClick(item.navUrl)" class="item">
+					<image class="itemIcon" :src="item.icon"></image>
+					<text class="itemName">{{item.text}}</text>
+				</view>
+			</block>
+		</view>
+		<view class="other-tab">
+			<view class="other-item">
+				<text class="other-itemName">消息免打扰</text>
+				<switch :checked="noticeStatus" @change="switchChange" color="#FFDA44"/>
+			</view>
+			<block>
+				<view class="other-item">
+					<button open-type="contact" class="other-itemName">联系客服</button>
+					<image class="other-itemIcon" :src="arrowRight"></image>
+				</view>
+				<view class="other-item">
+					<view class="other-itemName">关于我们</view>
+					<image class="other-itemIcon" :src="arrowRight"></image>
+				</view>
+			</block>
+		</view>
+		<!-- <image class="avatar" :src="avatarUrl?avatarUrl:baseAvatar" mode="aspectFill"></image>
 		<view class="list">
 			<image class="white-background" :src="white" mode="aspectFill"></image>
-			<view class="nickName">{{userInfo.nickName}}</view>
+			<view class="nickName">{{nickName}}</view>
 			<view class="item-line">
 				<view class="item-line-left">
 					<image class="item-line-image" :src="nonotice"></image>
@@ -20,15 +50,16 @@
 					</view>
 				</block>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
 <script>
 	import {mapState,mapMutations} from 'vuex'
-	import {changeNoticeStatus} from 'common/js/requestUrl'
-	import {request} from 'common/js/common'
-	import baseAvatar from 'static/img/car.png'
+	import {changeNoticeStatus, getUserInfo} from 'common/js/requestUrl'
+	import {request, showToast} from 'common/js/common'
+	import avatar from 'static/img/icon/avatar.png'
+	import arrowRight from 'static/img/icon/arrow-right.png'
 	import white from 'static/img/white.jpg'
 	import qrcode from 'static/img/icon/qrcode.png'
 	import bankcard from 'static/img/icon/card.png'
@@ -38,14 +69,18 @@
 	export default {
 		data() {
 			return {
-				baseAvatar,
+				nickName: 'x先生',
+				avatarUrl: null,
+				avatar,
+				arrowRight,
 				white,
 				nonotice,
+				noticeStatus: true,
 				itemList: [{
 					text: "我的车牌",
 					url: 'chepai',
 					icon: bankcard,
-					navUrl: './car_card/car_card'
+					navUrl: '../cardList/cardList'
 				},{
 					text: "我的二维码",
 					navUrl: '../getCode/getCode',
@@ -54,17 +89,32 @@
 					text: "我的订单",
 					navUrl: '../orderList/orderList',
 					icon: order
+				}],
+				otherList: [{
+					text: "联系客服",
+					url: 'chepai',
+					navUrl: './car_card/car_card'
+				},{
+					text: "关于我们",
+					url: 'chepai',
+					navUrl: './car_card/car_card'
 				}]
 			}
 		},
-		computed:{
-			...mapState(['userInfo'])
+		onLoad(){
+			this.getUserInfo()
 		},
 		methods: {
 			...mapMutations(['getUserMessage','loginOrLoginOut']),
-			getUserInfo: function(res){
-				let userInfo = res.detail.userInfo
-				this.getUserMessage(userInfo)
+
+			getUserInfo(){
+				request(getUserInfo, {},(res)=> {
+					if(res.code == 200){
+						this.nickName = res.result.nickname
+						this.avatarUrl = res.result.avatar
+						this.noticeStatus = res.result.notice_status == 1 ? true : false
+					}
+				})
 			},
 			itemClick(navUrl){
 				uni.navigateTo({
@@ -76,7 +126,9 @@
 				request(changeNoticeStatus,{
 					status
 					},(res) => {
-						console.log(res)
+						if(res.code == 200){
+							showToast('修改成功')
+						}
 					})
 			}
 		}
@@ -86,89 +138,134 @@
 <style lang="stylus" scoped>
 	@import "~common/stylus/variable"
 	.background
-		background: linear-gradient($base-color, white)
-		height: 600upx
-		width: 750upx
-	button
-		width: 600upx
-		height: 100upx
 		position: relative
-		top: -120upx
-		z-index: 999
-		color: black
-	.avatar
-		width: 200upx
-		height: 200upx
-		border-radius: 50%
-		background-color: #fff
-		border: 30upx solid $base-color
-		position: absolute
-		left: 375upx
-		top: 20upx
-		transform: translateX(-50%)
-		z-index: 888
-	.list
+		align-items: center
+		height: 600rpx
+		overflow: hidden
+		background-color: white
+		&:before, &:after 
+			content: ""
+			position: absolute
+			left: 50%
+			min-width: 1500rpx
+			min-height: 1500rpx
+			background: linear-gradient($deep-color, $base-color)
+			animation-iteration-count: infinite
+			animation-timing-function: linear
+		&:before 
+			top: -1030rpx
+			animation-name: rotate2
+			border-radius: 44%
+			opacity: .7
+			animation-duration: 10s 
+		&:after 
+			top: -1030rpx
+			border-radius: 44%
+			opacity: .8
+			animation-name: rotate1
+			animation-duration: 10s
+	.userInfo
 		display: flex
 		flex-direction: column
 		align-items: center
-		width: 700upx
-		background-color: $background
-		box-shadow: 0 0 10upx #d1d1d1
-		margin: 0 auto
-		border-radius: 20upx
-		min-height: 800upx
-		margin-top: -450upx
-		overflow: hidden
-		.white-background
-			width: 100%
-			height: 300upx
-			opacity: .3
-		.nickName
-			position: relative
-			top: -120upx
-			z-index: 999
-			font-size: 40upx
-			height: 100upx
-		.item-line
-			height:60upx
-			line-height: 60upx
-			width: 100%
-			padding:10upx
-			margin-top: -100upx
-			margin-bottom: 100upx
+		justify-content: center
+		position: absolute
+		top: 100rpx
+		width: 750rpx
+		z-index: 999
+		.avatar
+			border: 1px solid #fff
+			border-radius: 25rpx
+			background-color: $user-back
+			width: 150rpx
+			height: 150rpx
+		.avatar-name
+			font-size: 35rpx
+			letter-spacing: 20rpx
+			text-indent: 20rpx
+			text-align:center
+			font-weight: 600
+			margin-top: 20rpx
+			color: black
+		.card-msg
+			margin-top: 10rpx
+			letter-spacing: 5rpx
+			text-indent: 5rpx
+			font-size: 25rpx
+			font-weight: 500
+			color: black
+		.avatar-button
+			color: black
+			margin-top: 20rpx
+			border: 1px solid black
+			width: 160rpx
+			height: 40rpx
+			line-height: 40rpx
+			font-size: 22rpx
+	.tab
+		display: flex
+		width: 750rpx
+		justify-content: space-around
+		background-color: white
+		padding-bottom: 20rpx
+		.item
+			display: flex
+			flex-direction: column
+			align-items: center
+			.itemIcon
+				width: 80rpx
+				height: 80rpx
+			.itemName
+				letter-spacing: 5rpx
+				font-size: 20rpx
+				color: black
+	.other-tab
+		display:flex
+		flex-direction: column
+		margin-top: 10rpx
+		background-color: white
+		.other-item
+			width: 750rpx
+			height: 90rpx
 			display: flex
 			justify-content: space-between
 			align-items: center
-			border: 1px solid #f1f1f1
-			.item-line-left
-				display:flex
-				align-items: center
-				.item-line-image
-					width: 50upx
-					height: 50upx
-		.item-box
-			display: flex
-			flex-direction: row
-			flex-wrap: wrap
-			justify-content: space-around
-			width: 100%
-			margin-top: -50upx
-			.item
-				display: flex
-				flex-direction: column
-				align-items: center
-				width: 200upx
-				height: 200upx
-				border-radius: 10upx
-				background-color: $background
-				box-shadow: 0 0 5upx #d1d1d1
-				margin-bottom: 25upx
-				.itemIcon
-					margin-top: 30upx
-					width: 80upx
-					height:80upx
-				.itemName
-					font-size: 30upx
-					margin-top: 30upx
+			.other-itemName
+				letter-spacing: 5rpx
+				font-size: 25rpx
+				color: black
+				margin-left: 20rpx
+				background-color:white
+				width: 100%
+				text-align: left
+				padding: 0
+			button::after 
+				border: none
+			.other-itemIcon
+				width: 30rpx
+				height: 30rpx
+				margin-right: 20rpx
+// 			.other-switch
+// 				width: 30rpx
+// 				height: 30rpx
+// 				margin-right: 80rpx
 			
+	@keyframes rotate1 
+		0%
+			transform: translate(-50%, 1%) rotateZ(0deg)
+		50%
+			transform: translate(-50%, -2%) rotateZ(180deg)
+		100%
+			transform: translate(-50%, 1%) rotateZ(360deg)
+	@keyframes rotate2
+		0%
+			transform: translate(-50%, 1%) rotateZ(0deg)
+		25%
+			transform: translate(-50%, 2%) rotateZ(0deg)
+		50%
+			transform: translate(-50%, -2%) rotateZ(180deg)
+		75%
+			transform: translate(-50%, 2%) rotateZ(360deg)
+		100%
+			transform: translate(-50%, 1%) rotateZ(360deg)
 </style>

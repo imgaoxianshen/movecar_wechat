@@ -1,4 +1,4 @@
-let baseUrl = 'https://www.imgaoxianshen.cn/car/api/'
+let baseUrl = 'https://www.imgaoxianshen.cn/api/'
 
 module.exports = {
 	// main
@@ -11,6 +11,7 @@ module.exports = {
 	getCarCardList: baseUrl + 'card/getCarCardList',
 	addCarCard: baseUrl + 'card/addCarCard',
 	changeChoose: baseUrl + 'card/changeChoose',
+	deleteCard: baseUrl + 'card/deleteCard',
 	
 	// pay
 	placeOrderAndPay: baseUrl+'order/placeOrderAndPay',
@@ -21,6 +22,9 @@ module.exports = {
 	
 	// status
 	changeNoticeStatus: baseUrl +'loginUser/changeNoticeStatus',
+	updateUserInfo: baseUrl +'loginUser/updateUserInfo',
+	getUserInfo: baseUrl +'loginUser/getUserInfo',
+	bindUser: baseUrl +'loginUser/bindUser',//绑定挪车码
 	
 	// 获取小程序码
 	getWechatCode: baseUrl + 'code/getWechatCode',

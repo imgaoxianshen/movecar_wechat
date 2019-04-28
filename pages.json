@@ -17,8 +17,12 @@
             "style" : {}
         },
         {
-            "path" : "pages/tabbar/tabbar-5/tabbar-5",
-            "style" : {}
+            "path" : "pages/tabbar/tabbar-5/tabbar-5"
+//             "style": {  
+// 				"backgroundColor": "yellow",
+// 				"navigationBarTitleText": "我的",  
+// 				"enablePullDownRefresh": true
+// 			  } 
         },
         {
             "path" : "pages/tabbar/tabbar-5/car_card/car_card",
@@ -59,6 +63,14 @@
         },
         {
             "path" : "pages/tabbar/callPhone/callPhone",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar/cardList/cardList",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar/addCard/addCard",
             "style" : {}
         }
     ],

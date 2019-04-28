@@ -1,5 +1,91 @@
-.container.data-v-542211aa {
-  height: calc(100vh - 200rpx);
+.container.data-v-37b668da {
+  background-color: #ffda44;
+  height: 100vh;
+  opacity: 0.8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 100rpx;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .top.data-v-37b668da {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 50rpx;
+}
+.container .top .top-font.data-v-37b668da {
+  font-size: 50rpx;
+  font-weight: 300;
+}
+.container .card.data-v-37b668da {
+  margin-top: 60rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .card .card-base.data-v-37b668da {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff1af;
+  padding: 5rpx 10rpx;
+  border: 1px solid #e3d38d;
+  border-radius: 10rpx;
+  font-size: 50rpx;
+}
+.container .card .card-base .base-name.data-v-37b668da,
+.container .card .card-base .base-code.data-v-37b668da {
+  text-align: center;
+  width: 60rpx;
+}
+.container .card .card-base .base-name.data-v-37b668da {
+  border-right: 1px solid #d1d1d1;
+}
+.container .card .dot.data-v-37b668da {
+  width: 40rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 500;
+}
+.container .card .base-card.data-v-37b668da {
+  width: 60rpx;
+  padding: 5rpx;
+  background-color: #fff1af;
+  text-align: center;
+  border: 1px solid #e3d38d;
+  border-radius: 10rpx;
+  margin: 5rpx;
+  font-size: 50rpx;
+}
+.container .desc.data-v-37b668da {
+  font-size: 20rpx;
+  margin-top: 50rpx;
+  font-weight: 300;
+}
+.container .message-container.data-v-37b668da {
+  position: relative;
+  margin-top: 50rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,32 +99,127 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.container .message-container .message-top.data-v-37b668da {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #e3d38d;
+  border-radius: 80rpx;
+  padding: 10rpx 40rpx;
+  background-color: #fff;
+  z-index: 999;
+}
+.container .message-container .message-top .message-icon.data-v-37b668da {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+.container .message-container .message-content.data-v-37b668da {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  top: 35rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 600rpx;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  border: 1px solid #e3d38d;
+}
+.container .message-container .message-content .message-bottom.data-v-37b668da {
+  margin-top: 15rpx;
+  width: 550rpx;
+  padding: 5rpx 0;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #7f341a;
+  font-size: 30rpx;
+  border: 1px solid #7f341a;
+}
+.container .message-container .message-content .message-two.data-v-37b668da {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  width: 600rpx;
+  height: 100rpx;
 }
-.container .car-icon.data-v-542211aa {
-  margin: 100rpx 0 -70rpx 0;
-  width: 200rpx;
-  height: 150rpx;
+.container .message-container .message-content .message-two .message-two-botton.data-v-37b668da {
+  font-size: 25rpx;
+  width: 250rpx;
+  text-align: center;
+  padding: 5rpx 0;
+  border-radius: 10rpx;
+  border: 1px solid #d1d1d1;
 }
-.container .car-text.data-v-542211aa {
-  font-size: 80rpx;
-  font-weight: 800;
-}
-.container .car-card.data-v-542211aa {
-  font-size: 90rpx;
-  font-weight: 500;
-  line-height: 160rpx;
-  height: 160rpx;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.container .call.data-v-542211aa {
-  width: 300rpx;
+.container .phone-container.data-v-37b668da {
+  position: relative;
   height: 80rpx;
-  border-radius: 100rpx;
-  -webkit-box-shadow: 10rpx 10rpx 5rpx #d1d1d1;
-          box-shadow: 10rpx 10rpx 5rpx #d1d1d1;
+  line-height: 80rpx;
+  background-color: #7f341a;
+  margin-top: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 40rpx;
+}
+.container .phone-container .phone-icon.data-v-37b668da {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+.container .phone-container .phone-text.data-v-37b668da {
+  color: #fff;
+  font-weight: 300;
+}
+.container .code-container.data-v-37b668da {
+  position: relative;
+  background-color: #3d394d;
+  height: 80rpx;
+  font-weight: 300;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  text-align: center;
+  color: #fff;
 }
 

@@ -1,17 +1,16 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/common/js/common.js":
-/*!******************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/common/js/common.js ***!
-  \******************************************************************************/
+/***/ "../../../../movecar_wechat/common/js/common.js":
+/*!******************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/common/js/common.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {module.exports = {
+/* WEBPACK VAR INJECTION */(function(uni) {var _requestUrl = __webpack_require__(/*! ./requestUrl */ "../../../../movecar_wechat/common/js/requestUrl.js");
+module.exports = {
   request: function request(url, data, cb) {
-    // let that = this;
-    // console.log(this.callback)
     var token = uni.getStorageSync('token');
     uni.request({
       url: url, //仅为示例，并非真实接口地址。
@@ -20,7 +19,28 @@
         'token': token //自定义请求头信息
       },
       success: function success(res) {
-        if (res.data.code != 200) {
+        // 登陆过期的情况
+        if (res.data.code == 101) {
+          uni.login({
+            provider: 'weixin',
+            success: function success(loginRes) {
+              var code = loginRes.code;
+              uni.request({
+                url: _requestUrl.loginUrl,
+                data: { code: code },
+                success: function success(res) {
+                  uni.setStorageSync('token', res.data.result);
+                  uni.showToast({
+                    title: '请求失败，请重试',
+                    icon: 'none',
+                    duration: 2000 });
+
+                  return;
+                } });
+
+            } });
+
+        } else if (res.data.code != 200) {
           uni.showToast({
             title: res.data.msg,
             icon: 'none',
@@ -31,7 +51,11 @@
         return typeof cb == "function" && cb(res.data);
       },
       fail: function fail(res) {
-        console.log(res);
+        uni.showToast({
+          title: '请求失败，请重试',
+          icon: 'none',
+          duration: 2000 });
+
       } });
 
   },
@@ -46,15 +70,15 @@
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/common/js/requestUrl.js":
-/*!**********************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/common/js/requestUrl.js ***!
-  \**********************************************************************************/
+/***/ "../../../../movecar_wechat/common/js/requestUrl.js":
+/*!**********************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/common/js/requestUrl.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var baseUrl = 'https://www.imgaoxianshen.cn/car/api/';
+var baseUrl = 'https://www.imgaoxianshen.cn/api/';
 
 module.exports = {
   // main
@@ -67,6 +91,7 @@ module.exports = {
   getCarCardList: baseUrl + 'card/getCarCardList',
   addCarCard: baseUrl + 'card/addCarCard',
   changeChoose: baseUrl + 'card/changeChoose',
+  deleteCard: baseUrl + 'card/deleteCard',
 
   // pay
   placeOrderAndPay: baseUrl + 'order/placeOrderAndPay',
@@ -77,16 +102,19 @@ module.exports = {
 
   // status
   changeNoticeStatus: baseUrl + 'loginUser/changeNoticeStatus',
+  updateUserInfo: baseUrl + 'loginUser/updateUserInfo',
+  getUserInfo: baseUrl + 'loginUser/getUserInfo',
+  bindUser: baseUrl + 'loginUser/bindUser', //绑定挪车码
 
   // 获取小程序码
   getWechatCode: baseUrl + 'code/getWechatCode' };
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/pages.json":
-/*!*********************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/pages.json ***!
-  \*********************************************************************/
+/***/ "../../../../movecar_wechat/pages.json":
+/*!*********************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages.json ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -95,21 +123,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/car.png":
-/*!*****************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/car.png ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/card.png":
-/*!***********************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/icon/card.png ***!
-  \***********************************************************************************/
+/***/ "../../../../movecar_wechat/static/img/icon/card.png":
+/*!***********************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/card.png ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -117,10 +134,21 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "../../../../Documents/HBuilderProjects/扫码挪车/static/img/icon/order.png":
-/*!************************************************************************************!*\
-  !*** C:/Users/69022_000/Documents/HBuilderProjects/扫码挪车/static/img/icon/order.png ***!
-  \************************************************************************************/
+/***/ "../../../../movecar_wechat/static/img/icon/delete.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/delete.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "../../../../movecar_wechat/static/img/icon/order.png":
+/*!************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/order.png ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -128,161 +156,178 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
+/***/ "../../../../movecar_wechat/static/img/icon/qrcode.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/qrcode.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
 /***/ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js":
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-const _toString = Object.prototype.toString;
-const hasOwnProperty = Object.prototype.hasOwnProperty;
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createPage = createPage;exports.createComponent = createComponent;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
-function isFn (fn) {
-  return typeof fn === 'function'
+var _toString = Object.prototype.toString;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+function isFn(fn) {
+  return typeof fn === 'function';
 }
 
-function isStr (str) {
-  return typeof str === 'string'
+function isStr(str) {
+  return typeof str === 'string';
 }
 
-function isPlainObject (obj) {
-  return _toString.call(obj) === '[object Object]'
+function isPlainObject(obj) {
+  return _toString.call(obj) === '[object Object]';
 }
 
-function hasOwn (obj, key) {
-  return hasOwnProperty.call(obj, key)
+function hasOwn(obj, key) {
+  return hasOwnProperty.call(obj, key);
 }
 
-const SYNC_API_RE = /hideKeyboard|upx2px|canIUse|^create|Sync$|Manager$/;
+function noop() {}
 
-const CONTEXT_API_RE = /^create|Manager$/;
+var SYNC_API_RE = /requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$/;
 
-const CALLBACK_API_RE = /^on/;
+var CONTEXT_API_RE = /^create|Manager$/;
 
-function isContextApi (name) {
-  return CONTEXT_API_RE.test(name)
+var CALLBACK_API_RE = /^on/;
+
+function isContextApi(name) {
+  return CONTEXT_API_RE.test(name);
 }
-function isSyncApi (name) {
-  return SYNC_API_RE.test(name)
-}
-
-function isCallbackApi (name) {
-  return CALLBACK_API_RE.test(name)
+function isSyncApi(name) {
+  return SYNC_API_RE.test(name);
 }
 
-function handlePromise (promise) {
-  return promise.then(data => {
-    return [null, data]
-  })
-    .catch(err => [err])
+function isCallbackApi(name) {
+  return CALLBACK_API_RE.test(name);
 }
 
-function shouldPromise (name) {
+function handlePromise(promise) {
+  return promise.then(function (data) {
+    return [null, data];
+  }).
+  catch(function (err) {return [err];});
+}
+
+function shouldPromise(name) {
   if (isSyncApi(name)) {
-    return false
+    return false;
   }
   if (isCallbackApi(name)) {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 
-function promisify (name, api) {
+function promisify(name, api) {
   if (!shouldPromise(name)) {
-    return api
+    return api;
   }
-  return function promiseApi (options = {}, ...params) {
+  return function promiseApi() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};for (var _len = arguments.length, params = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {params[_key - 1] = arguments[_key];}
     if (isFn(options.success) || isFn(options.fail) || isFn(options.complete)) {
-      return api(options, ...params)
+      return api.apply(void 0, [options].concat(params));
     }
-    return handlePromise(new Promise((resolve, reject) => {
-      api(Object.assign({}, options, {
+    return handlePromise(new Promise(function (resolve, reject) {
+      api.apply(void 0, [Object.assign({}, options, {
         success: resolve,
-        fail: reject
-      }), ...params);
+        fail: reject })].concat(
+      params));
       /* eslint-disable no-extend-native */
       Promise.prototype.finally = function (callback) {
-        const promise = this.constructor;
+        var promise = this.constructor;
         return this.then(
-          value => promise.resolve(callback()).then(() => value),
-          reason => promise.resolve(callback()).then(() => {
-            throw reason
-          })
-        )
+        function (value) {return promise.resolve(callback()).then(function () {return value;});},
+        function (reason) {return promise.resolve(callback()).then(function () {
+            throw reason;
+          });});
+
       };
-    }))
-  }
+    }));
+  };
 }
 
-const EPS = 1e-4;
-const BASE_DEVICE_WIDTH = 750;
-let isIOS = false;
-let deviceWidth = 0;
-let deviceDPR = 0;
+var EPS = 1e-4;
+var BASE_DEVICE_WIDTH = 750;
+var isIOS = false;
+var deviceWidth = 0;
+var deviceDPR = 0;
 
-function checkDeviceWidth () {
-  const {
-    platform,
-    pixelRatio,
-    windowWidth
-  } = wx.getSystemInfoSync(); // uni=>wx runtime 编译目标是 uni 对象，内部不允许直接使用 uni
+function checkDeviceWidth() {var _wx$getSystemInfoSync =
+
+
+
+
+  wx.getSystemInfoSync(),platform = _wx$getSystemInfoSync.platform,pixelRatio = _wx$getSystemInfoSync.pixelRatio,windowWidth = _wx$getSystemInfoSync.windowWidth; // uni=>wx runtime 编译目标是 uni 对象，内部不允许直接使用 uni
 
   deviceWidth = windowWidth;
   deviceDPR = pixelRatio;
   isIOS = platform === 'ios';
 }
 
-function upx2px (number, newDeviceWidth) {
+function upx2px(number, newDeviceWidth) {
   if (deviceWidth === 0) {
     checkDeviceWidth();
   }
 
   number = Number(number);
   if (number === 0) {
-    return 0
+    return 0;
   }
-  number = (number / BASE_DEVICE_WIDTH) * (newDeviceWidth || deviceWidth);
-  number = Math.floor(number + EPS);
-  if (number === 0) {
+  var result = number / BASE_DEVICE_WIDTH * (newDeviceWidth || deviceWidth);
+  if (result < 0) {
+    result = -result;
+  }
+  result = Math.floor(result + EPS);
+  if (result === 0) {
     if (deviceDPR === 1 || !isIOS) {
-      return 1
+      return 1;
     } else {
-      return 0.5
+      return 0.5;
     }
   }
-  return number
+  return number < 0 ? -result : result;
 }
 
 var protocols = {};
 
-const CALLBACKS = ['success', 'fail', 'cancel', 'complete'];
+var CALLBACKS = ['success', 'fail', 'cancel', 'complete'];
 
-function processCallback (methodName, method, returnValue) {
+function processCallback(methodName, method, returnValue) {
   return function (res) {
-    return method(processReturnValue(methodName, res, returnValue))
-  }
+    return method(processReturnValue(methodName, res, returnValue));
+  };
 }
 
-function processArgs (methodName, fromArgs, argsOption = {}, returnValue = {}, keepFromArgs = false) {
-  if (isPlainObject(fromArgs)) { // 一般 api 的参数解析
-    const toArgs = keepFromArgs === true ? fromArgs : {}; // returnValue 为 false 时，说明是格式化返回值，直接在返回值对象上修改赋值
+function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};var returnValue = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};var keepFromArgs = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+  if (isPlainObject(fromArgs)) {// 一般 api 的参数解析
+    var toArgs = keepFromArgs === true ? fromArgs : {}; // returnValue 为 false 时，说明是格式化返回值，直接在返回值对象上修改赋值
     if (isFn(argsOption)) {
       argsOption = argsOption(fromArgs, toArgs) || {};
     }
-    for (let key in fromArgs) {
+    for (var key in fromArgs) {
       if (hasOwn(argsOption, key)) {
-        let keyOption = argsOption[key];
+        var keyOption = argsOption[key];
         if (isFn(keyOption)) {
           keyOption = keyOption(fromArgs[key], fromArgs, toArgs);
         }
-        if (!keyOption) { // 不支持的参数
-          console.warn(`微信小程序 ${methodName}暂不支持${key}`);
-        } else if (isStr(keyOption)) { // 重写参数 key
+        if (!keyOption) {// 不支持的参数
+          console.warn("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
+        } else if (isStr(keyOption)) {// 重写参数 key
           toArgs[keyOption] = fromArgs[key];
-        } else if (isPlainObject(keyOption)) { // {name:newName,value:value}可重新指定参数 key:value
+        } else if (isPlainObject(keyOption)) {// {name:newName,value:value}可重新指定参数 key:value
           toArgs[keyOption.name ? keyOption.name : key] = keyOption.value;
         }
       } else if (CALLBACKS.includes(key)) {
@@ -293,67 +338,67 @@ function processArgs (methodName, fromArgs, argsOption = {}, returnValue = {}, k
         }
       }
     }
-    return toArgs
+    return toArgs;
   } else if (isFn(fromArgs)) {
     fromArgs = processCallback(methodName, fromArgs, returnValue);
   }
-  return fromArgs
+  return fromArgs;
 }
 
-function processReturnValue (methodName, res, returnValue, keepReturnValue = false) {
-  if (isFn(protocols.returnValue)) { // 处理通用 returnValue
+function processReturnValue(methodName, res, returnValue) {var keepReturnValue = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  if (isFn(protocols.returnValue)) {// 处理通用 returnValue
     res = protocols.returnValue(methodName, res);
   }
-  return processArgs(methodName, res, returnValue, {}, keepReturnValue)
+  return processArgs(methodName, res, returnValue, {}, keepReturnValue);
 }
 
-function wrapper (methodName, method) {
+function wrapper(methodName, method) {
   if (hasOwn(protocols, methodName)) {
-    const protocol = protocols[methodName];
-    if (!protocol) { // 暂不支持的 api
+    var protocol = protocols[methodName];
+    if (!protocol) {// 暂不支持的 api
       return function () {
-        console.error(`微信小程序 暂不支持${methodName}`);
-      }
+        console.error("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F \u6682\u4E0D\u652F\u6301".concat(methodName));
+      };
     }
-    return function (arg1, arg2) { // 目前 api 最多两个参数
-      let options = protocol;
+    return function (arg1, arg2) {// 目前 api 最多两个参数
+      var options = protocol;
       if (isFn(protocol)) {
         options = protocol(arg1);
       }
 
       arg1 = processArgs(methodName, arg1, options.args, options.returnValue);
 
-      const returnValue = wx[options.name || methodName](arg1, arg2);
-      if (isSyncApi(methodName)) { // 同步 api
-        return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName))
+      var returnValue = wx[options.name || methodName](arg1, arg2);
+      if (isSyncApi(methodName)) {// 同步 api
+        return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
       }
-      return returnValue
-    }
+      return returnValue;
+    };
   }
-  return method
+  return method;
 }
 
-const todoApis = Object.create(null);
+var todoApis = Object.create(null);
 
-const TODOS = [
-  'subscribePush',
-  'unsubscribePush',
-  'onPush',
-  'offPush',
-  'share'
-];
+var TODOS = [
+'subscribePush',
+'unsubscribePush',
+'onPush',
+'offPush',
+'share'];
 
-function createTodoApi (name) {
-  return function todoApi ({
-    fail,
-    complete
-  }) {
-    const res = {
-      errMsg: `${name}:fail:暂不支持 ${name} 方法`
-    };
+
+function createTodoApi(name) {
+  return function todoApi(_ref)
+
+
+  {var fail = _ref.fail,complete = _ref.complete;
+    var res = {
+      errMsg: "".concat(name, ":fail:\u6682\u4E0D\u652F\u6301 ").concat(name, " \u65B9\u6CD5") };
+
     isFn(fail) && fail(res);
     isFn(complete) && complete(res);
-  }
+  };
 }
 
 TODOS.forEach(function (name) {
@@ -364,91 +409,521 @@ var providers = {
   oauth: ['weixin'],
   share: ['weixin'],
   payment: ['wxpay'],
-  push: ['weixin']
-};
+  push: ['weixin'] };
 
-function getProvider ({
-  service,
-  success,
-  fail,
-  complete
-}) {
-  let res = false;
+
+function getProvider(_ref2)
+
+
+
+
+{var service = _ref2.service,success = _ref2.success,fail = _ref2.fail,complete = _ref2.complete;
+  var res = false;
   if (providers[service]) {
     res = {
       errMsg: 'getProvider:ok',
-      service,
-      provider: providers[service]
-    };
+      service: service,
+      provider: providers[service] };
+
     isFn(success) && success(res);
   } else {
     res = {
-      errMsg: 'getProvider:fail:服务[' + service + ']不存在'
-    };
+      errMsg: 'getProvider:fail:服务[' + service + ']不存在' };
+
     isFn(fail) && fail(res);
   }
   isFn(complete) && complete(res);
 }
 
 var extraApi = /*#__PURE__*/Object.freeze({
-  getProvider: getProvider
-});
+  getProvider: getProvider });
 
 
 
-var api = /*#__PURE__*/Object.freeze({
 
-});
+var api = /*#__PURE__*/Object.freeze({});
 
-let uni = {};
+
+
+var MOCKS = ['__route__', '__wxExparserNodeId__', '__wxWebviewId__'];
+
+function initMocks(vm) {
+  var mpInstance = vm.$mp[vm.mpType];
+  MOCKS.forEach(function (mock) {
+    if (hasOwn(mpInstance, mock)) {
+      vm[mock] = mpInstance[mock];
+    }
+  });
+}
+
+function initHooks(mpOptions, hooks) {
+  hooks.forEach(function (hook) {
+    mpOptions[hook] = function (args) {
+      return this.$vm.__call_hook(hook, args);
+    };
+  });
+}
+
+function getData(vueOptions, context) {
+  var data = vueOptions.data || {};
+  var methods = vueOptions.methods || {};
+
+  if (typeof data === 'function') {
+    try {
+      data = data.call(context); // 支持 Vue.prototype 上挂的数据
+    } catch (e) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
+      }
+    }
+  } else {
+    try {
+      // 对 data 格式化
+      data = JSON.parse(JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  Object.keys(methods).forEach(function (methodName) {
+    if (!hasOwn(data, methodName)) {
+      data[methodName] = methods[methodName];
+    }
+  });
+
+  return data;
+}
+
+var PROP_TYPES = [String, Number, Boolean, Object, Array, null];
+
+function createObserver(name) {
+  return function observer(newVal, oldVal) {
+    if (this.$vm) {
+      this.$vm[name] = newVal; // 为了触发其他非 render watcher
+    }
+  };
+}
+
+function getProperties(props) {
+  var properties = {
+    vueSlots: { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
+      type: null,
+      value: [],
+      observer: function observer(newVal, oldVal) {
+        var $slots = Object.create(null);
+        newVal.forEach(function (slotName) {
+          $slots[slotName] = true;
+        });
+        this.setData({
+          $slots: $slots });
+
+      } } };
+
+
+  if (Array.isArray(props)) {// ['title']
+    props.forEach(function (key) {
+      properties[key] = {
+        type: null,
+        observer: createObserver(key) };
+
+    });
+  } else if (isPlainObject(props)) {// {title:{type:String,default:''},content:String}
+    Object.keys(props).forEach(function (key) {
+      var opts = props[key];
+      if (isPlainObject(opts)) {// title:{type:String,default:''}
+        var value = opts['default'];
+        if (isFn(value)) {
+          value = value();
+        }
+        properties[key] = {
+          type: PROP_TYPES.includes(opts.type) ? opts.type : null,
+          value: value,
+          observer: createObserver(key) };
+
+      } else {// content:String
+        properties[key] = {
+          type: PROP_TYPES.includes(opts) ? opts : null,
+          observer: createObserver(key) };
+
+      }
+    });
+  }
+  return properties;
+}
+
+function wrapper$1(event) {
+  event.stopPropagation = noop;
+  event.preventDefault = noop;
+
+  event.target = event.target || {};
+  event.detail = event.detail || {};
+
+  // TODO 又得兼容 mpvue 的 mp 对象
+  event.mp = event;
+  event.target = Object.assign({}, event.target, event.detail);
+  return event;
+}
+
+function processEventArgs(event) {var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];var isCustom = arguments.length > 2 ? arguments[2] : undefined;var methodName = arguments.length > 3 ? arguments[3] : undefined;
+  if (isCustom && !args.length) {// 无参数，直接传入 detail 数组
+    if (!Array.isArray(event.detail)) {// 应该是使用了 wxcomponent 原生组件，为了向前兼容，传递原始 event 对象
+      return [event];
+    }
+    return event.detail;
+  }
+  var ret = [];
+  args.forEach(function (arg) {
+    if (arg === '$event') {
+      if (methodName === '__set_model' && !isCustom) {// input v-model value
+        ret.push(event.target.value);
+      } else {
+        ret.push(isCustom ? event.detail[0] : event);
+      }
+    } else {
+      ret.push(arg);
+    }
+  });
+
+  return ret;
+}
+
+var ONCE = '~';
+var CUSTOM = '^';
+
+function handleEvent(event) {var _this = this;
+  event = wrapper$1(event);
+
+  // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
+  var eventOpts = (event.currentTarget || event.target).dataset.eventOpts;
+  if (!eventOpts) {
+    return console.warn("\u4E8B\u4EF6\u4FE1\u606F\u4E0D\u5B58\u5728");
+  }
+
+  // [['handle',[1,2,a]],['handle1',[1,2,a]]]
+  var eventType = event.type;
+  eventOpts.forEach(function (eventOpt) {
+    var type = eventOpt[0];
+    var eventsArray = eventOpt[1];
+
+    var isCustom = type.charAt(0) === CUSTOM;
+    type = isCustom ? type.slice(1) : type;
+    var isOnce = type.charAt(0) === ONCE;
+    type = isOnce ? type.slice(1) : type;
+
+    if (eventsArray && eventType === type) {
+      eventsArray.forEach(function (eventArray) {
+        var methodName = eventArray[0];
+        var handler = _this.$vm[methodName];
+        if (!isFn(handler)) {
+          throw new Error(" _vm.".concat(methodName, " is not a function"));
+        }
+        if (isOnce) {
+          if (handler.once) {
+            return;
+          }
+          handler.once = true;
+        }
+        handler.apply(_this.$vm, processEventArgs(event, eventArray[1], isCustom, methodName));
+      });
+    }
+  });
+}
+
+function initRefs(vm) {
+  var mpInstance = vm.$mp[vm.mpType];
+  Object.defineProperty(vm, '$refs', {
+    get: function get() {
+      var $refs = Object.create(null);
+      var components = mpInstance.selectAllComponents('.vue-ref');
+      components.forEach(function (component) {
+        var ref = component.dataset.ref;
+        $refs[ref] = component.$vm;
+      });
+      var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
+      forComponents.forEach(function (component) {
+        var ref = component.dataset.ref;
+        if (!$refs[ref]) {
+          $refs[ref] = [];
+        }
+        $refs[ref].push(component.$vm);
+      });
+      return $refs;
+    } });
+
+}
+
+var hooks = [
+'onShow',
+'onHide',
+'onError',
+'onPageNotFound'];
+
+
+function createApp(vm) {
+  // 外部初始化时 Vue 还未初始化，放到 createApp 内部初始化 mixin
+  _vue.default.mixin({
+    beforeCreate: function beforeCreate() {
+      if (!this.$options.mpType) {
+        return;
+      }
+      this.mpType = this.$options.mpType;
+      this.$mp = _defineProperty({
+        data: {} },
+      this.mpType, this.$options.mpInstance);
+
+      delete this.$options.mpType;
+      delete this.$options.mpInstance;
+
+      if (this.mpType !== 'app') {
+        initRefs(this);
+        initMocks(this);
+      }
+    },
+    created: function created() {// 处理 injections
+      this.__init_injections(this);
+      this.__init_provide(this);
+    } });
+
+
+  var appOptions = {
+    onLaunch: function onLaunch(args) {
+      this.$vm = vm;
+
+      this.$vm._isMounted = true;
+      this.$vm.__call_hook('mounted');
+
+      this.$vm.__call_hook('onLaunch', args);
+    } };
+
+
+  initHooks(appOptions, hooks); // 延迟执行，因为 App 的注册在 main.js 之前，可能导致生命周期内 Vue 原型上开发者注册的属性无法访问
+
+  App(appOptions);
+
+  return vm;
+}
+
+function triggerLink(mpInstance, vueOptions) {
+  mpInstance.triggerEvent('__l', mpInstance.$vm || vueOptions, {
+    bubbles: true,
+    composed: true });
+
+}
+
+function handleLink(event) {
+  if (event.detail.$mp) {// vm
+    if (!event.detail.$parent) {
+      event.detail.$parent = this.$vm;
+      event.detail.$parent.$children.push(event.detail);
+
+      event.detail.$root = this.$vm.$root;
+    }
+  } else {// vueOptions
+    if (!event.detail.parent) {
+      event.detail.parent = this.$vm;
+    }
+  }
+}
+
+var hooks$1 = [
+'onShow',
+'onHide',
+'onPullDownRefresh',
+'onReachBottom',
+'onShareAppMessage',
+'onPageScroll',
+'onResize',
+'onTabItemTap',
+'onBackPress',
+'onNavigationBarButtonTap',
+'onNavigationBarSearchInputChanged',
+'onNavigationBarSearchInputConfirmed',
+'onNavigationBarSearchInputClicked'];
+
+
+function createPage(vueOptions) {
+  vueOptions = vueOptions.default || vueOptions;
+  var VueComponent;
+  if (isFn(vueOptions)) {
+    VueComponent = vueOptions;
+    vueOptions = VueComponent.extendOptions;
+  } else {
+    VueComponent = _vue.default.extend(vueOptions);
+  }
+  var pageOptions = {
+    options: {
+      multipleSlots: true,
+      addGlobalClass: true },
+
+    data: getData(vueOptions, _vue.default.prototype),
+    lifetimes: { // 当页面作为组件时
+      attached: function attached() {
+
+        this.$vm = new VueComponent({
+          mpType: 'page',
+          mpInstance: this });
+
+
+        this.$vm.__call_hook('created');
+        this.$vm.$mount();
+      },
+      ready: function ready() {
+        this.$vm.__call_hook('beforeMount');
+        this.$vm._isMounted = true;
+        this.$vm.__call_hook('mounted');
+        this.$vm.__call_hook('onReady');
+      },
+      detached: function detached() {
+        this.$vm.$destroy();
+      } },
+
+    methods: { // 作为页面时
+      onLoad: function onLoad(args) {
+        this.$vm.$mp.query = args; // 又要兼容 mpvue
+        this.$vm.__call_hook('onLoad', args); // 开发者可能会在 onLoad 时赋值，提前到 mount 之前
+      },
+      onUnload: function onUnload() {
+        this.$vm.__call_hook('onUnload');
+      },
+      __e: handleEvent,
+      __l: handleLink } };
+
+
+
+  initHooks(pageOptions.methods, hooks$1);
+
+  return Component(pageOptions);
+}
+
+function initVueComponent(mpInstace, VueComponent) {var extraOptions = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  if (mpInstace.$vm) {
+    return;
+  }
+
+  var options = Object.assign({
+    mpType: 'component',
+    mpInstance: mpInstace,
+    propsData: mpInstace.properties },
+  extraOptions);
+  // 初始化 vue 实例
+  mpInstace.$vm = new VueComponent(options);
+
+  // 处理$slots,$scopedSlots（暂不支持动态变化$slots）
+  var vueSlots = mpInstace.properties.vueSlots;
+  if (Array.isArray(vueSlots) && vueSlots.length) {
+    var $slots = Object.create(null);
+    vueSlots.forEach(function (slotName) {
+      $slots[slotName] = true;
+    });
+    mpInstace.$vm.$scopedSlots = mpInstace.$vm.$slots = $slots;
+  }
+  // 性能优先，mount 提前到 attached 中，保证组件首次渲染数据被合并
+  // 导致与标准 Vue 的差异，data 和 computed 中不能使用$parent，provide等组件属性
+  mpInstace.$vm.$mount();
+}
+
+function createComponent(vueOptions) {
+  vueOptions = vueOptions.default || vueOptions;
+
+  var properties = getProperties(vueOptions.props);
+
+  var VueComponent = _vue.default.extend(vueOptions);
+
+  var componentOptions = {
+    options: {
+      multipleSlots: true,
+      addGlobalClass: true },
+
+    data: getData(vueOptions, _vue.default.prototype),
+    properties: properties,
+    lifetimes: {
+      attached: function attached() {
+        initVueComponent(this, VueComponent);
+      },
+      ready: function ready() {
+        initVueComponent(this, VueComponent); // 目前发现部分情况小程序 attached 不触发
+        triggerLink(this); // 处理 parent,children
+
+        // 补充生命周期
+        this.$vm.__call_hook('created');
+        this.$vm.__call_hook('beforeMount');
+        this.$vm._isMounted = true;
+        this.$vm.__call_hook('mounted');
+        this.$vm.__call_hook('onReady');
+      },
+      detached: function detached() {
+        this.$vm.$destroy();
+      } },
+
+    pageLifetimes: {
+      show: function show(args) {
+        this.$vm.__call_hook('onPageShow', args);
+      },
+      hide: function hide() {
+        this.$vm && this.$vm.__call_hook('onPageHide');
+      },
+      resize: function resize(size) {
+        this.$vm && this.$vm.__call_hook('onPageResize', size);
+      } },
+
+    methods: {
+      __e: handleEvent,
+      __l: handleLink } };
+
+
+
+  return Component(componentOptions);
+}
+
+var uni = {};
 
 if (typeof Proxy !== 'undefined') {
   uni = new Proxy({}, {
-    get (target, name) {
+    get: function get(target, name) {
       if (name === 'upx2px') {
-        return upx2px
+        return upx2px;
       }
       if (api[name]) {
-        return promisify(name, api[name])
+        return promisify(name, api[name]);
       }
-      if (extraApi[name]) {
-        return promisify(name, extraApi[name])
-      }
-      if (todoApis[name]) {
-        return promisify(name, todoApis[name])
+      {
+        if (extraApi[name]) {
+          return promisify(name, extraApi[name]);
+        }
+        if (todoApis[name]) {
+          return promisify(name, todoApis[name]);
+        }
       }
       if (!hasOwn(wx, name) && !hasOwn(protocols, name)) {
-        return
+        return;
       }
-      return promisify(name, wrapper(name, wx[name]))
-    }
-  });
+      return promisify(name, wrapper(name, wx[name]));
+    } });
+
 } else {
   uni.upx2px = upx2px;
 
-  Object.keys(todoApis).forEach(name => {
-    uni[name] = promisify(name, todoApis[name]);
-  });
+  {
+    Object.keys(todoApis).forEach(function (name) {
+      uni[name] = promisify(name, todoApis[name]);
+    });
+    Object.keys(extraApi).forEach(function (name) {
+      uni[name] = promisify(name, todoApis[name]);
+    });
+  }
 
-  Object.keys(extraApi).forEach(name => {
-    uni[name] = promisify(name, todoApis[name]);
-  });
-
-  Object.keys(api).forEach(name => {
+  Object.keys(api).forEach(function (name) {
     uni[name] = promisify(name, api[name]);
   });
 
-  Object.keys(wx).forEach(name => {
+  Object.keys(wx).forEach(function (name) {
     if (hasOwn(wx, name) || hasOwn(protocols, name)) {
       uni[name] = promisify(name, wrapper(name, wx[name]));
     }
   });
 }
 
-var uni$1 = uni;
+var uni$1 = uni;var _default =
 
-/* harmony default export */ __webpack_exports__["default"] = (uni$1);
-
+uni$1;exports.default = _default;
 
 /***/ }),
 
@@ -469,6 +944,9 @@ function callHook$1(vm, hook, params) {
   var handlers = vm.$options[hook];
   if (hook === 'onError' && handlers) {
     handlers = [handlers];
+  }
+  if(typeof handlers === 'function'){
+    handlers = [handlers]
   }
 
   var ret;
@@ -514,6 +992,7 @@ function getRootVueVm(page) {
       // 挂载Vue对象到page上
       this.$vm = app;
       var rootVueVM = app.$root;
+      rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__//fixed by xxxxxx(createIntersectionObserver)
       rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
       
       //初始化mp对象
@@ -605,6 +1084,18 @@ function getRootVueVm(page) {
     onNavigationBarButtonTap: function onNavigationBarButtonTap(options) {
         var rootVueVM = getRootVueVm(this);
     		callHook$1(rootVueVM, "onNavigationBarButtonTap", options)
+    },
+    onNavigationBarSearchInputChanged: function onNavigationBarSearchInputChanged(options) {
+        var rootVueVM = getRootVueVm(this);
+    		callHook$1(rootVueVM, "onNavigationBarSearchInputChanged", options)
+    },
+    onNavigationBarSearchInputConfirmed: function onNavigationBarSearchInputConfirmed(options) {
+        var rootVueVM = getRootVueVm(this);
+    		callHook$1(rootVueVM, "onNavigationBarSearchInputConfirmed", options)
+    },
+    onNavigationBarSearchInputClicked: function onNavigationBarSearchInputClicked(options) {
+        var rootVueVM = getRootVueVm(this);
+    		callHook$1(rootVueVM, "onNavigationBarSearchInputClicked", options)
     },
     onBackPress: function onBackPress(options) {
         var rootVueVM = getRootVueVm(this);
@@ -5674,6 +6165,8 @@ try {
             if (mpType === "app") {
                 callHook$1(this, "onLaunch", mp.appOptions)
             } else {
+                this.__wxWebviewId__ = rootVueVM.__wxWebviewId__
+                this.__wxExparserNodeId__ = rootVueVM.__wxExparserNodeId__
                 callHook$1(this, "onLoad", mp.query)
                 // callHook$1(this, "onReady") // 避免 onReady触发两次
             }
@@ -5795,6 +6288,7 @@ try {
                 // 生命周期函数--监听页面加载
                 onLoad: function onLoad(query) {
                     rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
+                    rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__
                     mp.page = this
                     mp.query = query
                     mp.status = "load"
@@ -5809,6 +6303,7 @@ try {
                 // 生命周期函数--监听页面显示
                 onShow: function onShow() {
                     rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
+                    rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__
                     mp.page = this
                     mp.status = "show"
                 
@@ -6031,9 +6526,9 @@ try {
             return
         }
 
-        var data = formatVmData(this)
+        var data = JSON.parse(JSON.stringify(formatVmData(this)))
         //fixed by xxxxxx
-        throttleSetData(page.setData.bind(page), JSON.parse(JSON.stringify(diff(data, page.data))))
+        throttleSetData(page.setData.bind(page), diff(data, page.data))
     }
 
     function initDataToMP() {

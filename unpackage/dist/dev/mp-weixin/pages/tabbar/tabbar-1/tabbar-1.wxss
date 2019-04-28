@@ -1,10 +1,10 @@
-page.data-v-794f3fee {
+page.data-v-63431d10 {
   overflow: hidden;
 }
-page .content.data-v-794f3fee {
+page .content.data-v-63431d10 {
   width: 750rpx;
 }
-page .content .map.data-v-794f3fee {
+page .content .map.data-v-63431d10 {
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,7 +18,7 @@ page .content .map.data-v-794f3fee {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.position.data-v-794f3fee {
+.position.data-v-63431d10 {
   position: absolute;
   bottom: 400rpx;
   border-radius: 50%;
@@ -40,11 +40,11 @@ page .content .map.data-v-794f3fee {
   -webkit-box-shadow: 0 10rpx 10rpx #d1d1d1;
           box-shadow: 0 10rpx 10rpx #d1d1d1;
 }
-.position .position-icon.data-v-794f3fee {
+.position .position-icon.data-v-63431d10 {
   width: 60rpx;
   height: 60rpx;
 }
-.deep.data-v-794f3fee {
+.deep.data-v-63431d10 {
   position: absolute;
   bottom: 0;
   width: 1500rpx;
@@ -70,7 +70,7 @@ page .content .map.data-v-794f3fee {
   -webkit-box-shadow: 0 10rpx 10rpx #d1d1d1;
           box-shadow: 0 10rpx 10rpx #d1d1d1;
 }
-.deep .saoma.data-v-794f3fee {
+.deep .saoma.data-v-63431d10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,14 +94,14 @@ page .content .map.data-v-794f3fee {
   border-radius: 50%;
   margin-top: 50rpx;
 }
-.deep .saoma .saoma-icon.data-v-794f3fee {
+.deep .saoma .saoma-icon.data-v-63431d10 {
   width: 100rpx;
   height: 100rpx;
 }
-.deep .saoma .saoma-text.data-v-794f3fee {
+.deep .saoma .saoma-text.data-v-63431d10 {
   color: #000;
 }
-.deep .deep-button.data-v-794f3fee {
+.deep .deep-button.data-v-63431d10 {
   width: 700rpx;
   background-color: #000;
   color: #fff;

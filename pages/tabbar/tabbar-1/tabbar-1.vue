@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<map id="map" class="map" show-location :latitude="latitude" :longitude="longitude" >
+		<map id="map" class="map" show-location>
 			<!-- <cover-view class="top">asdasd</cover-view> -->
 			<cover-view @click="changePosition" class="position">
 				<cover-image src="../../../static/img/icon/position.png" class="position-icon"></cover-image>
@@ -10,7 +10,7 @@
 					<cover-image src="../../../static/img/icon/saoma.png" class="saoma-icon"></cover-image>
 					<cover-view class="saoma-text">扫码挪车</cover-view>
 				</cover-view>
-				<button @click="NavicateToSendCard" class="deep-button">申请邮寄挪车码</button>
+				<button @click="navicateToSendCard" class="deep-button">申请邮寄挪车码</button>
 			</cover-view>
         </map>
 	</view>
@@ -25,30 +25,9 @@
 				mapContext: {}
 			};
 		},
-		onLoad() {
+		onReady(){
 			this.mapContext = uni.createMapContext('map',this)
-			uni.getLocation({
-				type: 'gcj02 ',
-				success: (res) => {
-					this.longitude = res.longitude
-					this.latitude = res.latitude
-				}
-			});
-		},
-		computed: {
-			markers(){
-				return [
-					{
-						id: 1,
-						latitude: this.latitude,
-						longitude: this.longitude,
-						iconPath: '../../../static/img/icon/zuobiao.png',
-						width: 40,
-						height: 40,
-						title:'我的位置'
-					}
-				]
-			}
+			this.changePosition()
 		},
 		methods: {
 			changePosition(){
@@ -57,12 +36,17 @@
 			openScan(){
 				uni.scanCode({
 					onlyFromCamera: true,
-					success: function (res) {
-						console.log(res)
+					success: (res) => {
+						this.navicateToPath(res.path)
 					}
 				});
 			},
-			NavicateToSendCard(){
+			navicateToPath(url){
+				uni.navigateTo({
+					url: '/'+ url
+				});
+			},
+			navicateToSendCard(){
 				uni.navigateTo({
 					url: '../sendCard/sendCard'
 				});
