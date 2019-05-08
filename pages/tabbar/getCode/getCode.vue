@@ -13,15 +13,15 @@
 			</view>
 			<view class="code-operation">
 				<view class="operation-item">
-					<image class="item-img" :src="qrcode"></image>
+					<image class="item-img" :src="wechat"></image>
 					<text class="item-text">发送到微信</text>
 				</view>
 				<view class="operation-item">
-					<image class="item-img" :src="qrcode"></image>
+					<image class="item-img" :src="circle"></image>
 					<text class="item-text">分享到朋友圈</text>
 				</view>
 				<view class="operation-item">
-					<image class="item-img" :src="qrcode"></image>
+					<image class="item-img" :src="save"></image>
 					<text class="item-text">保存到手机</text>
 				</view>
 			</view>
@@ -43,10 +43,16 @@
 	import {request} from 'common/js/common'
 	import {getWechatCode} from 'common/js/requestUrl'
 	import qrcode from 'static/img/icon/qrcode.png'
+	import save from 'static/img/icon/save.png'
+	import circle from 'static/img/icon/circle.png'
+	import wechat from 'static/img/icon/wechat.png'
 	export default {
 		data() {
 			return {
 				qrcode,
+				save,
+				circle,
+				wechat,
 				imgUrl: ''
 			};
 		},

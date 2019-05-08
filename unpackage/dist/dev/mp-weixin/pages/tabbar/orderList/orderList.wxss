@@ -1,7 +1,7 @@
-.carcard-container.data-v-095e8edc {
+.carcard-container.data-v-807ecf64 {
   width: 750rpx;
 }
-.carcard-container .car-container.data-v-095e8edc {
+.carcard-container .car-container.data-v-807ecf64 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -17,7 +17,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.carcard-container .car-container .car-item.data-v-095e8edc {
+.carcard-container .car-container .car-item.data-v-807ecf64 {
   position: relative;
   border-bottom: 1px solid #d1d1d1;
   width: 700rpx;
@@ -25,7 +25,7 @@
   font-size: 30rpx;
   line-height: 50rpx;
 }
-.carcard-container .car-container .car-item .items.data-v-095e8edc {
+.carcard-container .car-container .car-item .items.data-v-807ecf64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,19 +35,19 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.carcard-container .car-container .car-item .items .item-button.data-v-095e8edc {
+.carcard-container .car-container .car-item .items .item-button.data-v-807ecf64 {
   height: 50rpx;
   line-height: 50rpx;
   font-size: 20rpx;
 }
-.carcard-container .car-container .car-item .item-price.data-v-095e8edc {
+.carcard-container .car-container .car-item .item-price.data-v-807ecf64 {
   color: #f00 !important;
 }
-.carcard-container .addCard.data-v-095e8edc {
+.carcard-container .addCard.data-v-807ecf64 {
   margin-top: 100rpx;
   width: 600rpx;
 }
-.carcard-container .withoutList.data-v-095e8edc {
+.carcard-container .withoutList.data-v-807ecf64 {
   margin-top: 100rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,7 +63,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.carcard-container .withoutList .card-image.data-v-095e8edc {
+.carcard-container .withoutList .card-image.data-v-807ecf64 {
   width: 300rpx;
   height: 300rpx;
 }

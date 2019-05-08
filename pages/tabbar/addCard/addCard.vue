@@ -13,7 +13,7 @@
 					<view class="input-char">{{card[0]}}</view>
 				</view>
 				<view class="dot">·</view>
-				<block v-for="key in [1,2,3,4,5]">
+				<block wx:key="key" v-for="key in [1,2,3,4,5]">
 					<view class="input-one">{{card[key]}}</view>
 				</block>
 				<view class="input-one-list">
@@ -23,9 +23,9 @@
 			</view>
 			<view class="get-code">
 				<input placeholder="请输入手机号"  @input="inputPhone" placeholder-style="text-align: center" type="number">
-				<view class="get-button">获取验证码</view>
+				<view class="get-button" @click="getCode">获取验证码{{yanzhengStart ? '(' + yanzhengTime + ')' : ''}}</view>
 			</view>
-			<input class="yanzheng" placeholder-style="text-align: center" placeholder="请输入验证码" type="number">
+			<input class="yanzheng" @input="inputYanzhengCode" placeholder-style="text-align: center" placeholder="请输入验证码" type="number">
 			<botton class="confirm" @click="confirm">确定</botton>
 		</view>
 		<!-- <view class="add-car-title">车辆信息</view>
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-	import {addCarCard} from 'common/js/requestUrl'
+	import {addCarCard, getYanZhengCode} from 'common/js/requestUrl'
 	import {request,showToast} from 'common/js/common'
 	import avatar from 'static/img/icon/qrcode.png'
 	export default {
@@ -67,7 +67,12 @@
 				card: '',
 				phone: '',
 				avatar,
+				yanzhengStart: false,
+				yanzhengTime: 0,
+				yanzhengCode: null,
+				code: 0,
 				cardFocus: false,
+				Timer : null,
 				placeList:[
 					"京", 
 					"津", 
@@ -122,6 +127,9 @@
 			inputPhone(e){
 				this.phone = e.detail.value
 			},
+			inputYanzhengCode(e){
+				this.yanzhengCode = e.detail.value
+			},
 			changCardToUpper(){
 				this.card = this.card.toUpperCase()
 			},
@@ -131,15 +139,51 @@
 			cardUnFocus(){
 				this.cardFocus = false
 			},
+			getCode(){
+				if(!this.yanzhengStart){
+					if(!this.phone){
+						showToast('您还未输入手机号')
+						return
+					}
+					request(getYanZhengCode,{
+						phone: this.phone
+					},(res) => {
+						if(res.code == 200){
+							this.yanzhengStart = true
+							this.yanzhengTime = 30
+							this.Timer = setInterval(this.timeGone , 1000)
+							this.code = res.result
+						}
+					})
+				}
+			},
+			timeGone(){
+				this.yanzhengTime -= 1
+				if(this.yanzhengTime == 0){
+					this.yanzhengStart = false
+					clearInterval(this.Timer)
+				}
+			},
 			confirm(){
 				if(!this.placeChoosed){
 					showToast('您还未选择车牌前缀')
+					return
 				}
 				if(!this.phone){
 					showToast('您还未输入手机号')
+					return
 				}
 				if(!this.card){
 					showToast('您还未输入车牌号')
+					return
+				}
+				if(!this.yanzhengCode){
+					showToast('您还未输入验证码')
+					return
+				}
+				if(this.code != this.yanzhengCode){
+					showToast('验证码有误，您可以稍后重新获取验证码')
+					return
 				}
 				request(addCarCard,{
 					card: this.card,
@@ -263,7 +307,7 @@
 			border: 1px solid #d1d1d1
 			text-align: center
 			.get-button
-				font-size: 30rpx
+				font-size: 25rpx
 				width: 200rpx
 				text-align: center
 				border-left: 1px solid #d1d1d1

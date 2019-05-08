@@ -1,8 +1,8 @@
-.container.data-v-06e36e38 {
+.container.data-v-bfffe618 {
   background-color: #f1f1f1;
   height: 100%;
 }
-.container .deepIn.data-v-06e36e38 {
+.container .deepIn.data-v-bfffe618 {
   position: fixed;
   width: 750rpx;
   bottom: 0;
@@ -21,30 +21,30 @@
   height: 100rpx;
   line-height: 100rpx;
 }
-.container .deepIn .submit.data-v-06e36e38 {
+.container .deepIn .submit.data-v-bfffe618 {
   height: 100%;
   width: 300rpx;
   background-color: #ffda44;
   text-align: center;
 }
-.container .deepIn .price.data-v-06e36e38 {
+.container .deepIn .price.data-v-bfffe618 {
   padding-left: 10rpx;
   background-color: #fff;
   height: 100%;
   width: 100%;
 }
-.container .deepIn .price .huaxian.data-v-06e36e38 {
+.container .deepIn .price .huaxian.data-v-bfffe618 {
   text-decoration: line-through;
 }
-.container .deepIn .price .base.data-v-06e36e38 {
+.container .deepIn .price .base.data-v-bfffe618 {
   color: #f00;
 }
-.container .container-img.data-v-06e36e38 {
+.container .container-img.data-v-bfffe618 {
   width: 100%;
   height: 200rpx;
   background-color: #f00;
 }
-.container .addressMsg.data-v-06e36e38 {
+.container .addressMsg.data-v-bfffe618 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,12 +58,12 @@
   color: #d1d1d1;
   background-color: #fff;
 }
-.container .addressMsg .choose-address.data-v-06e36e38 {
+.container .addressMsg .choose-address.data-v-bfffe618 {
   color: #000;
   background-color: #f1f1f1;
   width: 600rpx;
 }
-.container .addressMsg .address-item.data-v-06e36e38 {
+.container .addressMsg .address-item.data-v-bfffe618 {
   padding: 5rpx 0;
 }
 

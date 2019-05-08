@@ -10,7 +10,7 @@
 			<view class="card-notice">其他车牌</view>
 		</view>
 		<view class="card-list">
-			<block v-for="(item, key) in carcardList">
+			<block wx:key="item" v-for="(item, key) in carcardList">
 				<view class="card-item" @click="changeCarChoosed(item.id, item.choosed)">
 					<view class="card-item-card">{{item.prefix}}{{item.address_code}}·{{item.card}}</view>
 					<view class="card-unchoosed">点击使用</view>

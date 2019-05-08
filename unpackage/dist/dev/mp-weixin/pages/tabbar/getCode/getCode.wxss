@@ -1,4 +1,4 @@
-.background.data-v-6c9a5900 {
+.background.data-v-4c8776bc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,35 +18,35 @@
   background-color: #fff;
   overflow: hidden;
 }
-.background.data-v-6c9a5900:before,
-.background.data-v-6c9a5900:after {
+.background.data-v-4c8776bc:before,
+.background.data-v-4c8776bc:after {
   content: "";
   position: absolute;
   left: 50%;
   min-width: 400vw;
   min-height: 400vw;
   background-color: #ffda44;
-  -webkit-animation-name: rotate-data-v-6c9a5900;
-          animation-name: rotate-data-v-6c9a5900;
+  -webkit-animation-name: rotate-data-v-4c8776bc;
+          animation-name: rotate-data-v-4c8776bc;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-.background.data-v-6c9a5900:before {
+.background.data-v-4c8776bc:before {
   bottom: 2vh;
   border-radius: 20%;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.background.data-v-6c9a5900:after {
+.background.data-v-4c8776bc:after {
   bottom: 0vh;
   opacity: 0.5;
   border-radius: 20%;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.background .code-container.data-v-6c9a5900 {
+.background .code-container.data-v-4c8776bc {
   position: absolute;
   height: 800rpx;
   margin-top: 50rpx;
@@ -68,23 +68,23 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.background .code-container .code-my.data-v-6c9a5900 {
+.background .code-container .code-my.data-v-4c8776bc {
   margin-top: 50rpx;
   color: #b2887b;
 }
-.background .code-container .code-img.data-v-6c9a5900 {
+.background .code-container .code-img.data-v-4c8776bc {
   width: 450rpx;
   height: 450rpx;
   margin-top: 30rpx;
 }
-.background .code-container .line.data-v-6c9a5900 {
+.background .code-container .line.data-v-4c8776bc {
   height: 1rpx;
   width: 100%;
   border-top: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
   position: relative;
 }
-.background .code-container .line .left-circle.data-v-6c9a5900 {
+.background .code-container .line .left-circle.data-v-4c8776bc {
   width: 40rpx;
   height: 40rpx;
   border-radius: 50%;
@@ -93,7 +93,7 @@
   top: -20rpx;
   left: -20rpx;
 }
-.background .code-container .line .right-circle.data-v-6c9a5900 {
+.background .code-container .line .right-circle.data-v-4c8776bc {
   width: 40rpx;
   height: 40rpx;
   border-radius: 50%;
@@ -102,7 +102,7 @@
   top: -20rpx;
   right: -20rpx;
 }
-.background .code-container .button.data-v-6c9a5900 {
+.background .code-container .button.data-v-4c8776bc {
   text-align: center;
   margin-top: 20rpx;
   width: 450rpx;
@@ -115,12 +115,12 @@
   border-radius: 40rpx;
   margin-top: 40rpx;
 }
-.background .code-container .text-desc.data-v-6c9a5900 {
+.background .code-container .text-desc.data-v-4c8776bc {
   font-weight: 200;
   margin-top: 20rpx;
   font-size: 20rpx;
 }
-.background .code-operation.data-v-6c9a5900 {
+.background .code-operation.data-v-4c8776bc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -133,7 +133,7 @@
   height: 300rpx;
   width: 750rpx;
 }
-.background .code-operation .operation-item.data-v-6c9a5900 {
+.background .code-operation .operation-item.data-v-4c8776bc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,14 +148,14 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.background .code-operation .operation-item .item-img.data-v-6c9a5900 {
+.background .code-operation .operation-item .item-img.data-v-4c8776bc {
   width: 100rpx;
   height: 100rpx;
 }
-.background .code-operation .operation-item .item-text.data-v-6c9a5900 {
+.background .code-operation .operation-item .item-text.data-v-4c8776bc {
   font-size: 25rpx;
 }
-@-webkit-keyframes rotate-data-v-6c9a5900 {
+@-webkit-keyframes rotate-data-v-4c8776bc {
 0% {
     -webkit-transform: translate(-50%, 0) rotateZ(0deg);
             transform: translate(-50%, 0) rotateZ(0deg);
@@ -169,7 +169,7 @@
             transform: translate(-50%, 0%) rotateZ(360deg);
 }
 }
-@keyframes rotate-data-v-6c9a5900 {
+@keyframes rotate-data-v-4c8776bc {
 0% {
     -webkit-transform: translate(-50%, 0) rotateZ(0deg);
             transform: translate(-50%, 0) rotateZ(0deg);

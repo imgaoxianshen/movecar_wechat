@@ -4,11 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
-		"newFeature": true
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "",
+	"libVersion": "2.6.4",
 	"appid": "wx911f830a88389a71",
 	"projectname": "扫码挪车",
 	"condition": {
@@ -29,12 +33,27 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
-					"name": "asd",
+					"name": "333",
+					"pathName": "pages/tabbar/tabbar-5/tabbar-5",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addCard",
+					"pathName": "pages/tabbar/addCard/addCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "addCard",
 					"pathName": "pages/tabbar/callPhone/callPhone",
+					"query": "scene=1/2",
 					"scene": null
 				}
 			]

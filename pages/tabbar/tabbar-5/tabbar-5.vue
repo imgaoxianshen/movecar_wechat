@@ -106,7 +106,6 @@
 		},
 		methods: {
 			...mapMutations(['getUserMessage','loginOrLoginOut']),
-
 			getUserInfo(){
 				request(getUserInfo, {},(res)=> {
 					if(res.code == 200){

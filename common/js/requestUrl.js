@@ -1,4 +1,4 @@
-let baseUrl = 'https://www.imgaoxianshen.cn/api/'
+let baseUrl = 'api/'
 
 module.exports = {
 	// main
@@ -6,6 +6,7 @@ module.exports = {
 	isLoginUrl: baseUrl + 'user/isLogin',
 	getCalllMsg: baseUrl + 'user/getCalllMsg',
 	bindPhone: baseUrl + 'user/bindPhone',
+	getYanZhengCode: baseUrl + 'user/getYanZhengCode',
 	
 	// carcard
 	getCarCardList: baseUrl + 'card/getCarCardList',

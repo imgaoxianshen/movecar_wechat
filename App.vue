@@ -1,25 +1,11 @@
 <script>
 import {loginUrl} from './common/js/requestUrl'
 import {request} from './common/js/common'
+import {Storages} from './common/js/storages'
 
 
 export default {
 	onLaunch: function(e) {
-		// 判断token是否存在，不存在再登陆
-		let token = uni.getStorageSync('token');
-		if(!token){
-			uni.login({
-			  provider: 'weixin',
-			  success: (loginRes) => {
-				let code = loginRes.code
-				request(loginUrl,{
-					code: code
-				},(res) => {
-					uni.setStorageSync('token',res.result);
-				});
-			  }
-			})
-		}
 		if(e.path != 'pages/tabbar/callPhone/callPhone'){
 			// 获取授权信息
 			uni.getSetting({

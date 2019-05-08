@@ -1,46 +1,68 @@
 <template>
 	<view class="container">
-		<view class="top">
-			<text class="top-font">临时停车</text>
-			<text class="top-font">请多关照</text>
-		</view>
-		<view class="card">
-			<view class="card-base">
-				<view class="base-name">浙</view>
-				<view class="base-code">C</view>
+		<block v-if="type == 2 && needBindUser">
+			<view class="background">
+				<view class="title">绑定信息</view>
 			</view>
-			<view class="dot">·</view>
-			<block v-for="card in cards">
-				<view class="base-card">{{card}}</view>
-			</block>
-		</view>
-		<view class="desc">我的爱车如果阻碍了您的车辆通过，您可以点击下方按钮通知我，给您带来的不便请谅解</view>
-		<view class="message-container">
-			<view class="message-top" @click="showMessage()">
-				<image class="message-icon" :src="car"></image>
-				<text>短信通知</text>
-			</view>
-			<view class="message-content" :animation="messageAnimationData">
-				<text class="desc">请选择以下内容发送短信</text>
-				<view class="message-bottom">请帮忙挪下车</view>
-				<view class="message-two">
-					<view class="message-two-botton">玻璃或车门没关好</view>
-					<view class="message-two-botton">轮胎漏气</view>
+			<view class="center">
+				<text class="tips">请输入车牌号</text>
+				<view class="input-msg">
+					<view class="input">浙</view>
+					<input class="card-msg" placeholder="请输入车牌号"  placeholder-style="line-height: 30rpx">
 				</view>
-				<view class="message-two">
-					<view class="message-two-botton">大灯或室内灯还亮着</view>
-					<view class="message-two-botton">被警察蜀黍贴罚单了</view>
+				<view class="get-code">
+					<input placeholder="请输入手机号"  @input="inputPhone" placeholder-style="text-align: center" type="number">
+					<view class="get-button" @click="getCode">获取验证码{{yanzhengStart ? '(' + yanzhengTime + ')' : ''}}</view>
 				</view>
-				<view class="message-bottom">其他状况（请自己填写）</view>
+				<input class="yanzheng" @input="inputYanzhengCode" placeholder-style="text-align: center" placeholder="请输入验证码" type="number">
+				<botton class="confirm" @click="confirm">确定</botton>
 			</view>
-		</view>
-		<view class="phone-container" :animation="buttonAnimationData">
-			<image class="phone-icon" :src="car"></image>
-			<text class="phone-text">电话通知</text>
-		</view>
-		<view class="code-container" :animation="buttonAnimationData">
-			我要我的挪车码
-		</view>
+		</block>
+		<block v-else>
+			<view class="padding">
+				<view class="top">
+					<text class="top-font">临时停车</text>
+					<text class="top-font">请多关照</text>
+				</view>
+				<view class="card">
+					<view class="card-base">
+						<view class="base-name">浙</view>
+						<view class="base-code">C</view>
+					</view>
+					<view class="dot">·</view>
+					<block :key="key" v-for="(card,key) in cards">
+						<view class="base-card">{{card}}</view>
+					</block>
+				</view>
+				<view class="desc">我的爱车如果阻碍了您的车辆通过，您可以点击下方按钮通知我，给您带来的不便请谅解</view>
+				<view class="message-container">
+					<view class="message-top" @click="showMessage()">
+						<image class="message-icon" :src="car"></image>
+						<text>短信通知</text>
+					</view>
+					<view class="message-content" :animation="messageAnimationData">
+						<text class="desc">请选择以下内容发送短信</text>
+						<view class="message-bottom">请帮忙挪下车</view>
+						<view class="message-two">
+							<view class="message-two-botton">玻璃或车门没关好</view>
+							<view class="message-two-botton">轮胎漏气</view>
+						</view>
+						<view class="message-two">
+							<view class="message-two-botton">大灯或室内灯还亮着</view>
+							<view class="message-two-botton">被警察蜀黍贴罚单了</view>
+						</view>
+						<!-- <view class="message-bottom">其他状况（请自己填写）</view> -->
+					</view>
+				</view>
+				<view class="phone-container" :animation="buttonAnimationData">
+					<image class="phone-icon" :src="car"></image>
+					<text class="phone-text">电话通知</text>
+				</view>
+				<view class="code-container" :animation="buttonAnimationData">
+					我要我的挪车码
+				</view>
+			</view>
+		</block>
 	<!-- 	<block v-if="type == 2 && needBindUser">
 			<image class="car-icon" :src="bind"></image>
 			<view class="bind-container">
@@ -124,7 +146,7 @@
 			this.buttonAnimationData = buttonAnimation.export()
 		},
 		methods: {
-			getCalllMsg(res){
+			getCalllMsg(){
 				request(getCalllMsg,{
 					id : this.id,
 					type: this.type
@@ -181,131 +203,216 @@
 		height: 100vh
 		opacity: 0.8
 		display: flex
-		padding: 0 100rpx
+		// padding: 0 100rpx
 		flex-direction: column
-		.top
-			width: 100%
-			display: flex
-			justify-content: space-around
-			margin-top: 50rpx
-			.top-font
-				font-size: 50rpx
-				font-weight: 300
-		.card
-			margin-top: 60rpx
-			display: flex
-			align-items: center
-			justify-content: center
-			.card-base
-				display: flex
-				background-color: $little-color
-				padding: 5rpx 10rpx
-				border: 1px solid $border-color 
-				border-radius: 10rpx
-				font-size: 50rpx
-				.base-name, .base-code
-					text-align: center
-					width: 60rpx
-				.base-name
-					border-right: 1px solid #d1d1d1
-			.dot
-				width: 40rpx
-				text-align: center
-				font-size: 50rpx
-				font-weight: 500
-			.base-card
-				width: 60rpx
-				padding: 5rpx
-				background-color: $little-color
-				text-align: center
-				border: 1px solid $border-color
-				border-radius: 10rpx
-				margin: 5rpx
-				font-size: 50rpx
-		.desc
-			font-size: 20rpx
-			margin-top: 50rpx
-			font-weight: 300
-		.message-container
-			position: relative
-			margin-top: 50rpx
+		.center
+			position: absolute
+			top: 300rpx
+			padding: 0 100rpx
+			width: 550rpx
 			display: flex
 			flex-direction: column
+			.tips
+				font-size: 30rpx
+			.input-msg
+				display: flex
+				margin-top: 20rpx
+				.input
+					padding: 20rpx
+					height: 30rpx
+					line-height: 30rpx
+					border-radius: 10rpx
+					color: white
+					background-color:black
+				.card-msg
+					display: flex
+					align-items: center
+					margin-left: 20rpx
+					width: 100%
+					padding: 20rpx
+					font-size: 30rpx
+					height: 30rpx
+					min-height: 30rpx
+					line-height: 30rpx
+					border: 1px solid black
+					border-radius: 10rpx
+		.background
+			position: relative
 			align-items: center
-			.message-top
+			height: 100vh
+			overflow: hidden
+			background-color: linear-gradient($deep-color, $base-color)
+			&:before, &:after 
+				content: ""
+				position: absolute
+				left: 50%
+				min-width: 1500rpx
+				min-height: 1500rpx
+				background: white
+				animation-iteration-count: infinite
+				animation-timing-function: linear
+			&:before 
+				top: 220rpx
+				animation-name: rotate2
+				border-radius: 44%
+				opacity: .5
+				animation-duration: 10s 
+			&:after 
+				top: 180rpx
+				border-radius: 44%
+				opacity: .8
+				animation-name: rotate1
+				animation-duration: 10s
+			.title
+				width: 750rpx
+				margin-top: 50rpx
+				letter-spacing: 10rpx
+				font-size: 40rpx
+				font-weight: 300
+				text-align:center
+		@keyframes rotate1 
+			0%
+				transform: translate(-50%, 1%) rotateZ(0deg)
+			50%
+				transform: translate(-50%, -2%) rotateZ(180deg)
+			100%
+				transform: translate(-50%, 1%) rotateZ(360deg)
+		@keyframes rotate2
+			0%
+				transform: translate(-50%, 1%) rotateZ(0deg)
+			25%
+				transform: translate(-50%, 2%) rotateZ(0deg)
+			50%
+				transform: translate(-50%, -2%) rotateZ(180deg)
+			75%
+				transform: translate(-50%, 2%) rotateZ(360deg)
+			100%
+				transform: translate(-50%, 1%) rotateZ(360deg)
+		.padding
+			padding: 0 100rpx
+			.top
+				width: 100%
+				display: flex
+				justify-content: space-around
+				margin-top: 50rpx
+				.top-font
+					font-size: 50rpx
+					font-weight: 300
+			.card
+				margin-top: 60rpx
 				display: flex
 				align-items: center
 				justify-content: center
-				border: 1px solid $border-color
-				border-radius: 80rpx
-				padding: 10rpx 40rpx
-				background-color: white
-				z-index: 999
-				.message-icon
-					width: 35rpx
-					height: 35rpx
-					margin-right: 20rpx
-			.message-content
-				height: 0
-				opacity: 0
-				position: absolute
-				background-color: white
-				top: 35rpx
+				.card-base
+					display: flex
+					background-color: $little-color
+					padding: 5rpx 10rpx
+					border: 1px solid $border-color 
+					border-radius: 10rpx
+					font-size: 50rpx
+					.base-name, .base-code
+						text-align: center
+						width: 60rpx
+					.base-name
+						border-right: 1px solid #d1d1d1
+				.dot
+					width: 40rpx
+					text-align: center
+					font-size: 50rpx
+					font-weight: 500
+				.base-card
+					width: 60rpx
+					padding: 5rpx
+					background-color: $little-color
+					text-align: center
+					border: 1px solid $border-color
+					border-radius: 10rpx
+					margin: 5rpx
+					font-size: 50rpx
+			.desc
+				font-size: 20rpx
+				margin-top: 50rpx
+				font-weight: 300
+			.message-container
+				position: relative
+				margin-top: 50rpx
 				display: flex
 				flex-direction: column
 				align-items: center
-				width: 600rpx
-				padding: 20rpx 0
-				border-radius: 10rpx
-				border: 1px solid $border-color
-				.message-bottom
-					margin-top: 15rpx
-					width: 550rpx
-					padding: 5rpx 0
-					text-align: center
-					border-radius: 10rpx
-					color: $botton-red
-					font-size: 30rpx
-					border: 1px solid $botton-red
-				.message-two
+				.message-top
 					display: flex
 					align-items: center
-					justify-content: space-around
+					justify-content: center
+					border: 1px solid $border-color
+					border-radius: 80rpx
+					padding: 10rpx 40rpx
+					background-color: white
+					z-index: 999
+					.message-icon
+						width: 35rpx
+						height: 35rpx
+						margin-right: 20rpx
+				.message-content
+					height: 0
+					opacity: 0
+					position: absolute
+					background-color: white
+					top: 35rpx
+					display: flex
+					flex-direction: column
+					align-items: center
 					width: 600rpx
-					height: 100rpx
-					.message-two-botton
-						font-size: 25rpx
-						width: 250rpx
-						text-align: center
+					padding: 20rpx 0
+					border-radius: 10rpx
+					border: 1px solid $border-color
+					.message-bottom
+						margin-top: 15rpx
+						width: 550rpx
 						padding: 5rpx 0
+						text-align: center
 						border-radius: 10rpx
-						border: 1px solid #d1d1d1
-		.phone-container
-			position: relative
-			height: 80rpx
-			line-height: 80rpx
-			background-color: $botton-red
-			margin-top: 40rpx
-			display: flex
-			align-items: center
-			justify-content: center
-			border-radius: 40rpx
-			.phone-icon
-				width: 35rpx
-				height: 35rpx
-				margin-right: 20rpx
-			.phone-text
-				color: white
+						color: $botton-red
+						font-size: 30rpx
+						border: 1px solid $botton-red
+					.message-two
+						display: flex
+						align-items: center
+						justify-content: space-around
+						width: 600rpx
+						height: 100rpx
+						.message-two-botton
+							font-size: 25rpx
+							width: 250rpx
+							text-align: center
+							padding: 5rpx 0
+							border-radius: 10rpx
+							border: 1px solid #d1d1d1
+			.phone-container
+				position: relative
+				height: 80rpx
+				line-height: 80rpx
+				background-color: $botton-red
+				margin-top: 40rpx
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 40rpx
+				.phone-icon
+					width: 35rpx
+					height: 35rpx
+					margin-right: 20rpx
+				.phone-text
+					color: white
+					font-weight: 300
+			.code-container
+				position: relative
+				background-color: $botton-black
+				height: 80rpx
 				font-weight: 300
-		.code-container
-			position: relative
-			background-color: $botton-black
-			height: 80rpx
-			font-weight: 300
-			line-height: 80rpx
-			border-radius: 40rpx
-			margin-top: 30rpx
-			font-size: 35rpx
-			text-align: center
-			color:white
+				line-height: 80rpx
+				border-radius: 40rpx
+				margin-top: 30rpx
+				font-size: 35rpx
+				text-align: center
+				color:white
 </style>
