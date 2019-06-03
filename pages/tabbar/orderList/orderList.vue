@@ -1,38 +1,30 @@
 <template>
 	<view class="carcard-container">
+		<view class="top">
+			<view @click="changeChoosed(10)" :class="[{topBase: true,activeColor: choosedItem == 10}]">全部</view>
+			<view @click="changeChoosed(0)" :class="[{topBase: true,activeColor: choosedItem == 0}]">待付款</view>
+			<view @click="changeChoosed(1)" :class="[{topBase: true,activeColor: choosedItem == 1}]">待发货</view>
+			<view @click="changeChoosed(2)" :class="[{topBase: true,activeColor: choosedItem == 2}]">已发货</view>
+		</view>
 		<block v-if="orderList.length > 0">
-			<view class="car-container">
-				<block v-for="(item,index) in orderList">					
-					<view class="car-item">
-						<view class="items">
-							<view>订单编号： {{item.order_no}}</view>
-							<view class="item-price">
-								<block v-if="item.status == 0">
-									待付款
-								</block>
-								<block v-if="item.status == 1">
-									已付款
-								</block>
-								<block v-if="item.status == 2">
-									已发货
-								</block>
-							</view>
+			<view class="list-container">
+				<block :key="index" v-for="(item,index) in orderList">
+					<view class="order-item">
+						<view class="order-status">
+							<text class="order-status-name">
+								<block v-if="item.status == 0">待付款</block>
+								<block v-else-if="item.status == 1">待发货</block>
+								<block v-else-if="item.status == 2">已发货</block>
+							</text>
 						</view>
-						<view>
-							支付金额：<text class="item-price">￥{{item.price}}</text>
-						</view>
-						<view>
-							下单时间： {{item.create_time}}
-						</view>
-						<view>
-							地址： {{item.province + item.city + item.country + item.address +' '+ item.name +'收'}}
-						</view>
-						<view class="items">
-							<view>运单编号： {{item.logisticNo == null ? '暂无' : item.logisticNo}}</view>
-							<view class="item-price">
-								<block v-if="item.status == 0">
-									<button @click="payOrders(item.id)" class="item-button">付款</button>
-								</block>
+						<image class="order-chetie" :src="chetie"></image>
+						<view class="order-msg">
+							<view>精美车贴  X{{item.num}}</view>
+							<view class="order_no">订单编号: {{item.order_no}}</view>
+							<view>物流单号：{{item.logisticNo == null ? '暂无物流信息' : item.logisticNo}}</view>
+							<view class="order-price">
+								<view>共{{item.num}}件商品  合计</view>
+								<view class="order-money">￥{{item.price}}</view>
 							</view>
 						</view>
 					</view>
@@ -50,23 +42,59 @@
 
 <script>
 	import {getOrderList,payOrder} from 'common/js/requestUrl'
-	import {request} from 'common/js/common'
+	import {request,showToast} from 'common/js/common'
 	import order from 'static/img/icon/order.png'
+	import chetie from 'static/img/icon/chetie.png'
 	export default {
 		data() {
 			return {
 				order,
-				orderList: []
+				chetie,
+				orderList: [],
+				choosedItem: 10,
+				page: 1,
+				pageSize: 5,
+				total: 0
 			};
 		},
 		onShow(){
 			this.getOrderList()
 		},
+		onReachBottom: function() {
+			if( (this.page * this.pageSize) < this.total ){
+				this.page += 1
+				this.getOrderList();
+			}
+		},
 		methods:{
+			changeChoosed(index){
+				this.choosedItem = index
+				this.page = 1
+				this.pageSize = 5
+				this.total = 0
+				// this.orderList = []
+				this.getOrderList()
+			},
 			getOrderList(){
-				request(getOrderList,{},(res) => {
-						console.log(res)
-						this.orderList = res.result.data
+				request(getOrderList,{
+					page: this.page,
+					pageSize: this.pageSize,
+					type: this.choosedItem
+				},(res) => {
+						if(res.result.data.length > 0){
+							if(this.page == 1){
+								this.orderList = res.result.data
+							}else{
+								this.orderList = this.orderList.concat(res.result.data)
+							}
+							this.total = res.result.total
+						}else{
+							if(this.page == 1){
+								this.orderList = []
+								this.total = 0
+							}
+							showToast('没有更多数据了')
+						}
 					}
 				)
 			},
@@ -99,33 +127,71 @@
 </script>
 
 <style lang="stylus" scoped>
+@import "~common/stylus/variable"
 .carcard-container
-	width: 750upx
-	.car-container
-		background-color: white
+	display: flex
+	flex-direction: column
+	align-items: center
+	.top
+		display: flex
+		width: 500rpx
+		justify-content: space-around
+		margin-top: 50rpx
+		font-weight: 200
+		font-size: 30rpx
+		.topBase
+			padding: 10rpx 20rpx
+			text-align: center
+			border-radius: 15rpx
+		.activeColor
+			background-color: $base-color
+	.list-container
 		display: flex
 		flex-direction: column
-		align-items: center
-		.car-item
-			position: relative
-			border-bottom: 1px solid #d1d1d1
-			width: 700upx
-			padding:20upx
-			font-size: 30upx
-			line-height: 50upx
-			.items
+		width: 700rpx
+		margin-top: 30rpx
+		.order-item
+			position:relative
+			background-color: white
+			margin: 10rpx 0
+			border-radius: 20rpx
+			padding: 20rpx
+			display: flex
+			align-items: center
+			justify-content: space-around
+			overflow: hidden
+			.order-status
+				position: absolute
+				top:-20rpx
+				right:-100rpx
+				background-color: $base-color
+				width: 300rpx
+				height: 100rpx
+				transform:rotate(45deg)
+				font-size: 20rpx
 				display: flex
-				justify-content: space-between
-				.item-button
-					height: 50upx
-					line-height: 50upx
-					font-size: 20upx
-			.item-price
-				color: red !important
-	.addCard
-		// color: white
-		margin-top: 100upx
-		width: 600upx
+				align-items: center
+				justify-content: center
+				.order-status-name
+					font-size: 20rpx
+					transform:rotate(-45deg)
+			.order-chetie
+				width: 130rpx
+				height: 200rpx
+			.order-msg
+				width: 350rpx
+				font-size: 25rpx
+				font-weight: 200
+				.order_no
+					margin-top: 20rpx
+				.order-price
+					margin-top: 20rpx
+					display: flex
+					font-size: 25rpx
+					font-weight: 200
+					align-items: center
+					.order-money
+						font-size: 35rpx
 	.withoutList
 		margin-top: 100upx
 		display: flex

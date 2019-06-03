@@ -407,7 +407,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8733,17 +8733,17 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\common.js":
-/*!*************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/common/js/common.js ***!
-  \*************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\common\\js\\common.js":
+/*!******************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/common/js/common.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));var _requestUrl = __webpack_require__(/*! ./requestUrl */ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\requestUrl.js");
-var _storages = __webpack_require__(/*! ./storages */ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\storages.js");
-var _unifly = _interopRequireDefault(__webpack_require__(/*! unifly */ "C:\\Users\\69022_000\\movecar_wechat\\node_modules\\unifly\\uniFly.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+/* WEBPACK VAR INJECTION */(function(uni) {var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));var _requestUrl = __webpack_require__(/*! ./requestUrl */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\requestUrl.js");
+var _storages = __webpack_require__(/*! ./storages */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\storages.js");
+var _unifly = _interopRequireDefault(__webpack_require__(/*! unifly */ "C:\\Users\\热水\\movecar_wechat\\node_modules\\unifly\\uniFly.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
 
 var storage = new _storages.Storages();
 
@@ -8769,7 +8769,7 @@ _unifly.default.responseInterceptors.success = function (request) {
   uni.hideLoading();
   if (request.data.code != 200 && request.data.code != 450) {
     showToast(request.data.msg);
-    return;
+    return Promise.resolve(request.data);
   }
   return Promise.resolve(request.data);
 };
@@ -8828,11 +8828,19 @@ module.exports = {
 
               if (method == 'post') {
                 requestPost(url, data).then(function (requestRes) {
-                  cb(requestRes);
+                  if (requestRes.code == 101) {
+                    getLoginAndRequest(url, data, cb, method);
+                  } else {
+                    cb(requestRes);
+                  }
                 });
               } else {
                 requestGet(url, data).then(function (requestRes) {
-                  cb(requestRes);
+                  if (requestRes.code == 101) {
+                    getLoginAndRequest(url, data, cb, method);
+                  } else {
+                    cb(requestRes);
+                  }
                 });
               }case 8:case "end":return _context.stop();}}}, _callee, this);}));function request(_x5, _x6, _x7) {return _request.apply(this, arguments);}return request;}(),
 
@@ -8844,15 +8852,23 @@ module.exports = {
 
 
 
-  showToast: showToast };
+  showToast: showToast,
+  getQueryString: function getQueryString(url, name) {
+    var reg = new RegExp('(^|&|/?)' + name + '=([^&|/?]*)(&|/?|$)', 'i');
+    var r = url.substr(1).match(reg);
+    if (r != null) {
+      return r[2];
+    }
+    return null;
+  } };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\requestUrl.js":
-/*!*****************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/common/js/requestUrl.js ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\common\\js\\requestUrl.js":
+/*!**********************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/common/js/requestUrl.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8866,12 +8882,14 @@ module.exports = {
   getCalllMsg: baseUrl + 'user/getCalllMsg',
   bindPhone: baseUrl + 'user/bindPhone',
   getYanZhengCode: baseUrl + 'user/getYanZhengCode',
+  sendMoveCarCode: baseUrl + 'user/sendMoveCarCode',
 
   // carcard
   getCarCardList: baseUrl + 'card/getCarCardList',
   addCarCard: baseUrl + 'card/addCarCard',
   changeChoose: baseUrl + 'card/changeChoose',
   deleteCard: baseUrl + 'card/deleteCard',
+  addCarCardAndBindUser: baseUrl + 'card/addCarCardAndBindUser',
 
   // pay
   placeOrderAndPay: baseUrl + 'order/placeOrderAndPay',
@@ -8891,10 +8909,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\storages.js":
-/*!***************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/common/js/storages.js ***!
-  \***************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\common\\js\\storages.js":
+/*!********************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/common/js/storages.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8932,10 +8950,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.Storages =
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\node_modules\\unifly\\uniFly.js":
-/*!***********************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/node_modules/unifly/uniFly.js ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\node_modules\\unifly\\uniFly.js":
+/*!****************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/node_modules/unifly/uniFly.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8945,10 +8963,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.Storages =
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\pages.json":
-/*!****************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/pages.json ***!
-  \****************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\pages.json":
+/*!*********************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages.json ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8957,10 +8975,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.Storages =
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\card.png":
-/*!******************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/card.png ***!
-  \******************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\card.png":
+/*!***********************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/card.png ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8968,10 +8986,21 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\delete.png":
-/*!********************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/delete.png ***!
-  \********************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\chetie.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/chetie.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/chetie.82b6e8fb.png";
+
+/***/ }),
+
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\delete.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/delete.png ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8979,10 +9008,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\order.png":
-/*!*******************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/order.png ***!
-  \*******************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\order.png":
+/*!************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/order.png ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8990,10 +9019,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\qrcode.png":
-/*!********************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/qrcode.png ***!
-  \********************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\qrcode.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/qrcode.png ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

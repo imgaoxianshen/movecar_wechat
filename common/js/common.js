@@ -26,7 +26,7 @@ uniFly.responseInterceptors.success = function(request) {
   uni.hideLoading()
   if(request.data.code != 200 && request.data.code != 450){
 	showToast(request.data.msg)
-	return
+	return Promise.resolve(request.data)
   }
   return Promise.resolve(request.data)
 }
@@ -85,11 +85,19 @@ module.exports = {
 		}else{
 			if(method == 'post'){
 				requestPost(url, data).then(requestRes => {
-					cb(requestRes)
+					if(requestRes.code == 101){
+						getLoginAndRequest(url,data,cb, method)
+					}else{
+						cb(requestRes)
+					}
 				})
 			}else{
 				requestGet(url, data).then(requestRes => {
-					cb(requestRes)
+					if(requestRes.code == 101){
+						getLoginAndRequest(url,data,cb, method)
+					}else{
+						cb(requestRes)
+					}
 				})
 			}
 		}
@@ -101,5 +109,14 @@ module.exports = {
 		// 	// await baseRequest(url, data, 'post', cb, token)
 		// }
 	},
-	showToast
+	showToast,
+	getQueryString: (url,name) => {
+	  let reg = new RegExp('(^|&|/?)' + name + '=([^&|/?]*)(&|/?|$)', 'i')
+	  let r = url.substr(1).match(reg) 
+	  if (r != null) {
+		return r[2]
+	  }
+	  return null
+	}
+
 }

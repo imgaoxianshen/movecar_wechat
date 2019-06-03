@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/tabbar/tabbar-5/tabbar-5"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65,27 +65,33 @@
 
 
 
+
+
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\requestUrl.js");
-var _common = __webpack_require__(/*! common/js/common */ "C:\\Users\\69022_000\\movecar_wechat\\common\\js\\common.js");
-var _avatar = _interopRequireDefault(__webpack_require__(/*! static/img/icon/avatar.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\avatar.png"));
-var _arrowRight = _interopRequireDefault(__webpack_require__(/*! static/img/icon/arrow-right.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\arrow-right.png"));
-var _white = _interopRequireDefault(__webpack_require__(/*! static/img/white.jpg */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\white.jpg"));
-var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrcode.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\qrcode.png"));
-var _card = _interopRequireDefault(__webpack_require__(/*! static/img/icon/card.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\card.png"));
-var _order = _interopRequireDefault(__webpack_require__(/*! static/img/icon/order.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\order.png"));
-var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/nonotice.png */ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\nonotice.png"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\requestUrl.js");
+var _common = __webpack_require__(/*! common/js/common */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\common.js");
+var _avatar = _interopRequireDefault(__webpack_require__(/*! static/img/icon/avatar.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\avatar.png"));
+var _arrowRight = _interopRequireDefault(__webpack_require__(/*! static/img/icon/arrow-right.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\arrow-right.png"));
+var _white = _interopRequireDefault(__webpack_require__(/*! static/img/white.jpg */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\white.jpg"));
+var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrcode.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\qrcode.png"));
+var _card = _interopRequireDefault(__webpack_require__(/*! static/img/icon/card.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\card.png"));
+var _order = _interopRequireDefault(__webpack_require__(/*! static/img/icon/order.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\order.png"));
+var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/nonotice.png */ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\nonotice.png"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 {
   data: function data() {
     return {
-      nickName: 'x先生',
-      avatarUrl: null,
       avatar: _avatar.default,
       arrowRight: _arrowRight.default,
       white: _white.default,
       nonotice: _nonotice.default,
-      noticeStatus: true,
+      nickName: 'x先生',
+      avatarUrl: null,
+      noticeStatus: false,
+      choosedCard: '',
       itemList: [{
         text: "我的车牌",
         url: 'chepai',
@@ -111,7 +117,7 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
 
 
   },
-  onLoad: function onLoad() {
+  onShow: function onShow() {
     this.getUserInfo();
   },
   methods: _objectSpread({},
@@ -122,6 +128,10 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
           _this.nickName = res.result.nickname;
           _this.avatarUrl = res.result.avatar;
           _this.noticeStatus = res.result.notice_status == 1 ? true : false;
+          if (res.result.choosedCard != null) {
+            _this.choosedCard = res.result.choosedCard.prefix +
+            res.result.choosedCard.address_code + '·' + res.result.choosedCard.card;
+          }
         }
       });
     },
@@ -144,10 +154,10 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -155,10 +165,10 @@ var _nonotice = _interopRequireDefault(__webpack_require__(/*! static/img/icon/n
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=21aad698&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=21aad698&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -186,15 +196,17 @@ var render = function() {
         _c("text", { staticClass: "avatar-name" }, [
           _vm._v(_vm._s(_vm.nickName))
         ]),
-        _c("text", { staticClass: "card-msg" }, [_vm._v("浙C·989HB")]),
-        _c(
-          "button",
-          {
-            staticClass: "avatar-button",
-            attrs: { type: "primary", plain: "true" }
-          },
-          [_vm._v("编辑资料")]
-        )
+        _vm.choosedCard
+          ? _c("block", [
+              _c("text", { staticClass: "card-msg" }, [
+                _vm._v(_vm._s(_vm.choosedCard))
+              ])
+            ])
+          : _c("block", [
+              _c("text", { staticClass: "card-msg" }, [
+                _vm._v("暂无使用中车牌")
+              ])
+            ])
       ],
       1
     ),
@@ -282,34 +294,34 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
-/*!*************************************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
-  \*************************************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
+/*!******************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__(/*! uni-pages */ "C:\\Users\\69022_000\\movecar_wechat\\pages.json");
+__webpack_require__(/*! uni-pages */ "C:\\Users\\热水\\movecar_wechat\\pages.json");
 var _mpvuePageFactory = _interopRequireDefault(__webpack_require__(/*! mpvue-page-factory */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue-page-factory/index.js"));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 Page((0, _mpvuePageFactory.default)(_tabbar.default));
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue":
-/*!****************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue ***!
-  \****************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue":
+/*!*********************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=template&id=21aad698&scoped=true& */ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=21aad698&scoped=true&");
-/* harmony import */ var _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=script&lang=js& */ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&");
+/* harmony import */ var _tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true& */ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true&");
+/* harmony import */ var _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=script&lang=js& */ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&");
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true& */ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true&");
+/* harmony import */ var _tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true& */ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true&");
 /* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -321,76 +333,76 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "21aad698",
+  "1e5de362",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue"
+component.options.__file = "C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&");
+/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=script&lang=js&");
 /* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_D_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true&":
-/*!****************************************************************************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true& ***!
-  \****************************************************************************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true& ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=21aad698&lang=stylus&scoped=true&");
-/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_21aad698_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=style&index=0&id=1e5de362&lang=stylus&scoped=true&");
+/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_D_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_D_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_D_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_D_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_style_index_0_id_1e5de362_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=21aad698&scoped=true&":
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=21aad698&scoped=true& ***!
-  \***********************************************************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/pages/tabbar/tabbar-5/tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true& ***!
+  \****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=template&id=21aad698&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\69022_000\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=21aad698&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!./tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!C:\\Users\\热水\\movecar_wechat\\pages\\tabbar\\tabbar-5\\tabbar-5.vue?vue&type=template&id=1e5de362&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_21aad698_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_D_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_5_vue_vue_type_template_id_1e5de362_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\arrow-right.png":
-/*!*************************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/arrow-right.png ***!
-  \*************************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\arrow-right.png":
+/*!******************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/arrow-right.png ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -398,10 +410,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\avatar.png":
-/*!********************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/avatar.png ***!
-  \********************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\avatar.png":
+/*!*************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/avatar.png ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -409,10 +421,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\icon\\nonotice.png":
-/*!**********************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/icon/nonotice.png ***!
-  \**********************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\icon\\nonotice.png":
+/*!***************************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/icon/nonotice.png ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -420,10 +432,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 
 /***/ }),
 
-/***/ "C:\\Users\\69022_000\\movecar_wechat\\static\\img\\white.jpg":
-/*!**************************************************************!*\
-  !*** C:/Users/69022_000/movecar_wechat/static/img/white.jpg ***!
-  \**************************************************************/
+/***/ "C:\\Users\\热水\\movecar_wechat\\static\\img\\white.jpg":
+/*!*******************************************************!*\
+  !*** C:/Users/热水/movecar_wechat/static/img/white.jpg ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -431,5 +443,5 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QAiRXhpZgA
 
 /***/ })
 
-},[["C:\\Users\\69022_000\\movecar_wechat\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}","common/runtime","common/vendor"]]]);
+},[["C:\\Users\\热水\\movecar_wechat\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}","common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../../.sourcemap/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js.map

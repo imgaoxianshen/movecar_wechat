@@ -213,7 +213,6 @@
 		align-items: center
 		height: 100vh
 		overflow: hidden
-		background-color: linear-gradient($deep-color, $base-color)
 		&:before, &:after 
 			content: ""
 			position: absolute
@@ -227,12 +226,12 @@
 			top: 220rpx
 			animation-name: rotate2
 			border-radius: 44%
-			opacity: .5
+			opacity: 1
 			animation-duration: 10s 
 		&:after 
 			top: 180rpx
 			border-radius: 44%
-			opacity: .8
+			opacity: 0.8
 			animation-name: rotate1
 			animation-duration: 10s
 		.title
@@ -295,6 +294,7 @@
 				.input-icon
 					width: 30rpx
 					height: 30rpx
+					margin-top: 5rpx
 				.new-text
 					font-size: 10rpx
 		.get-code

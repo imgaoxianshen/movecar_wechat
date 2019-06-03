@@ -4,8 +4,13 @@
 		<view class="userInfo">
 			<image class="avatar" :src="avatarUrl?avatarUrl:avatar" mode="aspectFill"></image>
 			<text class="avatar-name">{{nickName}}</text>
-			<text class="card-msg">浙C·989HB</text>
-			<button class="avatar-button" type="primary" plain="true">编辑资料</button>
+			<block v-if="choosedCard">
+				<text class="card-msg">{{choosedCard}}</text>
+			</block>
+			<block v-else="choosedCard">
+				<text class="card-msg">暂无使用中车牌</text>
+			</block>
+			<!-- <button class="avatar-button" type="primary" plain="true">编辑资料</button> -->
 		</view>
 		<view class="tab">
 			<block v-for="(item,key) in itemList" :key="key">
@@ -69,13 +74,14 @@
 	export default {
 		data() {
 			return {
-				nickName: 'x先生',
-				avatarUrl: null,
 				avatar,
 				arrowRight,
 				white,
 				nonotice,
-				noticeStatus: true,
+				nickName: 'x先生',
+				avatarUrl: null,
+				noticeStatus: false,
+				choosedCard: '',
 				itemList: [{
 					text: "我的车牌",
 					url: 'chepai',
@@ -101,7 +107,7 @@
 				}]
 			}
 		},
-		onLoad(){
+		onShow(){
 			this.getUserInfo()
 		},
 		methods: {
@@ -112,6 +118,10 @@
 						this.nickName = res.result.nickname
 						this.avatarUrl = res.result.avatar
 						this.noticeStatus = res.result.notice_status == 1 ? true : false
+						if(res.result.choosedCard != null){
+							this.choosedCard = res.result.choosedCard.prefix
+								+ res.result.choosedCard.address_code + '·' + res.result.choosedCard.card
+						}
 					}
 				})
 			},

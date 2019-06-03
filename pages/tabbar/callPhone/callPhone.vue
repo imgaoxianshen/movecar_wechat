@@ -7,15 +7,41 @@
 			<view class="center">
 				<text class="tips">请输入车牌号</text>
 				<view class="input-msg">
-					<view class="input">浙</view>
-					<input class="card-msg" placeholder="请输入车牌号"  placeholder-style="line-height: 30rpx">
+					<view class="input" @click="showModel">
+						{{bindPrefix}}
+						<image class="input-arrow" :src="arrowDown"></image>
+					</view>
+					<input class="card-msg" @input="setCard" :value="bindCard">
 				</view>
-				<view class="get-code">
-					<input placeholder="请输入手机号"  @input="inputPhone" placeholder-style="text-align: center" type="number">
-					<view class="get-button" @click="getCode">获取验证码{{yanzhengStart ? '(' + yanzhengTime + ')' : ''}}</view>
+				<text class="card-notice">请输入车牌后六位，如果是新能源牌照，请输入后七位</text>
+				<!-- <view class="card-name">
+					<text class="name">车主称呼</text>
+					<text class="card-name-choose">先生</text>
+					<view class="name-choose-container">
+						<view class="name-choose-left">先生</view>
+						<view class="name-choose-right">女士</view>
+					</view>
+				</view> -->
+				<view class="card-name">
+					<text class="name">手机号码</text>
+					<input class="card-name-choose" @input="inputPhone" placeholder="请输入手机号码"></input>
+					<!-- <button class="getPhone" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">一键获取</button> -->
 				</view>
-				<input class="yanzheng" @input="inputYanzhengCode" placeholder-style="text-align: center" placeholder="请输入验证码" type="number">
-				<botton class="confirm" @click="confirm">确定</botton>
+				<view class="input-msg">
+					<input class="yanzheng-input" @input="inputYanzhengCode" placeholder="请输入验证码"></input>
+					<view class="yanzheng-code" @click="getCode">获取验证码{{yanzhengStart ? '(' + yanzhengTime + ')' : ''}}</view>
+				</view>
+				<view class="bind-card" @click="bindCardConfirm">绑定挪车码</view>
+				<view class="bottom-tips">
+					<view class="tips-item">
+						<image class="notice-img" :src="protect"></image>
+						<text class="notice-msg">保护隐私，匿名拨打电话信息无泄漏</text>
+					</view>
+					<view class="tips-item">
+						<image class="notice-img" :src="list"></image>
+						<text class="notice-msg">多管齐下，电话短信推送多通道送达</text>
+					</view>
+				</view>
 			</view>
 		</block>
 		<block v-else>
@@ -26,8 +52,8 @@
 				</view>
 				<view class="card">
 					<view class="card-base">
-						<view class="base-name">浙</view>
-						<view class="base-code">C</view>
+						<view class="base-name">{{prefix}}</view>
+						<view class="base-code">{{address_code}}</view>
 					</view>
 					<view class="dot">·</view>
 					<block :key="key" v-for="(card,key) in cards">
@@ -37,28 +63,28 @@
 				<view class="desc">我的爱车如果阻碍了您的车辆通过，您可以点击下方按钮通知我，给您带来的不便请谅解</view>
 				<view class="message-container">
 					<view class="message-top" @click="showMessage()">
-						<image class="message-icon" :src="car"></image>
+						<image class="message-icon" :src="message"></image>
 						<text>短信通知</text>
 					</view>
 					<view class="message-content" :animation="messageAnimationData">
 						<text class="desc">请选择以下内容发送短信</text>
-						<view class="message-bottom">请帮忙挪下车</view>
+						<view class="message-bottom" @click="sendMoveCarMsg(1)">请帮忙挪下车</view>
 						<view class="message-two">
-							<view class="message-two-botton">玻璃或车门没关好</view>
-							<view class="message-two-botton">轮胎漏气</view>
+							<view class="message-two-botton" @click="sendMoveCarMsg(2)">玻璃或车门没关好</view>
+							<view class="message-two-botton" @click="sendMoveCarMsg(3)">轮胎漏气</view>
 						</view>
 						<view class="message-two">
-							<view class="message-two-botton">大灯或室内灯还亮着</view>
-							<view class="message-two-botton">被警察蜀黍贴罚单了</view>
+							<view class="message-two-botton" @click="sendMoveCarMsg(4)">大灯或室内灯还亮着</view>
+							<view class="message-two-botton" @click="sendMoveCarMsg(5)">被警察蜀黍贴罚单了</view>
 						</view>
 						<!-- <view class="message-bottom">其他状况（请自己填写）</view> -->
 					</view>
 				</view>
-				<view class="phone-container" :animation="buttonAnimationData">
-					<image class="phone-icon" :src="car"></image>
+				<view class="phone-container"  @click="bindPhone()" :animation="buttonAnimationData">
+					<image class="phone-icon" :src="call"></image>
 					<text class="phone-text">电话通知</text>
 				</view>
-				<view class="code-container" :animation="buttonAnimationData">
+				<view class="code-container" @click="getCard" :animation="buttonAnimationData">
 					我要我的挪车码
 				</view>
 			</view>
@@ -86,14 +112,30 @@
 				<text>亲，要扫码才能使用哦</text>
 			</block>
 		</block> -->
+		<block v-if="showBack">
+			<view class="back" @click="cancleBack"></view>
+			<view class="display">
+				<view class="add-car">添加车牌</view>
+				<view class="place-container">
+					<block :key="index" v-for="(item,index) in placeList">
+						<view class="car-place" @click="chooseItem(item)">{{item}}</view>
+					</block>
+				</view>
+			</view>
+		</block>
 	</view>
 </template>
 
 <script>
 	import car from 'static/img/car.png'
 	import broken from 'static/img/broken.png'
+	import call from 'static/img/icon/call.png'
+	import message from 'static/img/icon/message.png'
 	import bind from 'static/img/icon/bind.png'
-	import {getCalllMsg, bindPhone, bindUser} from 'common/js/requestUrl'
+	import arrowDown from 'static/img/icon/arrow-down.png'
+	import protect from 'static/img/icon/protect.png'
+	import list from 'static/img/icon/list.png'
+	import {getCalllMsg, bindPhone, bindUser, sendMoveCarCode, getYanZhengCode, addCarCardAndBindUser } from 'common/js/requestUrl'
 	import {request,showToast} from 'common/js/common'
 	
 	export default {
@@ -102,16 +144,70 @@
 				car,
 				broken,
 				bind,
-				cards: '898HB',
+				call,
+				message,
+				arrowDown,
+				protect,
+				list,
+				yanzhengStart: false,
+				yanzhengTime: 0,
+				yanzhengCode: null,
+				code: 0,
+				showBack: false,//遮罩层
+				cards: '',
+				prefix: '',
+				bindPrefix: '浙', //绑定的时候的前缀
+				bindCard: '',
+				phone: '',
+				Timer: null,//定时器
+				address_code: '',
 				id: null,
-				card: '免打扰中',
 				type: 1,
-				needBindUser: false,
+				needBindUser: true,
 				messageIsShow: false,
 				messageAnimation:{},
 				messageAnimationData: {},
 				buttonAnimation: {},
 				buttonAnimationData: {},
+				msgData: {
+					1: '挡住了道路，请挪下车',
+					2: '的玻璃或车门可能未关闭',
+					3: '的轮胎可能漏气',
+					4: '的大灯或室内灯可能开着',
+					5: '可能被警察蜀黍贴罚单了'
+				},
+				placeList:[
+					"京", 
+					"津", 
+					"沪",
+					"渝",
+					"冀",
+					"吉",
+					"辽", 
+					"黑",
+					"湘",
+					"鄂",
+					"甘",
+					"晋",
+					"陕",
+					"豫",
+					"川", 
+					"云", 
+					"桂",
+					"蒙",
+					"贵", 
+					"青",
+					"藏",
+					"新", 
+					"宁", 
+					"粤",
+					"琼",
+					"闽", 
+					"苏",
+					"浙", 
+					"赣",  
+					"鲁",  
+					"皖"]
 			};
 		},
 		onLoad(query){
@@ -155,7 +251,23 @@
 					if(res.code == 450){
 						this.needBindUser = true
 					}else if(res.code == 200){
-						this.card = res.result.prefix + res.result.card
+						this.needBindUser = false
+						this.cards = res.result.card
+						this.prefix = res.result.prefix
+						this.address_code = res.result.address_code
+					}else{
+						showToast(res.msg)
+					}
+				})
+			},
+			sendMoveCarMsg(index){
+				request(sendMoveCarCode,{
+					id : this.id,
+					type: this.type,
+					msg: this.msgData[index]
+				},(res) => {
+					if(res.code == 200){
+						showToast('短信发送成功')
 					}else{
 						showToast(res.msg)
 					}
@@ -166,9 +278,11 @@
 					id : this.id,
 					type: this.type
 				},(res) => {
-					uni.makePhoneCall({
-						phoneNumber: res.result //仅为示例
-					});
+					if(res.code == 200){
+						uni.makePhoneCall({
+							phoneNumber: res.result //仅为示例
+						});
+					}
 				})
 			},
 			bindUser(){
@@ -182,6 +296,21 @@
 					}
 				});
 			},
+			getCard(){
+				uni.getSetting({
+				    success: function(res){
+						if (!res.authSetting['scope.userInfo']) {
+							wx.redirectTo({
+								url: '/pages/tabbar/authorize/authorize'
+							})
+						}else{
+							wx.switchTab({
+								url: '/pages/tabbar/tabbar-1/tabbar-1'
+							})
+						}
+					}
+				})	
+			},
 			showMessage(){
 				if(this.messageIsShow){
 					this.messageAnimationData = this.messageAnimation.height(0).opacity(0).step().export()
@@ -191,6 +320,86 @@
 					this.buttonAnimationData = this.buttonAnimation.top('380rpx').step().export()
 				}
 				this.messageIsShow = !this.messageIsShow
+			},
+			showModel(){
+				this.showBack = true
+			},
+			cancleBack(){
+				this.showBack = false
+			},
+			chooseItem(item){
+				this.bindPrefix = item
+				this.showBack = false
+			},
+			setCard(e){
+				this.bindCard = e.detail.value.toUpperCase()
+			},
+			getPhoneNumber(e) {  
+                
+            },  
+			getCode(){
+				if(!this.yanzhengStart){
+					if(!this.phone){
+						showToast('您还未输入手机号')
+						return
+					}
+					request(getYanZhengCode,{
+						phone: this.phone
+					},(res) => {
+						if(res.code == 200){
+							this.yanzhengStart = true
+							this.yanzhengTime = 30
+							this.Timer = setInterval(this.timeGone , 1000)
+							this.code = res.result
+						}
+					})
+				}
+			},
+			timeGone(){
+				this.yanzhengTime -= 1
+				if(this.yanzhengTime == 0){
+					this.yanzhengStart = false
+					clearInterval(this.Timer)
+				}
+			},
+			inputPhone(e){
+				this.phone = e.detail.value
+			},
+			inputYanzhengCode(e){
+				this.yanzhengCode = e.detail.value
+			},
+			bindCardConfirm(){
+				if(!this.bindPrefix){
+					showToast('您还未选择车牌前缀')
+					return
+				}
+				if(!this.bindCard){
+					showToast('您还未填写车牌')
+					return
+				}
+				if(!this.phone){
+					showToast('您还未输入手机号')
+					return
+				}
+				if(!this.yanzhengCode){
+					showToast('您还未填写验证码')
+					return
+				}
+				if(this.yanzhengCode != this.code){
+					showToast('验证码错误！')
+					return
+				}
+				request(addCarCardAndBindUser,{
+					card: this.bindCard,
+					phone: this.phone,
+					prefix: this.bindPrefix,
+					card_id: this.id
+				},(res) =>{
+					if(res.code == 200){
+						showToast('绑定成功','success')
+						this.getCalllMsg()
+					}
+				})
 			}
 		}
 	}
@@ -205,6 +414,35 @@
 		display: flex
 		// padding: 0 100rpx
 		flex-direction: column
+		.back
+			position: fixed
+			height: 100%
+			width: 100%
+			background-color:black
+			z-index: 999
+			opacity: .7
+		.display
+			display: flex
+			position: fixed
+			bottom: 0
+			flex-direction: column
+			background-color: white
+			z-index: 1000
+			.add-car
+				width: 100%
+				padding: 20rpx
+				text-align: center
+				border-bottom: 1px solid #d1d1d1
+			.place-container
+				display: flex
+				flex-wrap: wrap
+				justify-content: left
+				.car-place
+					border-radius: 10rpx
+					box-shadow: 1rpx 3rpx 1rpx #d1d1d1
+					padding: 15rpx
+					margin: 5rpx
+					background-color: $base-color
 		.center
 			position: absolute
 			top: 300rpx
@@ -216,14 +454,39 @@
 				font-size: 30rpx
 			.input-msg
 				display: flex
-				margin-top: 20rpx
+				margin-top: 60rpx
+				.yanzheng-input
+					width: 90%
+					border: 1px solid black
+					border-radius: 10rpx
+					height: 40rpx
+					line-height: 40rpx
+					padding: 10rpx
+					font-size: 30rpx
+				.yanzheng-code
+					width: 400rpx
+					font-size: 30rpx
+					padding: 20rpx
+					height: 30rpx
+					line-height: 30rpx
+					border-radius: 10rpx
+					background-color: black
+					color: white
+					text-align: center
+					margin-left: 20rpx
 				.input
+					display: flex
+					align-items: center
+					justify-content: center
 					padding: 20rpx
 					height: 30rpx
 					line-height: 30rpx
 					border-radius: 10rpx
 					color: white
 					background-color:black
+					.input-arrow
+						width: 40rpx
+						height: 60rpx
 				.card-msg
 					display: flex
 					align-items: center
@@ -236,6 +499,77 @@
 					line-height: 30rpx
 					border: 1px solid black
 					border-radius: 10rpx
+			.bind-card
+				padding: 20rpx 20rpx
+				font-size: 35rpx
+				text-align: center
+				margin-top: 60rpx
+				border-radius: 60rpx
+				background-color: $base-color
+			.bottom-tips
+				display: flex
+				flex-direction: column
+				justify-content: space-around
+				align-items: center
+				margin-top: 100rpx
+				.tips-item
+					display: flex
+					margin: 10rpx 0
+					align-items: center
+					.notice-img
+						width: 50rpx
+						height: 50rpx
+					.notice-msg
+						font-size: 28rpx
+			.card-notice
+				font-size: 20rpx
+				margin: 20rpx 0 10rpx 0
+			.card-name
+				position: relative
+				display: flex
+				border: 1px solid black
+				margin-top: 20rpx
+				height: 40rpx
+				line-height: 40rpx
+				border-radius: 10rpx
+				padding: 15rpx
+				.name
+					font-size: 30rpx
+				.card-name-choose
+					color: #d1d1d1
+					font-size: 30rpx
+					margin-left: 20rpx
+				.name-choose-container
+					display: flex
+					position: absolute
+					right: 10rpx
+					font-size: 30rpx
+					border-radius: 30rpx
+					border: 1px solid black
+					overflow: hidden
+					.name-choose-left
+						background-color: black
+						color: white
+						padding: 0 10rpx
+						width: 50%
+					.name-choose-right
+						background-color:white
+						padding: 0 10rpx
+						width: 50%
+						color: black
+				.getPhone
+					display: flex
+					position: absolute
+					right: 10rpx
+					font-size: 30rpx
+					height: 40rpx
+					line-height: 40rpx
+					color: white
+					border-radius: 30rpx
+					z-index:500
+					border: 1px solid black
+					padding: 0 20rpx
+					background-color: black
 		.background
 			position: relative
 			align-items: center
@@ -255,7 +589,7 @@
 				top: 220rpx
 				animation-name: rotate2
 				border-radius: 44%
-				opacity: .5
+				// opacity: .5
 				animation-duration: 10s 
 			&:after 
 				top: 180rpx

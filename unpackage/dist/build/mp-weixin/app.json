@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/tabbar/tabbar-1/tabbar-1",
+    "pages/tabbar/orderList/orderList",
+    "pages/tabbar/sendCard/sendCard",
+    "pages/tabbar/authorize/authorize",
+    "pages/tabbar/tabbar-5/tabbar-5",
+    "pages/tabbar/tabbar-5/car_card/car_card",
+    "pages/tabbar/tabbar-2/tabbar-2",
+    "pages/tabbar/tabbar-3/tabbar-3",
+    "pages/tabbar/tabbar-4/tabbar-4",
+    "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
+    "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
+    "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
+    "pages/tabbar/tabbar-5/car_card/add_card/add_card",
+    "pages/tabbar/getCode/getCode",
+    "pages/tabbar/callPhone/callPhone",
+    "pages/tabbar/cardList/cardList",
+    "pages/tabbar/addCard/addCard"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "帮忙族",
+    "navigationBarBackgroundColor": "#FFDA44",
+    "backgroundColor": "#FFFFFF"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+        "iconPath": "static/img/tabbar/home.png",
+        "selectedIconPath": "static/img/tabbar/homeactive.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+        "iconPath": "static/img/tabbar/me.png",
+        "selectedIconPath": "static/img/tabbar/meactive.png",
+        "text": "我"
+      }
+    ]
+  }
+}

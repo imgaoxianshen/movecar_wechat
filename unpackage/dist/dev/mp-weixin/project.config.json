@@ -33,27 +33,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "333",
-					"pathName": "pages/tabbar/tabbar-5/tabbar-5",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "addCard",
-					"pathName": "pages/tabbar/addCard/addCard",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "addCard",
-					"pathName": "pages/tabbar/callPhone/callPhone",
-					"query": "scene=1/2",
+					"id": 0,
+					"name": "测试",
+					"pathName": "pages/tabbar/tabbar-1/tabbar-1",
+					"query": "q='https://www.imgaoxianshen.cn/?id=1'",
 					"scene": null
 				}
 			]

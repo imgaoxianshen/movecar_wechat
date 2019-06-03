@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */ 
+
+page {
+  background-color: #efefef;
+}
+page text {
+  font-size: 35rpx;
+}
+page button {
+  background-color: #ffda44;
+}
+

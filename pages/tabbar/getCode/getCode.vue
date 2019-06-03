@@ -3,27 +3,28 @@
 		<view class="background">
 			<view class="code-container">
 				<text class="code-my">我的挪车码</text>
+				<text class="code-zhu">注:此二维码仅作为体验使用</text>
 				<image class="code-img" :src="imgUrl"></image>
 				<view class="line">
 					<view class="left-circle"></view>
 					<view class="right-circle"></view>
 				</view>
-				<view class="button">申请邮寄</view>
+				<view class="button" @click="applyCode">申请邮寄</view>
 				<text class="text-desc">点击申请邮寄，您将收到一副精美的挪车码</text>
 			</view>
 			<view class="code-operation">
-				<view class="operation-item">
+				<button class="operation-item" hover-class="none" open-type="share">
 					<image class="item-img" :src="wechat"></image>
-					<text class="item-text">发送到微信</text>
-				</view>
-				<view class="operation-item">
+					<text class="item-text">分享到微信</text>
+				</button>
+				<!-- <button class="operation-item" hover-class="none">
 					<image class="item-img" :src="circle"></image>
 					<text class="item-text">分享到朋友圈</text>
-				</view>
-				<view class="operation-item">
+				</button> -->
+				<button @click="saveCode" class="operation-item" hover-class="none">
 					<image class="item-img" :src="save"></image>
 					<text class="item-text">保存到手机</text>
-				</view>
+				</button>
 			</view>
 		</view>
 	</view>
@@ -61,7 +62,17 @@
 				this.imgUrl = res.result
 			})
 		},
+		onShareAppMessage(){
+			return {
+				title:'免费获取挪车码，你也可以！'
+			}
+		},
 		methods: {
+			applyCode(){
+				uni.navigateTo({
+					url: '../sendCard/sendCard'
+				});
+			},
 			saveCode(){	
 				uni.showModal({
 					title: '提示',
@@ -107,28 +118,28 @@
 		position: relative
 		align-items: center
 		min-height: 100vh
-		background-color: #fff
-		overflow: hidden
-		&:before, &:after 
-			content: ""
-			position: absolute
-			left: 50%
-			min-width: 400vw
-			min-height: 400vw
-			background-color: $base-color
-			animation-name: rotate
-			animation-iteration-count: infinite
-			animation-timing-function: linear
-		&:before
-			bottom: 2vh
-			// opacity: .8
-			border-radius: 20%
-			animation-duration: 10s
-		&:after 
-			bottom: 0vh
-			opacity: .5
-			border-radius: 20%
-			animation-duration: 10s
+		background-color: $base-color
+		// overflow: hidden
+		// &:before, &:after 
+		// 	content: ""
+		// 	position: absolute
+		// 	left: 50%
+		// 	min-width: 400vw
+		// 	min-height: 400vw
+		// 	background-color: $base-color
+		// 	animation-name: rotate
+		// 	animation-iteration-count: infinite
+		// 	animation-timing-function: linear
+		// &:before
+		// 	bottom: 2vh
+		// 	// opacity: .8
+		// 	border-radius: 20%
+		// 	animation-duration: 10s
+		// &:after 
+		// 	bottom: 0vh
+		// 	opacity: .5
+		// 	border-radius: 20%
+		// 	animation-duration: 10s
 		.code-container
 			position:absolute
 			height:800rpx
@@ -143,6 +154,10 @@
 			.code-my
 				margin-top: 50rpx
 				color: rgb(178,136,123)
+			.code-zhu
+				margin-top: 10rpx
+				font-size: 20rpx
+				letter-spacing: 5rpx
 			.code-img
 				width: 450rpx
 				height: 450rpx
@@ -192,7 +207,8 @@
 			margin-top: 900rpx
 			height: 300rpx
 			width: 750rpx
-			// background-color: white
+			button::after 
+				border: none
 			.operation-item
 				display: flex
 				flex-direction: column
@@ -202,11 +218,11 @@
 					height: 100rpx
 				.item-text
 					font-size: 25rpx
-	@keyframes rotate 
-		0% 
-			transform: translate(-50%, 0) rotateZ(0deg)
-		50% 
-			transform: translate(-50%, -2%) rotateZ(180deg)
-		100% 
-			transform: translate(-50%, 0%) rotateZ(360deg)
+	// @keyframes rotate 
+	// 	0% 
+	// 		transform: translate(-50%, 0) rotateZ(0deg)
+	// 	50% 
+	// 		transform: translate(-50%, -2%) rotateZ(180deg)
+	// 	100% 
+	// 		transform: translate(-50%, 0%) rotateZ(360deg)
 </style>

@@ -45,5 +45,10 @@
         "text": "我"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "地理位置描述"
+    }
   }
 }

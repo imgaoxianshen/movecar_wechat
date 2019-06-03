@@ -7,12 +7,14 @@ module.exports = {
 	getCalllMsg: baseUrl + 'user/getCalllMsg',
 	bindPhone: baseUrl + 'user/bindPhone',
 	getYanZhengCode: baseUrl + 'user/getYanZhengCode',
+	sendMoveCarCode: baseUrl + 'user/sendMoveCarCode',
 	
 	// carcard
 	getCarCardList: baseUrl + 'card/getCarCardList',
 	addCarCard: baseUrl + 'card/addCarCard',
 	changeChoose: baseUrl + 'card/changeChoose',
 	deleteCard: baseUrl + 'card/deleteCard',
+	addCarCardAndBindUser: baseUrl + 'card/addCarCardAndBindUser',
 	
 	// pay
 	placeOrderAndPay: baseUrl+'order/placeOrderAndPay',

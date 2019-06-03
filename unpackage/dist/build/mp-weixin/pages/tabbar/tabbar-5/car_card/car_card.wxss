@@ -1,0 +1,70 @@
+.carcard-container.data-v-dbb44508 {
+  width: 750rpx;
+}
+.carcard-container .car-container.data-v-dbb44508 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carcard-container .car-container .car-item.data-v-dbb44508 {
+  position: relative;
+  border-bottom: 1px solid #d1d1d1;
+  width: 650rpx;
+  padding: 50rpx;
+}
+.carcard-container .car-container .car-item .items.data-v-dbb44508 {
+  font-size: 60rpx;
+}
+.carcard-container .car-container .car-item .choosed.data-v-dbb44508 {
+  -webkit-transform: translate(-150rpx, -50%);
+      -ms-transform: translate(-150rpx, -50%);
+          transform: translate(-150rpx, -50%);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.carcard-container .car-container .car-item .deleteIcon.data-v-dbb44508 {
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 60rpx;
+  height: 60rpx;
+}
+.carcard-container .addCard.data-v-dbb44508 {
+  margin-top: 100rpx;
+  width: 600rpx;
+}
+.carcard-container .withoutList.data-v-dbb44508 {
+  margin-top: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carcard-container .withoutList .card-image.data-v-dbb44508 {
+  width: 300rpx;
+  height: 300rpx;
+}
+

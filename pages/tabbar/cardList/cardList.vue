@@ -3,7 +3,10 @@
 		<view class="card-choosed">
 			<view class="useing">正在使用车辆</view>
 			<view class="useing-item">
-				<text class="item-card">{{usingCard}}</text>
+				<view class="useing-item-left">
+					<text class="item-card">{{usingCard}}</text>
+					<text class="item-phone">{{usingPhone}}</text>
+				</view>
 				<text class="item-useing">正在使用</text>
 			</view>
 			<view class="card-notice">一个账号可以选择使用的车牌号，请在您出行的时候选择对应的车牌，可以自由切换</view>
@@ -12,12 +15,15 @@
 		<view class="card-list">
 			<block wx:key="item" v-for="(item, key) in carcardList">
 				<view class="card-item" @click="changeCarChoosed(item.id, item.choosed)">
-					<view class="card-item-card">{{item.prefix}}{{item.address_code}}·{{item.card}}</view>
+					<view class="card-item-left">
+						<view class="card-item-card">{{item.prefix}}{{item.address_code}}·{{item.card}}</view>
+						<view class="card-item-phone">{{item.phone}}</view>
+					</view>
 					<view class="card-unchoosed">点击使用</view>
 				</view>
 			</block>
 			<view class="add-item"  @click="navAddCard">
-				<image class="add-item-icon" :src="card"></image>
+				<image class="add-item-icon" :src="addCard"></image>
 				<text class="add-item-text">添加其他车辆</text>
 			</view>
 		</view>
@@ -53,14 +59,15 @@
 <script>
 	import {getCarCardList,changeChoose,deleteCard} from 'common/js/requestUrl'
 	import {request,showToast} from 'common/js/common'
-	import card from 'static/img/icon/card.png'
+	import addCard from 'static/img/icon/add_card.png'
 	import deleteIcon from 'static/img/icon/delete.png'
 	export default {
 		data() {
 			return {
-				card,
+				addCard,
 				deleteIcon,
 				usingCard: '暂无车牌',
+				usingPhone: '暂无手机',
 				carcardList: [],
 				choosedCard: {}
 			};
@@ -70,22 +77,29 @@
 		},
 		methods:{
 			navAddCard(){
-				uni.navigateTo({
-					url: '../addCard/addCard'
-				});
+				if(this.carcardList.length < 9){
+					uni.navigateTo({
+						url: '../addCard/addCard'
+					});	
+				}else{
+					showToast('您最多只能创建十个车牌信息')
+				}
 			},
 			getCardList(){
-				this.carcardList = []
+				// this.carcardList = []
 				this.choosedCard = {}
 				request(getCarCardList,{},(res) => {
 						if(res.result.data != null){
+							let cardLists = []
 							res.result.data.forEach( v => {
 								if(v.choosed == 1){
 									this.usingCard = v.prefix + v.address_code+'·'+v.card
+									this.usingPhone = v.phone
 								}else{
-									this.carcardList.push(v)
+									cardLists.push(v)
 								}
 							})
+							this.carcardList = cardLists
 						}
 						// this.carcardList = res.result.data
 					}
@@ -136,10 +150,18 @@
 		justify-content: space-between
 		align-items: center
 		padding: 10rpx 0
-		.item-card
-			margin-left: 30rpx
-			font-weight: 300
-			letter-spacing: 10rpx
+		.useing-item-left
+			display: flex
+			flex-direction: column
+			.item-card
+				margin-left: 30rpx
+				font-weight: 300
+				letter-spacing: 10rpx
+			.item-phone
+				font-weight: 300
+				letter-spacing: 3rpx
+				margin-left: 30rpx
+				font-size: 20rpx
 		.item-useing
 			font-weight: 300
 			font-size: 25rpx
@@ -163,11 +185,19 @@
 			align-items: center
 			padding: 10rpx 0
 			border-bottom: 1px solid #f1f1f1
-			.card-item-card
-				font-weight: 200
-				letter-spacing: 10rpx
-				margin-left: 30rpx
-				font-size: 35rpx
+			.card-item-left
+				display: flex
+				flex-direction: column
+				.card-item-card
+					font-weight: 200
+					letter-spacing: 10rpx
+					margin-left: 30rpx
+					font-size: 35rpx
+				.card-item-phone
+					font-weight: 300
+					letter-spacing: 3rpx
+					margin-left: 30rpx
+					font-size: 20rpx
 			.card-unchoosed
 				margin-right: 30rpx
 				font-weight: 200
