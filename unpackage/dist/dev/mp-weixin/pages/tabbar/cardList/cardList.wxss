@@ -1,12 +1,12 @@
-.carcard-container.data-v-1da47f4f {
+.carcard-container.data-v-fa3d3210 {
   width: 750rpx;
 }
-.carcard-container .useing.data-v-1da47f4f {
+.carcard-container .useing.data-v-fa3d3210 {
   font-size: 20rpx;
   font-weight: 300;
   margin: 40rpx 0 10rpx 30rpx;
 }
-.carcard-container .useing-item.data-v-1da47f4f {
+.carcard-container .useing-item.data-v-fa3d3210 {
   background-color: #ffda44;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,7 +22,7 @@
           align-items: center;
   padding: 10rpx 0;
 }
-.carcard-container .useing-item .useing-item-left.data-v-1da47f4f {
+.carcard-container .useing-item .useing-item-left.data-v-fa3d3210 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,30 +33,30 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.carcard-container .useing-item .useing-item-left .item-card.data-v-1da47f4f {
+.carcard-container .useing-item .useing-item-left .item-card.data-v-fa3d3210 {
   margin-left: 30rpx;
   font-weight: 300;
   letter-spacing: 10rpx;
 }
-.carcard-container .useing-item .useing-item-left .item-phone.data-v-1da47f4f {
+.carcard-container .useing-item .useing-item-left .item-phone.data-v-fa3d3210 {
   font-weight: 300;
   letter-spacing: 3rpx;
   margin-left: 30rpx;
   font-size: 20rpx;
 }
-.carcard-container .useing-item .item-useing.data-v-1da47f4f {
+.carcard-container .useing-item .item-useing.data-v-fa3d3210 {
   font-weight: 300;
   font-size: 25rpx;
   margin-right: 30rpx;
 }
-.carcard-container .card-notice.data-v-1da47f4f {
+.carcard-container .card-notice.data-v-fa3d3210 {
   font-weight: 300;
   letter-spacing: 5rpx;
   margin-top: 20rpx;
   font-size: 18rpx;
   margin: 20rpx 30rpx 20rpx 30rpx;
 }
-.carcard-container .card-list.data-v-1da47f4f {
+.carcard-container .card-list.data-v-fa3d3210 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,7 +71,7 @@
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
 }
-.carcard-container .card-list .card-item.data-v-1da47f4f {
+.carcard-container .card-list .card-item.data-v-fa3d3210 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,7 +87,7 @@
   padding: 10rpx 0;
   border-bottom: 1px solid #f1f1f1;
 }
-.carcard-container .card-list .card-item .card-item-left.data-v-1da47f4f {
+.carcard-container .card-list .card-item .card-item-left.data-v-fa3d3210 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,24 +98,24 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.carcard-container .card-list .card-item .card-item-left .card-item-card.data-v-1da47f4f {
+.carcard-container .card-list .card-item .card-item-left .card-item-card.data-v-fa3d3210 {
   font-weight: 200;
   letter-spacing: 10rpx;
   margin-left: 30rpx;
   font-size: 35rpx;
 }
-.carcard-container .card-list .card-item .card-item-left .card-item-phone.data-v-1da47f4f {
+.carcard-container .card-list .card-item .card-item-left .card-item-phone.data-v-fa3d3210 {
   font-weight: 300;
   letter-spacing: 3rpx;
   margin-left: 30rpx;
   font-size: 20rpx;
 }
-.carcard-container .card-list .card-item .card-unchoosed.data-v-1da47f4f {
+.carcard-container .card-list .card-item .card-unchoosed.data-v-fa3d3210 {
   margin-right: 30rpx;
   font-weight: 200;
   font-size: 25rpx;
 }
-.carcard-container .card-list .add-item.data-v-1da47f4f {
+.carcard-container .card-list .add-item.data-v-fa3d3210 {
   padding: 20rpx 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,12 +130,12 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.carcard-container .card-list .add-item .add-item-icon.data-v-1da47f4f {
+.carcard-container .card-list .add-item .add-item-icon.data-v-fa3d3210 {
   width: 30rpx;
   height: 30rpx;
   margin-right: 10rpx;
 }
-.carcard-container .card-list .add-item .add-item-text.data-v-1da47f4f {
+.carcard-container .card-list .add-item .add-item-text.data-v-fa3d3210 {
   font-weight: 300;
   font-size: 30rpx;
 }

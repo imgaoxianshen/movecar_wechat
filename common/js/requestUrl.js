@@ -32,4 +32,7 @@ module.exports = {
 	// 获取小程序码
 	getWechatCode: baseUrl + 'code/getWechatCode',
 	
+	// adv
+	getAdvList: baseUrl + 'adv/getAdvList',
+	
 }

@@ -12,41 +12,38 @@
 			</cover-view>
 			<cover-view class="view">
 				<cover-view class="show-border">
-					<cover-view class="top-main" @click="chooseLocation">
-						<cover-view class="top-top">
-							<cover-image class="top-img" src="/static/img/icon/position.png"></cover-image>
-							<cover-view class="top-neirong">
-								<cover-view class="top-title">眼镜小镇开业 福利多多</cover-view>
-								<cover-view class="top-desc">2019年5约15日第三方的姐攻防的合法很管波们内部听好好说阿瑟东...</cover-view>
+					<block v-if="list[0]">
+						<cover-view class="top-main">
+							<cover-view class="top-top">
+								<cover-image class="top-img" :src="list[0].img"></cover-image>
+								<cover-view class="top-neirong">
+									<cover-view class="top-title">{{list[0].title}}</cover-view>
+									<cover-view class="top-desc">{{list[0].desc}}</cover-view>
+								</cover-view>
+								<!-- <view class="">3.11km</view> -->
 							</cover-view>
-							<!-- <view class="">3.11km</view> -->
-						</cover-view>
-						<cover-view class="top-bottom">
-							<cover-view></cover-view>
-							<cover-view class="top-bottom-right">
-								<cover-view class="top-bottom-redirect">▶</cover-view>
-								<cover-view class="top-bottom-to">到这去</cover-view>
+							<cover-view class="top-bottom">
+								<cover-view></cover-view>
+								<cover-view class="top-bottom-right" @click="chooseLocation">
+									<cover-view class="top-bottom-redirect">▶</cover-view>
+									<cover-view class="top-bottom-to">到这去</cover-view>
+								</cover-view>
 							</cover-view>
 						</cover-view>
-					</cover-view>
-					<cover-view class="top-other">
-						<cover-image class="top-other-img" src="/static/img/icon/position.png"></cover-image>
-						<cover-view class="top-other-center">
-							<cover-view class="top-other-title">龙湾万达开业</cover-view>
-							<cover-view class="top-other-desc">龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业</cover-view>
+					</block>
+					<block :key="index" v-for="(item,index) in list">
+						<cover-view class="top-other">
+							<cover-image class="top-other-img" :src="item.img"></cover-image>
+							<cover-view class="top-other-center">
+								<cover-view class="top-other-title">{{item.title}}</cover-view>
+								<cover-view class="top-other-desc">{{item.desc}}</cover-view>
+							</cover-view>
 						</cover-view>
-					</cover-view>
-					<cover-view class="top-other">
-						<cover-image class="top-other-img" src="/static/img/icon/position.png"></cover-image>
-						<cover-view class="top-other-center">
-							<cover-view class="top-other-title">龙湾万达开业</cover-view>
-							<cover-view class="top-other-desc">龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业龙湾万达开业</cover-view>
-						</cover-view>
-					</cover-view>
+					</block>
 				</cover-view>
 				<cover-view @click="openScan" class="deep-button">
 					<cover-image class="saoma" src="/static/img/icon/saoma.png"></cover-image>
-					<cover-view>扫码挪车</cover-view>
+					<cover-view>扫码挪车{{id}}{{type}}</cover-view>
 				</cover-view>
 			</cover-view>
         </map>
@@ -55,6 +52,8 @@
 
 <script>
 	import {request, getQueryString} from 'common/js/common'
+	import {getAdvList} from 'common/js/requestUrl'
+	
 	export default {
 		data() {
 			return {
@@ -64,19 +63,11 @@
 				callout: {
 					bgColor: 'red'
 				},
-				covers: [
-					{
-						latitude: 27.9539300000,
-						longitude: 120.5989070000,
-						iconPath: '/static/img/icon/Location.png',
-						width: '60rpx',
-						height: '60rpx',
-						title: '测试',
-						callout: this.callout
-					}
-				],
-				id: null,
-				type: null
+				covers: [],
+				list: [],
+				mainItem: {},
+				id: '',
+				type: ''
 			};
 		},
 		onShow(){
@@ -87,27 +78,40 @@
 				this.latitude = res.latitude
 				this.longitude = res.longitude
 				this.covers.push({
+					id: 0,
 					latitude: this.latitude,
 					longitude: this.longitude,
 					iconPath: '/static/img/icon/Location.png',
 					width: '60rpx',
 					height: '60rpx',
-					title: '我的位置'
+					callout:{
+						content: '我的位置',
+						display: 'ALWAYS',
+						padding: 10,
+						x: -40,
+						y: -40,
+						bgColor: '#fff',
+						borderRadius: 10
+					},
 				})
 			  }
 			})
 		},
 		onLoad(options){
+			this.getAdvList()
+
 			let link = decodeURIComponent(options.q)
-			let paramArr = link.split('=');
-			console.log(paramArr.length)
-			if (paramArr.length == 2){
-				var params = paramArr[1].split('_');
-				this.id = params[0];
-				this.type =params[1];
-			}     
+			this.changeData(link)
 		},
 		methods: {
+			changeData(link){
+				let paramArr = link.split('=');
+				if (paramArr.length == 2){
+					var params = paramArr[1].split('_');
+					this.id = params[0];
+					this.type =params[1];
+				}
+			},
 			changePosition(){
 				this.mapContext.moveToLocation()
 			},
@@ -115,7 +119,7 @@
 				uni.scanCode({
 					onlyFromCamera: true,
 					success: (res) => {
-						this.navicateToPath(res.path)
+						this.changeData(res.result)
 					}
 				});
 			},
@@ -132,7 +136,33 @@
 						console.log('success');
 					}
 				});
-			}
+			},
+			getAdvList(){
+				request(getAdvList, {},(res)=> {
+					if(res.code == 200){
+						this.list = res.result.data
+						res.result.data.forEach((v) => {
+							this.covers.push({
+								id: v.id,
+								latitude: v.latitude,
+								longitude: v.longitude,
+								iconPath: '/static/img/icon/Location.png',
+								width: '60rpx',
+								height: '60rpx',
+								callout:{
+									content: v.title,
+									display: 'ALWAYS',
+									padding: 10,
+									x: -40,
+									y: -40,
+									bgColor: '#fff',
+									borderRadius: 10
+								},
+							})
+						})
+					}
+				})
+			},
 		}
 	};
 </script>
@@ -152,7 +182,7 @@ page
 			justify-content: center
 			.position
 				position:absolute
-				bottom: 400upx
+				bottom: 100upx
 				border-radius: 50%
 				background-color:white
 				width:100upx
@@ -185,6 +215,7 @@ page
 						opacity: .8
 						justify-content: space-around
 						.top-other-img
+							border-radius: 10rpx
 							width: 60rpx
 							height: 60rpx
 						.top-other-center
@@ -237,6 +268,7 @@ page
 							justify-content: space-around
 							.top-img
 								display: inline-block
+								border-radius: 10rpx
 								width: 100rpx
 								height: 100rpx
 							.top-neirong

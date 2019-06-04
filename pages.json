@@ -1,9 +1,9 @@
 {
     "pages" : [
-		{
-		    "path" : "pages/tabbar/tabbar-1/tabbar-1",
-		    "style" : {}
-		},
+        {
+            "path" : "pages/tabbar/tabbar-1/tabbar-1",
+            "style" : {}
+        },
         {
             "path" : "pages/tabbar/orderList/orderList",
             "style" : {}
@@ -18,12 +18,12 @@
         },
         {
             "path" : "pages/tabbar/tabbar-5/tabbar-5"
-//             "style": {  
-// 				"backgroundColor": "yellow",
-// 				"navigationBarTitleText": "我的",  
-// 				"enablePullDownRefresh": true
-// 			  } 
         },
+        //             "style": {  
+        // 				"backgroundColor": "yellow",
+        // 				"navigationBarTitleText": "我的",  
+        // 				"enablePullDownRefresh": true
+        // 			  } 
         {
             "path" : "pages/tabbar/tabbar-5/car_card/car_card",
             "style" : {}
@@ -64,13 +64,17 @@
         {
             "path" : "pages/tabbar/callPhone/callPhone",
             "style" : {}
-        }
-        ,{
+        },
+        {
             "path" : "pages/tabbar/cardList/cardList",
             "style" : {}
-        }
-        ,{
+        },
+        {
             "path" : "pages/tabbar/addCard/addCard",
+            "style" : {}
+        },
+        {
+            "path" : "pages/tabbar/help/help",
             "style" : {}
         }
     ],

@@ -30,6 +30,10 @@
 					<button open-type="contact" class="other-itemName">联系客服</button>
 					<image class="other-itemIcon" :src="arrowRight"></image>
 				</view>
+				<view class="other-item" @click="navToHelp">
+					<view class="other-itemName">用户帮助</view>
+					<image class="other-itemIcon" :src="arrowRight"></image>
+				</view>
 				<view class="other-item">
 					<view class="other-itemName">关于我们</view>
 					<image class="other-itemIcon" :src="arrowRight"></image>
@@ -130,13 +134,22 @@
 					url: navUrl
 				});
 			},
+			navToHelp(){
+				uni.navigateTo({
+					url: '../help/help'
+				});
+			},
 			switchChange(res){
 				let status = res.detail.value == true ? 1:0
 				request(changeNoticeStatus,{
 					status
 					},(res) => {
 						if(res.code == 200){
-							showToast('修改成功')
+							if(status == 1){
+								showToast('开启免打扰模式成功')
+							}else{
+								showToast('关闭免打扰模式成功')
+							}
 						}
 					})
 			}
@@ -185,7 +198,6 @@
 		.avatar
 			border: 1px solid #fff
 			border-radius: 25rpx
-			background-color: $user-back
 			width: 150rpx
 			height: 150rpx
 		.avatar-name
