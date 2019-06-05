@@ -171,7 +171,7 @@
   text-align: left;
   padding: 0;
 }
-.other-tab .other-item ._button.data-v-560df5f8::after {
+.other-tab .other-item button.data-v-560df5f8::after {
   border: none;
 }
 .other-tab .other-item .other-itemIcon.data-v-560df5f8 {

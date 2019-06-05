@@ -16,7 +16,8 @@
     "pages/tabbar/getCode/getCode",
     "pages/tabbar/callPhone/callPhone",
     "pages/tabbar/cardList/cardList",
-    "pages/tabbar/addCard/addCard"
+    "pages/tabbar/addCard/addCard",
+    "pages/tabbar/help/help"
   ],
   "subPackages": [],
   "window": {
@@ -45,5 +46,10 @@
         "text": "我"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "地理位置描述"
+    }
   }
 }

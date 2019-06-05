@@ -211,16 +211,17 @@
 			};
 		},
 		onLoad(query){
-			const scene = decodeURIComponent(query.scene)
-			let e = scene.split("/")
+			// const scene = decodeURIComponent(query.scene)
+			// let e = scene.split("/")
 			// [0]=>类型 [1]=>值
 			// 类型1=>非实体
 			// 类型2=>实体
-			this.type = e.type
-			if(e[0] !='undefined'){
-				this.id = e[0]
-				this.type = e[1]
-			}
+			this.type = query.type
+			this.id = query.id
+			// if(e[0] !='undefined'){
+			// 	this.id = e[0]
+			// 	this.type = e[1]
+			// }
 			this.getCalllMsg()
 		},
 		onShow(){

@@ -12,21 +12,26 @@
 			</cover-view>
 			<cover-view class="view">
 				<cover-view class="show-border">
-					<block v-if="list[0]">
+					<block v-if="mainItem != null">
 						<cover-view class="top-main">
-							<cover-view class="top-top">
-								<cover-image class="top-img" :src="list[0].img"></cover-image>
-								<cover-view class="top-neirong">
-									<cover-view class="top-title">{{list[0].title}}</cover-view>
-									<cover-view class="top-desc">{{list[0].desc}}</cover-view>
+							<cover-view class="top-title">临时停车 请多关照</cover-view>
+							<cover-view class="top-card">
+								<cover-view class="top-card-left">
+									{{mainItem.prefix}}{{mainItem.address_code}}
 								</cover-view>
-								<!-- <view class="">3.11km</view> -->
+								<cover-view class="top-card-point">·</cover-view>
+								<block :key="index" v-for="(item,index) in mainItem.card">
+									<cover-view class="top-card-right">{{item}}</cover-view>
+								</block>
 							</cover-view>
-							<cover-view class="top-bottom">
-								<cover-view></cover-view>
-								<cover-view class="top-bottom-right" @click="chooseLocation">
-									<cover-view class="top-bottom-redirect">▶</cover-view>
-									<cover-view class="top-bottom-to">到这去</cover-view>
+							<cover-view class="top-card-notice">
+								<cover-view class="top-card-notice-button" @click="bindPhone">
+									<cover-image class="top-card-notice-phone-icon" src="../../../static/img/icon/call.png"></cover-image>
+									<cover-view>电话通知</cover-view>
+								</cover-view>
+								<cover-view class="top-card-notice-button" @click="sendMoveCarMsg">
+									<cover-image class="top-card-notice-phone-icon" src="../../../static/img/icon/messageWhite.png"></cover-image>
+									<cover-view>短信通知</cover-view>
 								</cover-view>
 							</cover-view>
 						</cover-view>
@@ -43,7 +48,7 @@
 				</cover-view>
 				<cover-view @click="openScan" class="deep-button">
 					<cover-image class="saoma" src="/static/img/icon/saoma.png"></cover-image>
-					<cover-view>扫码挪车{{id}}{{type}}</cover-view>
+					<cover-view>扫码挪车</cover-view>
 				</cover-view>
 			</cover-view>
         </map>
@@ -51,8 +56,8 @@
 </template>
 
 <script>
-	import {request, getQueryString} from 'common/js/common'
-	import {getAdvList} from 'common/js/requestUrl'
+	import {request, getQueryString, showToast} from 'common/js/common'
+	import {getAdvList, getCalllMsg, bindPhone, sendMoveCarCode} from 'common/js/requestUrl'
 	
 	export default {
 		data() {
@@ -65,7 +70,7 @@
 				},
 				covers: [],
 				list: [],
-				mainItem: {},
+				mainItem: null,
 				id: '',
 				type: ''
 			};
@@ -102,6 +107,7 @@
 
 			let link = decodeURIComponent(options.q)
 			this.changeData(link)
+			
 		},
 		methods: {
 			changeData(link){
@@ -111,6 +117,11 @@
 					this.id = params[0];
 					this.type =params[1];
 				}
+				
+				if(this.id && this.type){
+					this.getCalllMsg()
+				}
+				
 			},
 			changePosition(){
 				this.mapContext.moveToLocation()
@@ -160,6 +171,52 @@
 								},
 							})
 						})
+					}
+				})
+			},
+			getCalllMsg(){
+				request(getCalllMsg,{
+					id : this.id,
+					type: this.type
+				},(res) => {
+					// 450表示未绑定
+					if(res.code == 450){
+						uni.navigateTo({
+							url: '../callPhone/callPhone?id='+this.id+'&type='+this.type
+						});
+					}else if(res.code == 200){
+						this.mainItem = res.result
+						// this.needBindUser = false
+						// this.cards = res.result.card
+						// this.prefix = res.result.prefix
+						// this.address_code = res.result.address_code
+					}else{
+						showToast(res.msg)
+					}
+				})
+			},
+			bindPhone(){
+				request(bindPhone,{
+					id : this.id,
+					type: this.type
+				},(res) => {
+					if(res.code == 200){
+						uni.makePhoneCall({
+							phoneNumber: res.result //仅为示例
+						});
+					}
+				})
+			},
+			sendMoveCarMsg(){
+				request(sendMoveCarCode,{
+					id : this.id,
+					type: this.type,
+					msg: '挡住了道路，请挪下车'
+				},(res) => {
+					if(res.code == 200){
+						showToast('短信发送成功')
+					}else{
+						showToast(res.msg)
 					}
 				})
 			},
@@ -232,60 +289,52 @@ page
 					.top-main
 						display: flex
 						flex-direction: column
+						align-items: center
 						height : 200rpx
 						padding: 20rpx
 						background-color: $orange
-						.top-bottom
+						.top-title
+							font-size: 40rpx
+							font-weight: 300
+						.top-card
 							display: flex
-							justify-content: space-between
 							margin-top: 20rpx
-							.top-bottom-right
+							.top-card-left
 								display: flex
 								align-items: center
-								.top-bottom-redirect
-									font-size: 40rpx
-									text-align: center
-									width: 50rpx
-									height: 50rpx
-									line-height: 50rpx
-									padding: 5rpx 0rpx 5rpx 10rpx 
-									border-radius: 50%
-									box-shadow: 1px 1px 1px #d1d1d1
-									z-index: 999
-									background-color: #fff
-								.top-bottom-to
-									height: 40rpx
-									line-height: 40rpx
-									position: relative
-									box-shadow: 1px 1px 1px #d1d1d1
-									left: -20rpx
-									padding: 0 20rpx
-									border-radius: 20rpx
-									background-color: #fff
-									font-size: 20rpx
-						.top-top
-							display: flex
-							justify-content: space-around
-							.top-img
-								display: inline-block
+								justify-content: center
+								font-size: 30rpx
+								background-color: $little-color
+								padding: 5rpx 10rpx
+								border: 1px solid $border-color 
 								border-radius: 10rpx
-								width: 100rpx
-								height: 100rpx
-							.top-neirong
-								display: inline-block
-								width: 200rpx
-								overflow: hidden
-								padding: 0 20rpx
-								flex: 1
-								.top-title
-									font-size: 25rpx
-									font-weight: 800
-								.top-desc
-									margin-top: 20rpx
-									font-size: 20rpx
-									white-space: normal
-									text-overflow: ellipsis
-									word-break: break-all
+							.top-card-point
+								padding: 5rpx 10rpx
+							.top-card-right
+								font-size: 30rpx
+								background-color: $little-color
+								padding: 5rpx 10rpx
+								border: 1px solid $border-color 
+								border-radius: 10rpx
+								margin: 5rpx
+						.top-card-notice
+							display: flex
+							margin-top: 20rpx
+							width: 100%
+							justify-content: space-around
+							font-size: 25rpx
+							.top-card-notice-button
+								display: flex
+								align-items: center
+								background-color: black
+								color: white
+								padding: 10rpx 25rpx
+								border-radius: 50rpx
+								font-weight: 200
+								.top-card-notice-phone-icon
+									width: 35rpx
+									height: 35rpx
+									margin-right: 10rpx
 				.deep-button
 					display: flex
 					align-items: center

@@ -109,7 +109,7 @@
   height: 300rpx;
   width: 750rpx;
 }
-.background .code-operation ._button.data-v-6c9a5900::after {
+.background .code-operation button.data-v-6c9a5900::after {
   border: none;
 }
 .background .code-operation .operation-item.data-v-6c9a5900 {

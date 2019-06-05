@@ -41,7 +41,7 @@ page {
 page text {
   font-size: 35rpx;
 }
-page button {
+page ._button {
   background-color: #ffda44;
 }
 

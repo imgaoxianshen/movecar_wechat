@@ -50,7 +50,8 @@
         /* 小程序特有相关 */
         "appid" : "wx911f830a88389a71",
         "setting" : {
-            "urlCheck" : true
+            "urlCheck" : true,
+            "es6" : true
         },
         "permission" : {
             "scope.userLocation" : {

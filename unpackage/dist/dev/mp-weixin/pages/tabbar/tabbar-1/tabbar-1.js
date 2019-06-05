@@ -80,10 +80,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader??ref--11-oneOf-1-2!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--11-oneOf-1-3!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/stylus-loader??ref--11-oneOf-1-4!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true&");
-/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader??ref--11-oneOf-1-2!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--11-oneOf-1-3!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/stylus-loader??ref--11-oneOf-1-4!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-5!../../../../Desktop/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true& */ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true&");
+/* harmony import */ var _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_1_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_index_js_ref_11_oneOf_1_2_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_stylePostLoader_js_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_11_oneOf_1_3_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_stylus_loader_index_js_ref_11_oneOf_1_4_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_11_oneOf_1_5_Desktop_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_tabbar_1_vue_vue_type_style_index_0_id_63431d10_lang_stylus_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -166,6 +166,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
 var _common = __webpack_require__(/*! common/js/common */ "../../../../movecar_wechat/common/js/common.js");
 var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../movecar_wechat/common/js/requestUrl.js");var _default =
 
@@ -180,7 +185,7 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../m
 
       covers: [],
       list: [],
-      mainItem: {},
+      mainItem: null,
       id: '',
       type: '' };
 
@@ -217,6 +222,7 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../m
 
     var link = decodeURIComponent(options.q);
     this.changeData(link);
+
   },
   methods: {
     changeData: function changeData(link) {
@@ -226,6 +232,11 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../m
         this.id = params[0];
         this.type = params[1];
       }
+
+      if (this.id && this.type) {
+        this.getCalllMsg();
+      }
+
     },
     changePosition: function changePosition() {
       this.mapContext.moveToLocation();
@@ -277,15 +288,61 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../m
           });
         }
       });
+    },
+    getCalllMsg: function getCalllMsg() {var _this4 = this;
+      (0, _common.request)(_requestUrl.getCalllMsg, {
+        id: this.id,
+        type: this.type },
+      function (res) {
+        // 450表示未绑定
+        if (res.code == 450) {
+          uni.navigateTo({
+            url: '../callPhone/callPhone?id=' + _this4.id + '&type=' + _this4.type });
+
+        } else if (res.code == 200) {
+          _this4.mainItem = res.result;
+          // this.needBindUser = false
+          // this.cards = res.result.card
+          // this.prefix = res.result.prefix
+          // this.address_code = res.result.address_code
+        } else {
+          (0, _common.showToast)(res.msg);
+        }
+      });
+    },
+    bindPhone: function bindPhone() {
+      (0, _common.request)(_requestUrl.bindPhone, {
+        id: this.id,
+        type: this.type },
+      function (res) {
+        if (res.code == 200) {
+          uni.makePhoneCall({
+            phoneNumber: res.result //仅为示例
+          });
+        }
+      });
+    },
+    sendMoveCarMsg: function sendMoveCarMsg() {
+      (0, _common.request)(_requestUrl.sendMoveCarCode, {
+        id: this.id,
+        type: this.type,
+        msg: '挡住了道路，请挪下车' },
+      function (res) {
+        if (res.code == 200) {
+          (0, _common.showToast)('短信发送成功');
+        } else {
+          (0, _common.showToast)(res.msg);
+        }
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/hi/movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/stylus-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/vue-loader/lib/index.js?!../../../../movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--11-oneOf-1-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-1!./node_modules/css-loader??ref--11-oneOf-1-2!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--11-oneOf-1-3!./node_modules/stylus-loader??ref--11-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--11-oneOf-1-5!./node_modules/vue-loader/lib??vue-loader-options!C:/Users/hi/movecar_wechat/pages/tabbar/tabbar-1/tabbar-1.vue?vue&type=style&index=0&id=63431d10&lang=stylus&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -344,16 +401,16 @@ var render = function() {
           ),
           _c(
             "cover-view",
-            { staticClass: "view", attrs: { mpcomid: "a807f9a2-22" } },
+            { staticClass: "view", attrs: { mpcomid: "a807f9a2-24" } },
             [
               _c(
                 "cover-view",
                 {
                   staticClass: "show-border",
-                  attrs: { mpcomid: "a807f9a2-18" }
+                  attrs: { mpcomid: "a807f9a2-20" }
                 },
                 [
-                  _vm.list[0]
+                  _vm.mainItem != null
                     ? _c(
                         "block",
                         [
@@ -361,88 +418,129 @@ var render = function() {
                             "cover-view",
                             {
                               staticClass: "top-main",
-                              attrs: { mpcomid: "a807f9a2-12" }
+                              attrs: { mpcomid: "a807f9a2-14" }
                             },
                             [
                               _c(
                                 "cover-view",
                                 {
-                                  staticClass: "top-top",
-                                  attrs: { mpcomid: "a807f9a2-6" }
+                                  staticClass: "top-title",
+                                  attrs: { mpcomid: "a807f9a2-2" }
                                 },
-                                [
-                                  _c("cover-image", {
-                                    staticClass: "top-img",
-                                    attrs: {
-                                      src: _vm.list[0].img,
-                                      mpcomid: "a807f9a2-2"
-                                    }
-                                  }),
-                                  _c(
-                                    "cover-view",
-                                    {
-                                      staticClass: "top-neirong",
-                                      attrs: { mpcomid: "a807f9a2-5" }
-                                    },
-                                    [
-                                      _c(
-                                        "cover-view",
-                                        {
-                                          staticClass: "top-title",
-                                          attrs: { mpcomid: "a807f9a2-3" }
-                                        },
-                                        [_vm._v(_vm._s(_vm.list[0].title))]
-                                      ),
-                                      _c(
-                                        "cover-view",
-                                        {
-                                          staticClass: "top-desc",
-                                          attrs: { mpcomid: "a807f9a2-4" }
-                                        },
-                                        [_vm._v(_vm._s(_vm.list[0].desc))]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
+                                [_vm._v("临时停车 请多关照")]
                               ),
                               _c(
                                 "cover-view",
                                 {
-                                  staticClass: "top-bottom",
-                                  attrs: { mpcomid: "a807f9a2-11" }
+                                  staticClass: "top-card",
+                                  attrs: { mpcomid: "a807f9a2-6" }
                                 },
                                 [
-                                  _c("cover-view", {
-                                    attrs: { mpcomid: "a807f9a2-7" }
-                                  }),
                                   _c(
                                     "cover-view",
                                     {
-                                      staticClass: "top-bottom-right",
-                                      attrs: {
-                                        eventid: "a807f9a2-1",
-                                        mpcomid: "a807f9a2-10"
-                                      },
-                                      on: { click: _vm.chooseLocation }
+                                      staticClass: "top-card-left",
+                                      attrs: { mpcomid: "a807f9a2-3" }
                                     },
                                     [
+                                      _vm._v(
+                                        _vm._s(_vm.mainItem.prefix) +
+                                          _vm._s(_vm.mainItem.address_code)
+                                      )
+                                    ]
+                                  ),
+                                  _c(
+                                    "cover-view",
+                                    {
+                                      staticClass: "top-card-point",
+                                      attrs: { mpcomid: "a807f9a2-4" }
+                                    },
+                                    [_vm._v("·")]
+                                  ),
+                                  _vm._l(_vm.mainItem.card, function(
+                                    item,
+                                    index
+                                  ) {
+                                    return _c(
+                                      "block",
+                                      { key: index },
+                                      [
+                                        _c(
+                                          "cover-view",
+                                          {
+                                            staticClass: "top-card-right",
+                                            attrs: {
+                                              mpcomid: "a807f9a2-5-" + index
+                                            }
+                                          },
+                                          [_vm._v(_vm._s(item))]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
+                                ],
+                                2
+                              ),
+                              _c(
+                                "cover-view",
+                                {
+                                  staticClass: "top-card-notice",
+                                  attrs: { mpcomid: "a807f9a2-13" }
+                                },
+                                [
+                                  _c(
+                                    "cover-view",
+                                    {
+                                      staticClass: "top-card-notice-button",
+                                      attrs: {
+                                        eventid: "a807f9a2-1",
+                                        mpcomid: "a807f9a2-9"
+                                      },
+                                      on: { click: _vm.bindPhone }
+                                    },
+                                    [
+                                      _c("cover-image", {
+                                        staticClass:
+                                          "top-card-notice-phone-icon",
+                                        attrs: {
+                                          src:
+                                            "../../../static/img/icon/call.png",
+                                          mpcomid: "a807f9a2-7"
+                                        }
+                                      }),
                                       _c(
                                         "cover-view",
-                                        {
-                                          staticClass: "top-bottom-redirect",
-                                          attrs: { mpcomid: "a807f9a2-8" }
-                                        },
-                                        [_vm._v("▶")]
-                                      ),
+                                        { attrs: { mpcomid: "a807f9a2-8" } },
+                                        [_vm._v("电话通知")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "cover-view",
+                                    {
+                                      staticClass: "top-card-notice-button",
+                                      attrs: {
+                                        eventid: "a807f9a2-2",
+                                        mpcomid: "a807f9a2-12"
+                                      },
+                                      on: { click: _vm.sendMoveCarMsg }
+                                    },
+                                    [
+                                      _c("cover-image", {
+                                        staticClass:
+                                          "top-card-notice-phone-icon",
+                                        attrs: {
+                                          src:
+                                            "../../../static/img/icon/messageWhite.png",
+                                          mpcomid: "a807f9a2-10"
+                                        }
+                                      }),
                                       _c(
                                         "cover-view",
-                                        {
-                                          staticClass: "top-bottom-to",
-                                          attrs: { mpcomid: "a807f9a2-9" }
-                                        },
-                                        [_vm._v("到这去")]
+                                        { attrs: { mpcomid: "a807f9a2-11" } },
+                                        [_vm._v("短信通知")]
                                       )
                                     ],
                                     1
@@ -466,28 +564,28 @@ var render = function() {
                           "cover-view",
                           {
                             staticClass: "top-other",
-                            attrs: { mpcomid: "a807f9a2-17-" + index }
+                            attrs: { mpcomid: "a807f9a2-19-" + index }
                           },
                           [
                             _c("cover-image", {
                               staticClass: "top-other-img",
                               attrs: {
                                 src: item.img,
-                                mpcomid: "a807f9a2-13-" + index
+                                mpcomid: "a807f9a2-15-" + index
                               }
                             }),
                             _c(
                               "cover-view",
                               {
                                 staticClass: "top-other-center",
-                                attrs: { mpcomid: "a807f9a2-16-" + index }
+                                attrs: { mpcomid: "a807f9a2-18-" + index }
                               },
                               [
                                 _c(
                                   "cover-view",
                                   {
                                     staticClass: "top-other-title",
-                                    attrs: { mpcomid: "a807f9a2-14-" + index }
+                                    attrs: { mpcomid: "a807f9a2-16-" + index }
                                   },
                                   [_vm._v(_vm._s(item.title))]
                                 ),
@@ -495,7 +593,7 @@ var render = function() {
                                   "cover-view",
                                   {
                                     staticClass: "top-other-desc",
-                                    attrs: { mpcomid: "a807f9a2-15-" + index }
+                                    attrs: { mpcomid: "a807f9a2-17-" + index }
                                   },
                                   [_vm._v(_vm._s(item.desc))]
                                 )
@@ -516,7 +614,7 @@ var render = function() {
                 "cover-view",
                 {
                   staticClass: "deep-button",
-                  attrs: { eventid: "a807f9a2-2", mpcomid: "a807f9a2-21" },
+                  attrs: { eventid: "a807f9a2-3", mpcomid: "a807f9a2-23" },
                   on: { click: _vm.openScan }
                 },
                 [
@@ -524,11 +622,11 @@ var render = function() {
                     staticClass: "saoma",
                     attrs: {
                       src: "/static/img/icon/saoma.png",
-                      mpcomid: "a807f9a2-19"
+                      mpcomid: "a807f9a2-21"
                     }
                   }),
-                  _c("cover-view", { attrs: { mpcomid: "a807f9a2-20" } }, [
-                    _vm._v("扫码挪车" + _vm._s(_vm.id) + _vm._s(_vm.type))
+                  _c("cover-view", { attrs: { mpcomid: "a807f9a2-22" } }, [
+                    _vm._v("扫码挪车")
                   ])
                 ],
                 1
