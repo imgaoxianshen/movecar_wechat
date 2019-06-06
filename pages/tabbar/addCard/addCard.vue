@@ -6,20 +6,25 @@
 		<view class="center">
 			<text class="tips">请输入车牌号</text>
 			<text class="desc">请输入车牌号后六位，如果是新能源牌照，请点击最后新能源输入框后再输入。</text>
-			<input class='input_control' type="text" @blur="cardUnFocus" :focus="cardFocus" @input='inputCard' maxlength='6'/>
+			<input class='input_control' type="text" @blur="cardUnFocus" :focus="cardFocus" @input='inputCard' maxlength='7'/>
 			<view class="input-msg" @click="changForce()">
 				<view class="input">
-					<view class="input-name">浙</view>
+					<view class="input-name" @click.stop="showModel">{{placeChoosed}}</view>
 					<view class="input-char">{{card[0]}}</view>
 				</view>
 				<view class="dot">·</view>
-				<block wx:key="key" v-for="key in [1,2,3,4,5]">
+				<block :key="key" v-for="key in [1,2,3,4,5]">
 					<view class="input-one">{{card[key]}}</view>
 				</block>
-				<view class="input-one-list">
-					<image class="input-icon" :src="avatar"></image>
-					<text class="new-text">新能源</text>
-				</view>
+				<block v-if="card[6]">
+					<view class="input-one">{{card[6]}}</view>
+				</block>
+				<block v-else>
+					<view class="input-one-list">
+						<image class="input-icon" :src="avatar"></image>
+						<text class="new-text">新能源</text>
+					</view>
+				</block>
 			</view>
 			<view class="get-code">
 				<input placeholder="请输入手机号"  @input="inputPhone" placeholder-style="text-align: center" type="number">
@@ -52,6 +57,17 @@
 				</view>
 			</view>
 		</block> -->
+		<block v-if="showBack">
+			<view class="back" @click="cancleBack"></view>
+			<view class="display">
+				<view class="add-car">添加车牌</view>
+				<view class="place-container">
+					<block :key="index" v-for="(item,index) in placeList">
+						<view class="car-place" @click="chooseItem(item)">{{item}}</view>
+					</block>
+				</view>
+			</view>
+		</block>
 	</view>
 </template>
 
@@ -157,6 +173,9 @@
 					})
 				}
 			},
+			showModel(){
+				this.showBack = true
+			},
 			timeGone(){
 				this.yanzhengTime -= 1
 				if(this.yanzhengTime == 0){
@@ -208,6 +227,36 @@
 	background-color: $base-color
 	opacity: 0.8
 	position:relative
+	.back
+		position: fixed
+		top: 0
+		height: 100%
+		width: 100%
+		background-color:black
+		z-index: 999
+		opacity: .7
+	.display
+		display: flex
+		position: fixed
+		bottom: 0
+		flex-direction: column
+		background-color: white
+		z-index: 1000
+		.add-car
+			width: 100%
+			padding: 20rpx
+			text-align: center
+			border-bottom: 1px solid #d1d1d1
+		.place-container
+			display: flex
+			flex-wrap: wrap
+			justify-content: left
+			.car-place
+				border-radius: 10rpx
+				box-shadow: 1rpx 3rpx 1rpx #d1d1d1
+				padding: 15rpx
+				margin: 5rpx
+				background-color: $base-color
 	.background
 		position: relative
 		align-items: center
@@ -242,6 +291,7 @@
 			font-weight: 300
 			text-align:center
 	.center
+		width: 550rpx
 		position: absolute
 		top: 300rpx
 		padding: 0 100rpx

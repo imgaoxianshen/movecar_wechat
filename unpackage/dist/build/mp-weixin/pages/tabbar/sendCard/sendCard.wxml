@@ -1,2 +1,0 @@
-<import src="./sendCard.vue.wxml" />
-    <template is="9c054022" data="{{ ...$root['0'], $root }}"/>

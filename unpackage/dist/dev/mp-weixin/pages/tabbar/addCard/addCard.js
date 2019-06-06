@@ -171,6 +171,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "../../../../movecar_wechat/common/js/requestUrl.js");
 var _common = __webpack_require__(/*! common/js/common */ "../../../../movecar_wechat/common/js/common.js");
 var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrcode.png */ "../../../../movecar_wechat/static/img/icon/qrcode.png"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
@@ -272,6 +288,9 @@ var _qrcode = _interopRequireDefault(__webpack_require__(/*! static/img/icon/qrc
         });
       }
     },
+    showModel: function showModel() {
+      this.showBack = true;
+    },
     timeGone: function timeGone() {
       this.yanzhengTime -= 1;
       if (this.yanzhengTime == 0) {
@@ -343,112 +362,175 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("view", { staticClass: "addCard-container" }, [
-    _vm._m(0),
-    _c(
-      "view",
-      { staticClass: "center" },
-      [
-        _c("text", { staticClass: "tips" }, [_vm._v("请输入车牌号")]),
-        _c("text", { staticClass: "desc" }, [
-          _vm._v(
-            "请输入车牌号后六位，如果是新能源牌照，请点击最后新能源输入框后再输入。"
-          )
-        ]),
-        _c("input", {
-          staticClass: "input_control",
-          attrs: {
-            type: "text",
-            focus: _vm.cardFocus,
-            maxlength: "6",
-            eventid: "ba21cb5a-0"
-          },
-          on: { blur: _vm.cardUnFocus, input: _vm.inputCard }
-        }),
-        _c(
-          "view",
-          {
-            staticClass: "input-msg",
-            attrs: { eventid: "ba21cb5a-1" },
-            on: {
-              click: function($event) {
-                _vm.changForce()
-              }
-            }
-          },
-          [
-            _c("view", { staticClass: "input" }, [
-              _c("view", { staticClass: "input-name" }, [_vm._v("浙")]),
-              _c("view", { staticClass: "input-char" }, [
-                _vm._v(_vm._s(_vm.card[0]))
-              ])
-            ]),
-            _c("view", { staticClass: "dot" }, [_vm._v("·")]),
-            _vm._l([1, 2, 3, 4, 5], function(key, index0) {
-              return _c("block", { attrs: { "wx:key": "key" } }, [
-                _c("view", { staticClass: "input-one" }, [
-                  _vm._v(_vm._s(_vm.card[key]))
-                ])
-              ])
-            }),
-            _c("view", { staticClass: "input-one-list" }, [
-              _c("image", {
-                staticClass: "input-icon",
-                attrs: { src: _vm.avatar }
-              }),
-              _c("text", { staticClass: "new-text" }, [_vm._v("新能源")])
-            ])
-          ],
-          2
-        ),
-        _c("view", { staticClass: "get-code" }, [
+  return _c(
+    "view",
+    { staticClass: "addCard-container" },
+    [
+      _vm._m(0),
+      _c(
+        "view",
+        { staticClass: "center" },
+        [
+          _c("text", { staticClass: "tips" }, [_vm._v("请输入车牌号")]),
+          _c("text", { staticClass: "desc" }, [
+            _vm._v(
+              "请输入车牌号后六位，如果是新能源牌照，请点击最后新能源输入框后再输入。"
+            )
+          ]),
           _c("input", {
+            staticClass: "input_control",
             attrs: {
-              placeholder: "请输入手机号",
-              "placeholder-style": "text-align: center",
-              type: "number",
-              eventid: "ba21cb5a-2"
+              type: "text",
+              focus: _vm.cardFocus,
+              maxlength: "7",
+              eventid: "ba21cb5a-0"
             },
-            on: { input: _vm.inputPhone }
+            on: { blur: _vm.cardUnFocus, input: _vm.inputCard }
           }),
           _c(
             "view",
             {
-              staticClass: "get-button",
-              attrs: { eventid: "ba21cb5a-3" },
-              on: { click: _vm.getCode }
+              staticClass: "input-msg",
+              attrs: { eventid: "ba21cb5a-2" },
+              on: {
+                click: function($event) {
+                  _vm.changForce()
+                }
+              }
             },
             [
-              _vm._v(
-                "获取验证码" +
-                  _vm._s(_vm.yanzhengStart ? "(" + _vm.yanzhengTime + ")" : "")
-              )
-            ]
+              _c("view", { staticClass: "input" }, [
+                _c(
+                  "view",
+                  {
+                    staticClass: "input-name",
+                    attrs: { eventid: "ba21cb5a-1" },
+                    on: {
+                      click: function($event) {
+                        $event.stopPropagation()
+                        _vm.showModel($event)
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.placeChoosed))]
+                ),
+                _c("view", { staticClass: "input-char" }, [
+                  _vm._v(_vm._s(_vm.card[0]))
+                ])
+              ]),
+              _c("view", { staticClass: "dot" }, [_vm._v("·")]),
+              _vm._l([1, 2, 3, 4, 5], function(key, index0) {
+                return _c("block", { key: key }, [
+                  _c("view", { staticClass: "input-one" }, [
+                    _vm._v(_vm._s(_vm.card[key]))
+                  ])
+                ])
+              }),
+              _vm.card[6]
+                ? _c("block", [
+                    _c("view", { staticClass: "input-one" }, [
+                      _vm._v(_vm._s(_vm.card[6]))
+                    ])
+                  ])
+                : _c("block", [
+                    _c("view", { staticClass: "input-one-list" }, [
+                      _c("image", {
+                        staticClass: "input-icon",
+                        attrs: { src: _vm.avatar }
+                      }),
+                      _c("text", { staticClass: "new-text" }, [
+                        _vm._v("新能源")
+                      ])
+                    ])
+                  ])
+            ],
+            2
+          ),
+          _c("view", { staticClass: "get-code" }, [
+            _c("input", {
+              attrs: {
+                placeholder: "请输入手机号",
+                "placeholder-style": "text-align: center",
+                type: "number",
+                eventid: "ba21cb5a-3"
+              },
+              on: { input: _vm.inputPhone }
+            }),
+            _c(
+              "view",
+              {
+                staticClass: "get-button",
+                attrs: { eventid: "ba21cb5a-4" },
+                on: { click: _vm.getCode }
+              },
+              [
+                _vm._v(
+                  "获取验证码" +
+                    _vm._s(
+                      _vm.yanzhengStart ? "(" + _vm.yanzhengTime + ")" : ""
+                    )
+                )
+              ]
+            )
+          ]),
+          _c("input", {
+            staticClass: "yanzheng",
+            attrs: {
+              "placeholder-style": "text-align: center",
+              placeholder: "请输入验证码",
+              type: "number",
+              eventid: "ba21cb5a-5"
+            },
+            on: { input: _vm.inputYanzhengCode }
+          }),
+          _c(
+            "botton",
+            {
+              staticClass: "confirm",
+              attrs: { eventid: "ba21cb5a-6", mpcomid: "ba21cb5a-0" },
+              on: { click: _vm.confirm }
+            },
+            [_vm._v("确定")]
           )
-        ]),
-        _c("input", {
-          staticClass: "yanzheng",
-          attrs: {
-            "placeholder-style": "text-align: center",
-            placeholder: "请输入验证码",
-            type: "number",
-            eventid: "ba21cb5a-4"
-          },
-          on: { input: _vm.inputYanzhengCode }
-        }),
-        _c(
-          "botton",
-          {
-            staticClass: "confirm",
-            attrs: { eventid: "ba21cb5a-5", mpcomid: "ba21cb5a-0" },
-            on: { click: _vm.confirm }
-          },
-          [_vm._v("确定")]
-        )
-      ],
-      1
-    )
-  ])
+        ],
+        1
+      ),
+      _vm.showBack
+        ? _c("block", [
+            _c("view", {
+              staticClass: "back",
+              attrs: { eventid: "ba21cb5a-7" },
+              on: { click: _vm.cancleBack }
+            }),
+            _c("view", { staticClass: "display" }, [
+              _c("view", { staticClass: "add-car" }, [_vm._v("添加车牌")]),
+              _c(
+                "view",
+                { staticClass: "place-container" },
+                _vm._l(_vm.placeList, function(item, index) {
+                  return _c("block", { key: index }, [
+                    _c(
+                      "view",
+                      {
+                        staticClass: "car-place",
+                        attrs: { eventid: "ba21cb5a-8-" + index },
+                        on: {
+                          click: function($event) {
+                            _vm.chooseItem(item)
+                          }
+                        }
+                      },
+                      [_vm._v(_vm._s(item))]
+                    )
+                  ])
+                })
+              )
+            ])
+          ])
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {

@@ -4,12 +4,9 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
+		"newFeature": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
@@ -24,13 +21,24 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "add",
+					"pathName": "pages/tabbar/addCard/addCard",
+					"scene": null
+				}
+			]
 		}
 	}
 }
