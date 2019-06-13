@@ -4,9 +4,12 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
-		"newFeature": true
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
@@ -34,8 +37,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "add",
-					"pathName": "pages/tabbar/addCard/addCard",
+					"name": "cardlist",
+					"pathName": "pages/tabbar/cardList/cardList",
+					"query": "q='https://www.imgaoxianshen.cn/?id=1'",
 					"scene": null
 				}
 			]

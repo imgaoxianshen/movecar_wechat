@@ -41,8 +41,10 @@
 							<cover-image class="top-other-img" :src="item.img"></cover-image>
 							<cover-view class="top-other-center">
 								<cover-view class="top-other-title">{{item.title}}</cover-view>
-								<cover-view class="top-other-desc">{{item.desc}}</cover-view>
+								<!-- <cover-view class="top-other-desc">{{item.desc}}</cover-view> -->
 							</cover-view>
+							<cover-image class="top-other-call" src="../../../static/img/icon/plane.png" @click="chooseLocation(item.latitude, item.longitude)"></cover-image>
+							<cover-image class="top-other-call" src="../../../static/img/icon/callblack.png" @click="callAdvPhone(item.phone)"></cover-image>
 						</cover-view>
 					</block>
 				</cover-view>
@@ -101,13 +103,11 @@
 				})
 			  }
 			})
+			this.getAdvList()
 		},
 		onLoad(options){
-			this.getAdvList()
-
 			let link = decodeURIComponent(options.q)
 			this.changeData(link)
-			
 		},
 		methods: {
 			changeData(link){
@@ -139,10 +139,10 @@
 					url: '/'+ url
 				});
 			},
-			chooseLocation(){
+			chooseLocation(latitude, longitude){
 				uni.openLocation({
-					latitude: 27.9539300000,
-					longitude: 120.5989070000,
+					latitude: parseFloat(latitude),
+					longitude: parseFloat(longitude),
 					success: function () {
 						console.log('success');
 					}
@@ -220,6 +220,11 @@
 					}
 				})
 			},
+			callAdvPhone(phone){
+				uni.makePhoneCall({
+					phoneNumber: phone //仅为示例
+				});
+			}
 		}
 	};
 </script>
@@ -268,6 +273,7 @@ page
 					.top-other
 						display: flex
 						padding: 20rpx
+						align-items: center
 						background-color: white
 						opacity: .8
 						justify-content: space-around
@@ -275,13 +281,20 @@ page
 							border-radius: 10rpx
 							width: 60rpx
 							height: 60rpx
+						.top-other-call
+							margin-right: 15rpx
+							width: 40rpx
+							height: 40rpx
 						.top-other-center
 							overflow: hidden
 							padding: 0 20rpx
 							flex: 1
 							.top-other-title
+								height: 60rpx
+								line-height: 60rpx
 								font-size: 30rpx
 								font-weight: 500
+								text-overflow: ellipsis
 							.top-other-desc
 								margin-top: 5rpx
 								font-size: 18rpx

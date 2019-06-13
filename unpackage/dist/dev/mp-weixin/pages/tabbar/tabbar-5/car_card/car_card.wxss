@@ -1,7 +1,7 @@
-.carcard-container.data-v-4d49f00d {
+.carcard-container.data-v-05774996 {
   width: 750rpx;
 }
-.carcard-container .car-container.data-v-4d49f00d {
+.carcard-container .car-container.data-v-05774996 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,16 +16,16 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.carcard-container .car-container .car-item.data-v-4d49f00d {
+.carcard-container .car-container .car-item.data-v-05774996 {
   position: relative;
   border-bottom: 1px solid #d1d1d1;
   width: 650rpx;
   padding: 50rpx;
 }
-.carcard-container .car-container .car-item .items.data-v-4d49f00d {
+.carcard-container .car-container .car-item .items.data-v-05774996 {
   font-size: 60rpx;
 }
-.carcard-container .car-container .car-item .choosed.data-v-4d49f00d {
+.carcard-container .car-container .car-item .choosed.data-v-05774996 {
   -webkit-transform: translate(-150rpx, -50%);
       -ms-transform: translate(-150rpx, -50%);
           transform: translate(-150rpx, -50%);
@@ -33,7 +33,7 @@
   right: 0;
   top: 50%;
 }
-.carcard-container .car-container .car-item .deleteIcon.data-v-4d49f00d {
+.carcard-container .car-container .car-item .deleteIcon.data-v-05774996 {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -43,11 +43,11 @@
   width: 60rpx;
   height: 60rpx;
 }
-.carcard-container .addCard.data-v-4d49f00d {
+.carcard-container .addCard.data-v-05774996 {
   margin-top: 100rpx;
   width: 600rpx;
 }
-.carcard-container .withoutList.data-v-4d49f00d {
+.carcard-container .withoutList.data-v-05774996 {
   margin-top: 100rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,7 +63,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.carcard-container .withoutList .card-image.data-v-4d49f00d {
+.carcard-container .withoutList .card-image.data-v-05774996 {
   width: 300rpx;
   height: 300rpx;
 }

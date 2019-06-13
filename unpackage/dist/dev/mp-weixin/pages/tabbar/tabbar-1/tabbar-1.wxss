@@ -1,10 +1,10 @@
-page.data-v-63431d10 {
+page.data-v-692189cf {
   overflow: hidden;
 }
-page .content.data-v-63431d10 {
+page .content.data-v-692189cf {
   width: 750rpx;
 }
-page .content .map.data-v-63431d10 {
+page .content .map.data-v-692189cf {
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,7 +18,7 @@ page .content .map.data-v-63431d10 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-page .content .map .position.data-v-63431d10 {
+page .content .map .position.data-v-692189cf {
   position: absolute;
   bottom: 100rpx;
   border-radius: 50%;
@@ -40,11 +40,11 @@ page .content .map .position.data-v-63431d10 {
   -webkit-box-shadow: 0 10rpx 10rpx #d1d1d1;
           box-shadow: 0 10rpx 10rpx #d1d1d1;
 }
-page .content .map .position .position-icon.data-v-63431d10 {
+page .content .map .position .position-icon.data-v-692189cf {
   width: 60rpx;
   height: 60rpx;
 }
-page .content .map .view.data-v-63431d10 {
+page .content .map .view.data-v-692189cf {
   position: fixed;
   bottom: 20rpx;
   left: 125rpx;
@@ -67,31 +67,40 @@ page .content .map .view.data-v-63431d10 {
       -ms-flex-align: center;
           align-items: center;
 }
-page .content .map .view .show-border.data-v-63431d10 {
+page .content .map .view .show-border.data-v-692189cf {
   border: 1px solid #d1d1d1;
   -webkit-box-shadow: 1px 1px 1px #d1d1d1;
           box-shadow: 1px 1px 1px #d1d1d1;
   border-radius: 10rpx;
   width: 500rpx;
 }
-page .content .map .view .show-border .top-other.data-v-63431d10 {
+page .content .map .view .show-border .top-other.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 20rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
   opacity: 0.8;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-page .content .map .view .show-border .top-other .top-other-img.data-v-63431d10 {
+page .content .map .view .show-border .top-other .top-other-img.data-v-692189cf {
   border-radius: 10rpx;
   width: 60rpx;
   height: 60rpx;
 }
-page .content .map .view .show-border .top-other .top-other-center.data-v-63431d10 {
+page .content .map .view .show-border .top-other .top-other-call.data-v-692189cf {
+  margin-right: 15rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+page .content .map .view .show-border .top-other .top-other-center.data-v-692189cf {
   overflow: hidden;
   padding: 0 20rpx;
   -webkit-box-flex: 1;
@@ -99,17 +108,21 @@ page .content .map .view .show-border .top-other .top-other-center.data-v-63431d
       -ms-flex: 1;
           flex: 1;
 }
-page .content .map .view .show-border .top-other .top-other-center .top-other-title.data-v-63431d10 {
+page .content .map .view .show-border .top-other .top-other-center .top-other-title.data-v-692189cf {
+  height: 60rpx;
+  line-height: 60rpx;
   font-size: 30rpx;
   font-weight: 500;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
-page .content .map .view .show-border .top-other .top-other-center .top-other-desc.data-v-63431d10 {
+page .content .map .view .show-border .top-other .top-other-center .top-other-desc.data-v-692189cf {
   margin-top: 5rpx;
   font-size: 18rpx;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
-page .content .map .view .show-border .top-main.data-v-63431d10 {
+page .content .map .view .show-border .top-main.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,18 +140,18 @@ page .content .map .view .show-border .top-main.data-v-63431d10 {
   padding: 20rpx;
   background-color: #ebbe29;
 }
-page .content .map .view .show-border .top-main .top-title.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-title.data-v-692189cf {
   font-size: 40rpx;
   font-weight: 300;
 }
-page .content .map .view .show-border .top-main .top-card.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-top: 20rpx;
 }
-page .content .map .view .show-border .top-main .top-card .top-card-left.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card .top-card-left.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -157,10 +170,10 @@ page .content .map .view .show-border .top-main .top-card .top-card-left.data-v-
   border: 1px solid #e3d38d;
   border-radius: 10rpx;
 }
-page .content .map .view .show-border .top-main .top-card .top-card-point.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card .top-card-point.data-v-692189cf {
   padding: 5rpx 10rpx;
 }
-page .content .map .view .show-border .top-main .top-card .top-card-right.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card .top-card-right.data-v-692189cf {
   font-size: 30rpx;
   background-color: #fff1af;
   padding: 5rpx 10rpx;
@@ -168,7 +181,7 @@ page .content .map .view .show-border .top-main .top-card .top-card-right.data-v
   border-radius: 10rpx;
   margin: 5rpx;
 }
-page .content .map .view .show-border .top-main .top-card-notice.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card-notice.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,7 +193,7 @@ page .content .map .view .show-border .top-main .top-card-notice.data-v-63431d10
           justify-content: space-around;
   font-size: 25rpx;
 }
-page .content .map .view .show-border .top-main .top-card-notice .top-card-notice-button.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card-notice .top-card-notice-button.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,12 +208,12 @@ page .content .map .view .show-border .top-main .top-card-notice .top-card-notic
   border-radius: 50rpx;
   font-weight: 200;
 }
-page .content .map .view .show-border .top-main .top-card-notice .top-card-notice-button .top-card-notice-phone-icon.data-v-63431d10 {
+page .content .map .view .show-border .top-main .top-card-notice .top-card-notice-button .top-card-notice-phone-icon.data-v-692189cf {
   width: 35rpx;
   height: 35rpx;
   margin-right: 10rpx;
 }
-page .content .map .view .deep-button.data-v-63431d10 {
+page .content .map .view .deep-button.data-v-692189cf {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -220,7 +233,7 @@ page .content .map .view .deep-button.data-v-63431d10 {
   margin-top: 20rpx;
   border-radius: 60rpx;
 }
-page .content .map .view .deep-button .saoma.data-v-63431d10 {
+page .content .map .view .deep-button .saoma.data-v-692189cf {
   width: 40rpx;
   height: 40rpx;
   margin-right: 10rpx;

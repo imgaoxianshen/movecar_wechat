@@ -34,10 +34,10 @@
 					<view class="other-itemName">用户帮助</view>
 					<image class="other-itemIcon" :src="arrowRight"></image>
 				</view>
-				<view class="other-item">
+				<!-- <view class="other-item">
 					<view class="other-itemName">关于我们</view>
 					<image class="other-itemIcon" :src="arrowRight"></image>
-				</view>
+				</view> -->
 			</block>
 		</view>
 		<!-- <image class="avatar" :src="avatarUrl?avatarUrl:baseAvatar" mode="aspectFill"></image>
@@ -67,7 +67,7 @@
 	import {mapState,mapMutations} from 'vuex'
 	import {changeNoticeStatus, getUserInfo} from 'common/js/requestUrl'
 	import {request, showToast} from 'common/js/common'
-	import avatar from 'static/img/icon/avatar.png'
+	import avatar from 'static/img/icon/avatar.jpg'
 	import arrowRight from 'static/img/icon/arrow-right.png'
 	import white from 'static/img/white.jpg'
 	import qrcode from 'static/img/icon/qrcode.png'

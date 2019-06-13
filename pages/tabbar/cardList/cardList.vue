@@ -1,7 +1,7 @@
 <template>
 	<view class="carcard-container">
 		<view class="card-choosed">
-			<view class="useing">正在使用车辆</view>
+			<view class="useing">使用车辆</view>
 			<view class="useing-item">
 				<view class="useing-item-left">
 					<text class="item-card">{{usingCard}}</text>
@@ -9,8 +9,8 @@
 				</view>
 				<text class="item-useing">正在使用</text>
 			</view>
-			<view class="card-notice">一个账号可以选择使用的车牌号，请在您出行的时候选择对应的车牌，可以自由切换</view>
-			<view class="card-notice">其他车牌</view>
+			<view class="card-notice">请在您用车时选择对应的车牌号及电话号码</view>
+			<view class="card-notice">其他车辆</view>
 		</view>
 		<view class="card-list">
 			<block wx:key="item" v-for="(item, key) in carcardList">
@@ -161,7 +161,7 @@
 				font-weight: 300
 				letter-spacing: 3rpx
 				margin-left: 30rpx
-				font-size: 20rpx
+				font-size: 30rpx
 		.item-useing
 			font-weight: 300
 			font-size: 25rpx
@@ -197,7 +197,7 @@
 					font-weight: 300
 					letter-spacing: 3rpx
 					margin-left: 30rpx
-					font-size: 20rpx
+					font-size: 30rpx
 			.card-unchoosed
 				margin-right: 30rpx
 				font-weight: 200

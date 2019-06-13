@@ -64,7 +64,9 @@
 		},
 		onShareAppMessage(){
 			return {
-				title:'免费获取挪车码，你也可以！'
+				title:'多少堵车事，历历不能忘。',
+				path: 'pages/tabbar/tabbar-1/tabbar-1',
+				imageUrl: '../../../static/img/icon/share.jpg'
 			}
 		},
 		methods: {
