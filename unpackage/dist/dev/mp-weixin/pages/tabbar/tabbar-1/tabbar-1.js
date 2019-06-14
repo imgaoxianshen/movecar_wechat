@@ -88,7 +88,6 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "C:\\Users\\çƒ
 
   },
   onShow: function onShow() {var _this = this;
-    this.mapContext = uni.createMapContext('map', this);
     uni.getLocation({
       type: 'gcj02',
       success: function success(res) {
@@ -113,6 +112,7 @@ var _requestUrl = __webpack_require__(/*! common/js/requestUrl */ "C:\\Users\\çƒ
 
       } });
 
+    this.mapContext = uni.createMapContext('map', this);
     this.getAdvList();
   },
   onLoad: function onLoad(options) {

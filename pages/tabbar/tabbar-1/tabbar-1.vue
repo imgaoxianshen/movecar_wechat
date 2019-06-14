@@ -78,7 +78,6 @@
 			};
 		},
 		onShow(){
-			this.mapContext = uni.createMapContext('map',this)
 			uni.getLocation({
 			  type: 'gcj02',
 			  success: res => {
@@ -103,6 +102,7 @@
 				})
 			  }
 			})
+			this.mapContext = uni.createMapContext('map',this)
 			this.getAdvList()
 		},
 		onLoad(options){
