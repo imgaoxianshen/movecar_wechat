@@ -18,7 +18,8 @@
   position: absolute;
   top: 150rpx;
   border: 30rpx solid #ffda44;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 .container .item.data-v-d8ce00ba {
   margin-top: 200rpx;
@@ -47,7 +48,8 @@
   -webkit-transform: translateX(-500rpx);
       -ms-transform: translateX(-500rpx);
           transform: translateX(-500rpx);
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 .container .item .item-bottom .item-bottom-msg.data-v-d8ce00ba {
   width: 450rpx;

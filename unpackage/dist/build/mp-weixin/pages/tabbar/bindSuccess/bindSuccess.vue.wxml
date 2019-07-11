@@ -1,0 +1,1 @@
+<template name="afa7ea74"><view class="_view Mafa7ea74 image-container"><image class="_image Mafa7ea74 image-bindSuccess" src="{{bindSuccess}}"></image><view bindtap="handleProxy" class="_view Mafa7ea74 into-index" data-eventid="{{'afa7ea74-0'}}" data-comkey="{{$k}}"></view></view></template>

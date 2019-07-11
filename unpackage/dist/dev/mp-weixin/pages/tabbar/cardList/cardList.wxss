@@ -2,7 +2,7 @@
   width: 750rpx;
 }
 .carcard-container .useing.data-v-1da47f4f {
-  font-size: 20rpx;
+  font-size: 30rpx;
   font-weight: 300;
   margin: 40rpx 0 10rpx 30rpx;
 }
@@ -42,7 +42,7 @@
   font-weight: 300;
   letter-spacing: 3rpx;
   margin-left: 30rpx;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 .carcard-container .useing-item .item-useing.data-v-1da47f4f {
   font-weight: 300;
@@ -53,7 +53,14 @@
   font-weight: 300;
   letter-spacing: 5rpx;
   margin-top: 20rpx;
-  font-size: 18rpx;
+  font-size: 25rpx;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+}
+.carcard-container .card-notice-other.data-v-1da47f4f {
+  font-weight: 300;
+  letter-spacing: 5rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
   margin: 20rpx 30rpx 20rpx 30rpx;
 }
 .carcard-container .card-list.data-v-1da47f4f {
@@ -108,7 +115,7 @@
   font-weight: 300;
   letter-spacing: 3rpx;
   margin-left: 30rpx;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 .carcard-container .card-list .card-item .card-unchoosed.data-v-1da47f4f {
   margin-right: 30rpx;

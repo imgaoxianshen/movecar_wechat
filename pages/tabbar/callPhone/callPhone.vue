@@ -1,6 +1,5 @@
 <template>
 	<view class="container">
-		<block v-if="type == 2 && needBindUser">
 			<view class="background">
 				<view class="title">绑定信息</view>
 			</view>
@@ -11,24 +10,26 @@
 						{{bindPrefix}}
 						<image class="input-arrow" :src="arrowDown"></image>
 					</view>
-					<input class="card-msg" @input="setCard" :value="bindCard">
+					<view class="card-msg">
+						<input @input="setCard" :value="bindCard" maxlength='7'>
+						<image class="card-light" :src="showLight"></image>
+					</view>
 				</view>
 				<text class="card-notice">请输入车牌后六位，如果是新能源牌照，请输入后七位</text>
-				<!-- <view class="card-name">
+				<view class="card-name">
 					<text class="name">车主称呼</text>
-					<text class="card-name-choose">先生</text>
+					<input class="card-name-choose" maxlength='2' @input="inputFName" placeholder="先生"></input>
 					<view class="name-choose-container">
-						<view class="name-choose-left">先生</view>
-						<view class="name-choose-right">女士</view>
+						<view :class="leftSexStatus" @click="changeSex(1)">先生</view>
+						<view :class="rightSexStatus" @click="changeSex(2)">女士</view>
 					</view>
-				</view> -->
+				</view>
 				<view class="card-name">
 					<text class="name">手机号码</text>
-					<input class="card-name-choose" @input="inputPhone" placeholder="请输入手机号码"></input>
-					<!-- <button class="getPhone" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">一键获取</button> -->
+					<input class="card-name-choose" @input="inputPhone" type="number" placeholder="请输入手机号码"></input>
 				</view>
 				<view class="input-msg">
-					<input class="yanzheng-input" @input="inputYanzhengCode" placeholder="请输入验证码"></input>
+					<input class="yanzheng-input" @input="inputYanzhengCode" type="number" placeholder="请输入验证码"></input>
 					<view class="yanzheng-code" @click="getCode">获取验证码{{yanzhengStart ? '(' + yanzhengTime + ')' : ''}}</view>
 				</view>
 				<view class="bind-card" @click="bindCardConfirm">绑定挪车码</view>
@@ -43,8 +44,7 @@
 					</view>
 				</view>
 			</view>
-		</block>
-		<block v-else>
+		<!-- <block v-else>
 			<view class="padding">
 				<view class="top">
 					<text class="top-font">临时停车</text>
@@ -77,7 +77,6 @@
 							<view class="message-two-botton" @click="sendMoveCarMsg(4)">大灯或室内灯还亮着</view>
 							<view class="message-two-botton" @click="sendMoveCarMsg(5)">被警察蜀黍贴罚单了</view>
 						</view>
-						<!-- <view class="message-bottom">其他状况（请自己填写）</view> -->
 					</view>
 				</view>
 				<view class="phone-container"  @click="bindPhone()" :animation="buttonAnimationData">
@@ -89,29 +88,7 @@
 				</view>
 			</view>
 		</block>
-	<!-- 	<block v-if="type == 2 && needBindUser">
-			<image class="car-icon" :src="bind"></image>
-			<view class="bind-container">
-				<text class="white">tips:</text>
-				<text class="white">绑定到当前微信账号后，您还需要进入"帮挪车"微信小程序中去管理您的车牌信息以及手机号信息，以便其他用户扫码通知您挪车</text>
-			</view>
-			<button @click="bindUser()">绑定到当前微信账号</button>
-		</block>
-		<block v-else>
-			<block v-if="id">
-				<image class="car-icon" :src="car"></image>
-				<text class="car-text">扫码挪车</text>
-				<view class="car-card">{{card}}</view>
-				<button class="call" @click="bindPhone()">拨打电话</button>
-				<text clss="notice">双方都将显示临时虚拟号码，保护隐私！</text>
-				<text>安全至上，隐私挪车</text>
-			</block>
-			<block v-else>
-				<image class="car-icon" :src="broken"></image>
-				<text class="car-text">啊哦......</text>
-				<text>亲，要扫码才能使用哦</text>
-			</block>
-		</block> -->
+ -->
 		<block v-if="showBack">
 			<view class="back" @click="cancleBack"></view>
 			<view class="display">
@@ -128,21 +105,19 @@
 
 <script>
 	import car from 'static/img/car.png'
-	import broken from 'static/img/broken.png'
 	import call from 'static/img/icon/call.png'
 	import message from 'static/img/icon/message.png'
 	import bind from 'static/img/icon/bind.png'
 	import arrowDown from 'static/img/icon/arrow-down.png'
 	import protect from 'static/img/icon/protect.png'
 	import list from 'static/img/icon/list.png'
-	import {getCalllMsg, bindPhone, bindUser, sendMoveCarCode, getYanZhengCode, addCarCardAndBindUser } from 'common/js/requestUrl'
+	import {getCalllMsg, bindPhone, bindUser, sendMoveCarCode, getYanZhengCode, addCarCard, addCarCardAndBindUser } from 'common/js/requestUrl'
 	import {request,showToast} from 'common/js/common'
 	
 	export default {
 		data() {
 			return {
 				car,
-				broken,
 				bind,
 				call,
 				message,
@@ -159,6 +134,7 @@
 				bindPrefix: '浙', //绑定的时候的前缀
 				bindCard: '',
 				phone: '',
+				fName: '',
 				Timer: null,//定时器
 				address_code: '',
 				id: null,
@@ -176,6 +152,7 @@
 					4: '的大灯或室内灯可能开着',
 					5: '可能被警察蜀黍贴罚单了'
 				},
+				choosedSex: 1,//1->男 2->女
 				placeList:[
 					"京", 
 					"津", 
@@ -211,18 +188,8 @@
 			};
 		},
 		onLoad(query){
-			// const scene = decodeURIComponent(query.scene)
-			// let e = scene.split("/")
-			// [0]=>类型 [1]=>值
-			// 类型1=>非实体
-			// 类型2=>实体
 			this.type = query.type
 			this.id = query.id
-			// if(e[0] !='undefined'){
-			// 	this.id = e[0]
-			// 	this.type = e[1]
-			// }
-			this.getCalllMsg()
 		},
 		onShow(){
 			let messageAnimation = uni.createAnimation({
@@ -242,24 +209,20 @@
 			this.messageAnimationData = messageAnimation.export()
 			this.buttonAnimationData = buttonAnimation.export()
 		},
+		computed:{
+			showLight(){
+				return this.bindCard.length == 7 ? '/static/img/icon/light.png' : '/static/img/icon/unlight.png'
+			},
+			leftSexStatus(){
+				return this.choosedSex == 1 ? 'name-choose-left' : 'name-choose-right'
+			},
+			rightSexStatus(){
+				return this.choosedSex == 2 ? 'name-choose-left' : 'name-choose-right'
+			}
+		},
 		methods: {
-			getCalllMsg(){
-				request(getCalllMsg,{
-					id : this.id,
-					type: this.type
-				},(res) => {
-					// 450表示未绑定
-					if(res.code == 450){
-						this.needBindUser = true
-					}else if(res.code == 200){
-						this.needBindUser = false
-						this.cards = res.result.card
-						this.prefix = res.result.prefix
-						this.address_code = res.result.address_code
-					}else{
-						showToast(res.msg)
-					}
-				})
+			changeSex(sex){
+				this.choosedSex = sex
 			},
 			sendMoveCarMsg(index){
 				request(sendMoveCarCode,{
@@ -366,6 +329,9 @@
 			inputPhone(e){
 				this.phone = e.detail.value
 			},
+			inputFName(e){
+				this.fName = e.detail.value
+			},
 			inputYanzhengCode(e){
 				this.yanzhengCode = e.detail.value
 			},
@@ -386,19 +352,52 @@
 					showToast('您还未填写验证码')
 					return
 				}
+				if(!this.fName){
+					showToast('您还填写车主称呼')
+					return
+				}
 				if(this.yanzhengCode != this.code){
 					showToast('验证码错误！')
 					return
 				}
+				if(this.type == 2){
+					this.addCarCaedAndBind()
+				}else{
+					this.addCard()
+				}
+			},
+			addCarCaedAndBind(){
 				request(addCarCardAndBindUser,{
 					card: this.bindCard,
 					phone: this.phone,
 					prefix: this.bindPrefix,
+					fName: this.fName,
+					sex: this.choosedSex,
 					card_id: this.id
 				},(res) =>{
 					if(res.code == 200){
 						showToast('绑定成功','success')
-						this.getCalllMsg()
+						// this.getCalllMsg()
+						//跳转到成功界面
+						uni.navigateTo({
+							url: '../bindSuccess/bindSuccess'
+						});	
+					}
+				})
+			},
+			addCard(){
+				request(addCarCard,{
+					card: this.bindCard,
+					phone: this.phone,
+					prefix: this.bindPrefix,
+					fName: this.fName,
+					sex: this.choosedSex,
+				},(res) => {
+					if(res.code == 200){
+						showToast('添加成功','success')
+						uni.navigateBack({
+							delta: 1
+						});
 					}
 				})
 			}
@@ -455,7 +454,7 @@
 				font-size: 30rpx
 			.input-msg
 				display: flex
-				margin-top: 60rpx
+				margin-top: 20rpx
 				.yanzheng-input
 					width: 90%
 					border: 1px solid black
@@ -500,6 +499,9 @@
 					line-height: 30rpx
 					border: 1px solid black
 					border-radius: 10rpx
+					.card-light
+						width: 40rpx
+						height: 40rpx
 			.bind-card
 				padding: 20rpx 20rpx
 				font-size: 35rpx
@@ -531,13 +533,13 @@
 				border: 1px solid black
 				margin-top: 20rpx
 				height: 40rpx
-				line-height: 40rpx
+				align-items: center
 				border-radius: 10rpx
 				padding: 15rpx
 				.name
 					font-size: 30rpx
 				.card-name-choose
-					color: #d1d1d1
+					color: black
 					font-size: 30rpx
 					margin-left: 20rpx
 				.name-choose-container
@@ -548,6 +550,7 @@
 					border-radius: 30rpx
 					border: 1px solid black
 					overflow: hidden
+					z-index: 999
 					.name-choose-left
 						background-color: black
 						color: white

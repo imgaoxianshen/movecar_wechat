@@ -3,14 +3,14 @@
 		<view class="background"></view>
 		<view class="userInfo">
 			<image class="avatar" :src="avatarUrl?avatarUrl:avatar" mode="aspectFill"></image>
-			<text class="avatar-name">{{nickName}}</text>
+			<text class="avatar-name">{{nickName ? nickName : '帮忙族'}}</text>
 			<block v-if="choosedCard">
 				<text class="card-msg">{{choosedCard}}</text>
 			</block>
-			<block v-else="choosedCard">
+			<block v-else>
 				<text class="card-msg">暂无使用中车牌</text>
 			</block>
-			<!-- <button class="avatar-button" type="primary" plain="true">编辑资料</button> -->
+			<view @click="navToAuth" v-if="!avatarUrl && !nickName" class="getAuth">获取用户信息</view>
 		</view>
 		<view class="tab">
 			<block v-for="(item,key) in itemList" :key="key">
@@ -34,32 +34,12 @@
 					<view class="other-itemName">用户帮助</view>
 					<image class="other-itemIcon" :src="arrowRight"></image>
 				</view>
-				<!-- <view class="other-item">
-					<view class="other-itemName">关于我们</view>
+				<view class="other-item" @click="navToJoinUs">
+					<view class="other-itemName">一起来吧</view>
 					<image class="other-itemIcon" :src="arrowRight"></image>
-				</view> -->
+				</view>
 			</block>
 		</view>
-		<!-- <image class="avatar" :src="avatarUrl?avatarUrl:baseAvatar" mode="aspectFill"></image>
-		<view class="list">
-			<image class="white-background" :src="white" mode="aspectFill"></image>
-			<view class="nickName">{{nickName}}</view>
-			<view class="item-line">
-				<view class="item-line-left">
-					<image class="item-line-image" :src="nonotice"></image>
-					<text>免打扰</text>
-				</view>
-				<switch checked @change="switchChange" color="#FFDA44"/>
-			</view>
-			<view class="item-box">
-				<block v-for="(item,key) in itemList" :key="key">
-					<view @click="itemClick(item.navUrl)" class="item">
-						<image class="itemIcon" :src="item.icon"></image>
-						<text class="itemName">{{item.text}}</text>
-					</view>
-				</block>
-			</view>
-		</view> -->
 	</view>
 </template>
 
@@ -69,7 +49,6 @@
 	import {request, showToast} from 'common/js/common'
 	import avatar from 'static/img/icon/avatar.jpg'
 	import arrowRight from 'static/img/icon/arrow-right.png'
-	import white from 'static/img/white.jpg'
 	import qrcode from 'static/img/icon/qrcode.png'
 	import bankcard from 'static/img/icon/card.png'
 	import order from 'static/img/icon/order.png'
@@ -80,9 +59,8 @@
 			return {
 				avatar,
 				arrowRight,
-				white,
 				nonotice,
-				nickName: 'x先生',
+				nickName: '帮忙族',
 				avatarUrl: null,
 				noticeStatus: false,
 				choosedCard: '',
@@ -114,6 +92,9 @@
 		onShow(){
 			this.getUserInfo()
 		},
+		onLoad(){
+
+		},
 		methods: {
 			...mapMutations(['getUserMessage','loginOrLoginOut']),
 			getUserInfo(){
@@ -134,9 +115,19 @@
 					url: navUrl
 				});
 			},
+			navToAuth(){
+				uni.navigateTo({
+					url: '../authorize/authorize'
+				})
+			},
 			navToHelp(){
 				uni.navigateTo({
 					url: '../help/help'
+				});
+			},
+			navToJoinUs(){
+				uni.navigateTo({
+					url: '../joinUs/joinUs'
 				});
 			},
 			switchChange(res){
@@ -195,6 +186,12 @@
 		top: 100rpx
 		width: 750rpx
 		z-index: 999
+		.getAuth
+			font-size: 25rpx
+			margin-top: 20rpx
+			border: 1px solid black
+			padding: 5rpx;
+			border-radius: 5rpx
 		.avatar
 			border: 1px solid #fff
 			border-radius: 25rpx

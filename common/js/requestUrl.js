@@ -34,5 +34,8 @@ module.exports = {
 	
 	// adv
 	getAdvList: baseUrl + 'adv/getAdvList',
+	getAdvOfOne: baseUrl + 'adv/getAdvOfOne',
 	
+	// joinUs
+	addJoin: baseUrl + 'joinUs/addJoin',
 }

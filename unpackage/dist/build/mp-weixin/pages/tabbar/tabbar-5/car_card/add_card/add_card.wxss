@@ -1,0 +1,122 @@
+.addCard-container.data-v-65caef2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.addCard-container .confirm.data-v-65caef2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  height: 70rpx;
+  background-color: #ffda44;
+  width: 400rpx;
+  margin-top: 70rpx;
+}
+.addCard-container .add-car-title.data-v-65caef2b {
+  margin-top: 100rpx;
+}
+.addCard-container .input-container.data-v-65caef2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400rpx;
+  margin-top: 30rpx;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
+  height: 100rpx;
+}
+.addCard-container .input-container .input.data-v-65caef2b {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #d1d1d1;
+}
+.addCard-container .input-container .place-botton.data-v-65caef2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150rpx;
+  height: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40rpx;
+  background-color: #ffda44;
+}
+.addCard-container .input-container .place-botton .arrow-down.data-v-65caef2b {
+  width: 30rpx;
+  height: 30rpx;
+}
+.addCard-container .back.data-v-65caef2b {
+  background-color: #000;
+  opacity: 0.3;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.addCard-container .display.data-v-65caef2b {
+  width: 750rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+.addCard-container .display .place-container.data-v-65caef2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  z-index: 999;
+}
+.addCard-container .display .place-container .car-place.data-v-65caef2b {
+  padding: 20rpx 6rpx;
+  margin: 10rpx;
+  background-color: #ffda44;
+  width: 90rpx;
+  text-align: center;
+}
+.addCard-container .display .add-car.data-v-65caef2b {
+  padding: 10rpx;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #d1d1d1;
+}
+

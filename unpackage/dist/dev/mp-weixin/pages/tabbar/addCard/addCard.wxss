@@ -47,7 +47,8 @@
           justify-content: left;
 }
 .addCard-container .display .place-container .car-place.data-v-5ae7b0f3 {
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   -webkit-box-shadow: 1rpx 3rpx 1rpx #d1d1d1;
           box-shadow: 1rpx 3rpx 1rpx #d1d1d1;
   padding: 15rpx;
@@ -80,14 +81,16 @@
   top: 220rpx;
   -webkit-animation-name: rotate2-data-v-5ae7b0f3;
           animation-name: rotate2-data-v-5ae7b0f3;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   opacity: 1;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
 .addCard-container .background.data-v-5ae7b0f3:after {
   top: 180rpx;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   opacity: 0.8;
   -webkit-animation-name: rotate1-data-v-5ae7b0f3;
           animation-name: rotate1-data-v-5ae7b0f3;
@@ -147,7 +150,8 @@
   display: -ms-flexbox;
   display: flex;
   border: 1px dashed #000;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
 }
 .addCard-container .center .input-msg .input .input-name.data-v-5ae7b0f3 {
   padding: 5rpx 15rpx;
@@ -167,7 +171,8 @@
   margin: 0 5rpx;
   padding: 5rpx 15rpx;
   border: 1px dashed #000;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   font-size: 40rpx;
   width: 30rpx;
 }
@@ -175,7 +180,8 @@
   margin: 0 5rpx;
   padding: 5rpx 15rpx;
   border: 1px dashed #000;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,7 +217,8 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   border: 1px solid #d1d1d1;
   text-align: center;
 }
@@ -227,7 +234,8 @@
   width: 100%;
   height: 80rpx;
   border: 1px solid #d1d1d1;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
 }
 .addCard-container .center .confirm.data-v-5ae7b0f3 {
   text-align: center;
@@ -236,7 +244,8 @@
   margin-top: 60rpx;
   height: 80rpx;
   line-height: 80rpx;
-  border-radius: 40rpx;
+  -webkit-border-radius: 40rpx;
+          border-radius: 40rpx;
 }
 @-webkit-keyframes rotate1-data-v-5ae7b0f3 {
 0% {

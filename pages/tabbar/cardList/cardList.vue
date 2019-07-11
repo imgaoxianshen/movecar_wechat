@@ -10,7 +10,7 @@
 				<text class="item-useing">正在使用</text>
 			</view>
 			<view class="card-notice">请在您用车时选择对应的车牌号及电话号码</view>
-			<view class="card-notice">其他车辆</view>
+			<view class="card-notice-other">其他车辆</view>
 		</view>
 		<view class="card-list">
 			<block wx:key="item" v-for="(item, key) in carcardList">
@@ -79,7 +79,7 @@
 			navAddCard(){
 				if(this.carcardList.length < 9){
 					uni.navigateTo({
-						url: '../addCard/addCard'
+						url: '../callPhone/callPhone'
 					});	
 				}else{
 					showToast('您最多只能创建十个车牌信息')
@@ -141,7 +141,7 @@
 .carcard-container
 	width: 750upx
 	.useing
-		font-size: 20rpx
+		font-size: 30rpx
 		font-weight: 300
 		margin: 40rpx 0 10rpx 30rpx
 	.useing-item
@@ -161,7 +161,7 @@
 				font-weight: 300
 				letter-spacing: 3rpx
 				margin-left: 30rpx
-				font-size: 30rpx
+				font-size: 35rpx
 		.item-useing
 			font-weight: 300
 			font-size: 25rpx
@@ -170,7 +170,13 @@
 		font-weight: 300
 		letter-spacing: 5rpx
 		margin-top: 20rpx
-		font-size: 18rpx
+		font-size: 25rpx
+		margin: 20rpx 30rpx 20rpx 30rpx
+	.card-notice-other
+		font-weight: 300
+		letter-spacing: 5rpx
+		margin-top: 20rpx
+		font-size: 30rpx
 		margin: 20rpx 30rpx 20rpx 30rpx
 	.card-list
 		display: flex
@@ -197,7 +203,7 @@
 					font-weight: 300
 					letter-spacing: 3rpx
 					margin-left: 30rpx
-					font-size: 30rpx
+					font-size: 35rpx
 			.card-unchoosed
 				margin-right: 30rpx
 				font-weight: 200

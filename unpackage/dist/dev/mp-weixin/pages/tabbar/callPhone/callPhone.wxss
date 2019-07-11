@@ -55,7 +55,8 @@
           justify-content: left;
 }
 .container .display .place-container .car-place.data-v-2e14c771 {
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   -webkit-box-shadow: 1rpx 3rpx 1rpx #d1d1d1;
           box-shadow: 1rpx 3rpx 1rpx #d1d1d1;
   padding: 15rpx;
@@ -85,12 +86,13 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 60rpx;
+  margin-top: 20rpx;
 }
 .container .center .input-msg .yanzheng-input.data-v-2e14c771 {
   width: 90%;
   border: 1px solid #000;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   height: 40rpx;
   line-height: 40rpx;
   padding: 10rpx;
@@ -102,7 +104,8 @@
   padding: 20rpx;
   height: 30rpx;
   line-height: 30rpx;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -124,7 +127,8 @@
   padding: 20rpx;
   height: 30rpx;
   line-height: 30rpx;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   color: #fff;
   background-color: #000;
 }
@@ -149,14 +153,20 @@
   min-height: 30rpx;
   line-height: 30rpx;
   border: 1px solid #000;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+}
+.container .center .input-msg .card-msg .card-light.data-v-2e14c771 {
+  width: 40rpx;
+  height: 40rpx;
 }
 .container .center .bind-card.data-v-2e14c771 {
   padding: 20rpx 20rpx;
   font-size: 35rpx;
   text-align: center;
   margin-top: 60rpx;
-  border-radius: 60rpx;
+  -webkit-border-radius: 60rpx;
+          border-radius: 60rpx;
   background-color: #ffda44;
 }
 .container .center .bottom-tips.data-v-2e14c771 {
@@ -209,15 +219,19 @@
   border: 1px solid #000;
   margin-top: 20rpx;
   height: 40rpx;
-  line-height: 40rpx;
-  border-radius: 10rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   padding: 15rpx;
 }
 .container .center .card-name .name.data-v-2e14c771 {
   font-size: 30rpx;
 }
 .container .center .card-name .card-name-choose.data-v-2e14c771 {
-  color: #d1d1d1;
+  color: #000;
   font-size: 30rpx;
   margin-left: 20rpx;
 }
@@ -229,9 +243,11 @@
   position: absolute;
   right: 10rpx;
   font-size: 30rpx;
-  border-radius: 30rpx;
+  -webkit-border-radius: 30rpx;
+          border-radius: 30rpx;
   border: 1px solid #000;
   overflow: hidden;
+  z-index: 999;
 }
 .container .center .card-name .name-choose-container .name-choose-left.data-v-2e14c771 {
   background-color: #000;
@@ -256,7 +272,8 @@
   height: 40rpx;
   line-height: 40rpx;
   color: #fff;
-  border-radius: 30rpx;
+  -webkit-border-radius: 30rpx;
+          border-radius: 30rpx;
   z-index: 500;
   border: 1px solid #000;
   padding: 0 20rpx;
@@ -289,13 +306,15 @@
   top: 220rpx;
   -webkit-animation-name: rotate2-data-v-2e14c771;
           animation-name: rotate2-data-v-2e14c771;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
 .container .background.data-v-2e14c771:after {
   top: 180rpx;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   opacity: 0.8;
   -webkit-animation-name: rotate1-data-v-2e14c771;
           animation-name: rotate1-data-v-2e14c771;
@@ -351,7 +370,8 @@
   background-color: #fff1af;
   padding: 5rpx 10rpx;
   border: 1px solid #e3d38d;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   font-size: 50rpx;
 }
 .container .padding .card .card-base .base-name.data-v-2e14c771,
@@ -374,7 +394,8 @@
   background-color: #fff1af;
   text-align: center;
   border: 1px solid #e3d38d;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   margin: 5rpx;
   font-size: 50rpx;
 }
@@ -414,7 +435,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid #e3d38d;
-  border-radius: 80rpx;
+  -webkit-border-radius: 80rpx;
+          border-radius: 80rpx;
   padding: 10rpx 40rpx;
   background-color: #fff;
   z-index: 999;
@@ -445,7 +467,8 @@
           align-items: center;
   width: 600rpx;
   padding: 20rpx 0;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   border: 1px solid #e3d38d;
 }
 .container .padding .message-container .message-content .message-bottom.data-v-2e14c771 {
@@ -453,7 +476,8 @@
   width: 550rpx;
   padding: 5rpx 0;
   text-align: center;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   color: #7f341a;
   font-size: 30rpx;
   border: 1px solid #7f341a;
@@ -478,7 +502,8 @@
   width: 250rpx;
   text-align: center;
   padding: 5rpx 0;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   border: 1px solid #d1d1d1;
 }
 .container .padding .phone-container.data-v-2e14c771 {
@@ -499,7 +524,8 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 40rpx;
+  -webkit-border-radius: 40rpx;
+          border-radius: 40rpx;
 }
 .container .padding .phone-container .phone-icon.data-v-2e14c771 {
   width: 35rpx;
@@ -516,7 +542,8 @@
   height: 80rpx;
   font-weight: 300;
   line-height: 80rpx;
-  border-radius: 40rpx;
+  -webkit-border-radius: 40rpx;
+          border-radius: 40rpx;
   margin-top: 30rpx;
   font-size: 35rpx;
   text-align: center;

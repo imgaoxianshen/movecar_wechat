@@ -77,6 +77,18 @@
             "path" : "pages/tabbar/help/help",
             "style" : {}
         }
+        ,{
+            "path" : "pages/tabbar/bindSuccess/bindSuccess",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar/joinUs/joinUs",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar/web-view/web-view",
+            "style" : {}
+        }
     ],
     "globalStyle" : {
         "navigationBarTextStyle" : "black",

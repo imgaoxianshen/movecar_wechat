@@ -1,0 +1,149 @@
+.carcard-container.data-v-62f9185f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carcard-container .top.data-v-62f9185f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500rpx;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 50rpx;
+  font-weight: 200;
+  font-size: 30rpx;
+}
+.carcard-container .top .topBase.data-v-62f9185f {
+  padding: 10rpx 20rpx;
+  text-align: center;
+  -webkit-border-radius: 15rpx;
+          border-radius: 15rpx;
+}
+.carcard-container .top .activeColor.data-v-62f9185f {
+  background-color: #ffda44;
+}
+.carcard-container .list-container.data-v-62f9185f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 700rpx;
+  margin-top: 30rpx;
+}
+.carcard-container .list-container .order-item.data-v-62f9185f {
+  position: relative;
+  background-color: #fff;
+  margin: 10rpx 0;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
+  padding: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  overflow: hidden;
+}
+.carcard-container .list-container .order-item .order-status.data-v-62f9185f {
+  position: absolute;
+  top: -20rpx;
+  right: -100rpx;
+  background-color: #ffda44;
+  width: 300rpx;
+  height: 100rpx;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.carcard-container .list-container .order-item .order-status .order-status-name.data-v-62f9185f {
+  font-size: 20rpx;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.carcard-container .list-container .order-item .order-chetie.data-v-62f9185f {
+  width: 130rpx;
+  height: 200rpx;
+}
+.carcard-container .list-container .order-item .order-msg.data-v-62f9185f {
+  width: 350rpx;
+  font-size: 25rpx;
+  font-weight: 200;
+}
+.carcard-container .list-container .order-item .order-msg .order_no.data-v-62f9185f {
+  margin-top: 20rpx;
+}
+.carcard-container .list-container .order-item .order-msg .order-price.data-v-62f9185f {
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25rpx;
+  font-weight: 200;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carcard-container .list-container .order-item .order-msg .order-price .order-money.data-v-62f9185f {
+  font-size: 35rpx;
+}
+.carcard-container .withoutList.data-v-62f9185f {
+  margin-top: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carcard-container .withoutList .card-image.data-v-62f9185f {
+  width: 300rpx;
+  height: 300rpx;
+}
+

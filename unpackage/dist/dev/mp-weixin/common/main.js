@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 var _requestUrl = __webpack_require__(/*! ./common/js/requestUrl */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\requestUrl.js");
 var _common = __webpack_require__(/*! ./common/js/common */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\common.js");
 var _storages = __webpack_require__(/*! ./common/js/storages */ "C:\\Users\\热水\\movecar_wechat\\common\\js\\storages.js");var _default =
@@ -16,22 +16,22 @@ var _storages = __webpack_require__(/*! ./common/js/storages */ "C:\\Users\\热�
 
 {
   onLaunch: function onLaunch(e) {
-    if (e.path != 'pages/tabbar/callPhone/callPhone') {
-      // 获取授权信息
-      uni.getSetting({
-        success: function success(res) {
-          if (!res.authSetting['scope.userInfo']) {
-            // 						wx.switchTab({
-            // 							url: '/pages/tabbar/tabbar-1/tabbar-1'
-            // 						})
-            // 					}else{
-            wx.redirectTo({
-              url: '/pages/tabbar/authorize/authorize' });
-
-          }
-        } });
-
-    }
+    // 		if(e.path != 'pages/tabbar/callPhone/callPhone'){
+    // 			// 获取授权信息
+    // 			uni.getSetting({
+    // 			    success: function(res){
+    // 					if (!res.authSetting['scope.userInfo']) {
+    // // 						wx.switchTab({
+    // // 							url: '/pages/tabbar/tabbar-1/tabbar-1'
+    // // 						})
+    // // 					}else{
+    // 						wx.redirectTo({
+    // 							url: '/pages/tabbar/authorize/authorize'
+    // 						})
+    // 					}
+    // 				}	
+    // 			})
+    // 		}
   },
   onShow: function onShow() {
     console.log('App Show');
@@ -39,7 +39,6 @@ var _storages = __webpack_require__(/*! ./common/js/storages */ "C:\\Users\\热�
   onHide: function onHide() {
     console.log('App Hide');
   } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 

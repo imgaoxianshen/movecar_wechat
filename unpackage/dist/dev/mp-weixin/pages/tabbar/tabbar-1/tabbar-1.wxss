@@ -20,11 +20,13 @@ page .content .map.data-v-692189cf {
 }
 page .content .map .position.data-v-692189cf {
   position: absolute;
-  bottom: 100rpx;
-  border-radius: 50%;
+  bottom: 380rpx;
+  right: 20rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   background-color: #fff;
-  width: 100rpx;
-  height: 100rpx;
+  width: 60rpx;
+  height: 60rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,14 +43,18 @@ page .content .map .position.data-v-692189cf {
           box-shadow: 0 10rpx 10rpx #d1d1d1;
 }
 page .content .map .position .position-icon.data-v-692189cf {
-  width: 60rpx;
-  height: 60rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+page .content .map .position-saoma.data-v-692189cf {
+  bottom: 300rpx;
+  background-color: #ebbe29;
 }
 page .content .map .view.data-v-692189cf {
   position: fixed;
-  bottom: 20rpx;
-  left: 125rpx;
-  width: 500rpx;
+  bottom: 50rpx;
+  left: 75rpx;
+  width: 580rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,11 +74,11 @@ page .content .map .view.data-v-692189cf {
           align-items: center;
 }
 page .content .map .view .show-border.data-v-692189cf {
-  border: 1px solid #d1d1d1;
-  -webkit-box-shadow: 1px 1px 1px #d1d1d1;
-          box-shadow: 1px 1px 1px #d1d1d1;
-  border-radius: 10rpx;
-  width: 500rpx;
+  -webkit-box-shadow: 1px 0px 1px #d1d1d1;
+          box-shadow: 1px 0px 1px #d1d1d1;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  width: 580rpx;
 }
 page .content .map .view .show-border .top-other.data-v-692189cf {
   display: -webkit-box;
@@ -91,12 +97,13 @@ page .content .map .view .show-border .top-other.data-v-692189cf {
           justify-content: space-around;
 }
 page .content .map .view .show-border .top-other .top-other-img.data-v-692189cf {
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   width: 60rpx;
   height: 60rpx;
 }
 page .content .map .view .show-border .top-other .top-other-call.data-v-692189cf {
-  margin-right: 15rpx;
+  margin-right: 25rpx;
   width: 40rpx;
   height: 40rpx;
 }
@@ -152,6 +159,7 @@ page .content .map .view .show-border .top-main .top-card.data-v-692189cf {
   margin-top: 20rpx;
 }
 page .content .map .view .show-border .top-main .top-card .top-card-left.data-v-692189cf {
+  width: 50rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,7 +176,10 @@ page .content .map .view .show-border .top-main .top-card .top-card-left.data-v-
   background-color: #fff1af;
   padding: 5rpx 10rpx;
   border: 1px solid #e3d38d;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  margin: 5rpx 0;
+  letter-spacing: 5rpx;
 }
 page .content .map .view .show-border .top-main .top-card .top-card-point.data-v-692189cf {
   padding: 5rpx 10rpx;
@@ -178,7 +189,8 @@ page .content .map .view .show-border .top-main .top-card .top-card-right.data-v
   background-color: #fff1af;
   padding: 5rpx 10rpx;
   border: 1px solid #e3d38d;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
   margin: 5rpx;
 }
 page .content .map .view .show-border .top-main .top-card-notice.data-v-692189cf {
@@ -205,7 +217,8 @@ page .content .map .view .show-border .top-main .top-card-notice .top-card-notic
   background-color: #000;
   color: #fff;
   padding: 10rpx 25rpx;
-  border-radius: 50rpx;
+  -webkit-border-radius: 50rpx;
+          border-radius: 50rpx;
   font-weight: 200;
 }
 page .content .map .view .show-border .top-main .top-card-notice .top-card-notice-button .top-card-notice-phone-icon.data-v-692189cf {
@@ -231,7 +244,8 @@ page .content .map .view .deep-button.data-v-692189cf {
   height: 50rpx;
   padding: 10rpx 0;
   margin-top: 20rpx;
-  border-radius: 60rpx;
+  -webkit-border-radius: 60rpx;
+          border-radius: 60rpx;
 }
 page .content .map .view .deep-button .saoma.data-v-692189cf {
   width: 40rpx;

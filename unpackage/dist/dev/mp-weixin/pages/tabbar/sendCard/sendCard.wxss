@@ -26,7 +26,8 @@
   min-height: 350rpx;
   padding: 20rpx;
   background-color: #fff;
-  border-radius: 20rpx;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
   margin-top: 40rpx;
 }
 .container .choose-address .choose-address-msg.data-v-bcb2f2e2 {
@@ -59,7 +60,8 @@
   background-color: #fff;
   width: 650rpx;
   padding: 20rpx;
-  border-radius: 20rpx;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
 }
 .container .num-container .num-text.data-v-bcb2f2e2 {
   font-weight: 200;

@@ -51,12 +51,15 @@
         "appid" : "wx911f830a88389a71",
         "setting" : {
             "urlCheck" : true,
-            "es6" : true
+            "es6" : true,
+            "minified" : true,
+            "postcss" : true
         },
         "permission" : {
             "scope.userLocation" : {
                 "desc" : "地理位置描述"
             }
-        }
+        },
+        "usingComponents" : false
     }
 }

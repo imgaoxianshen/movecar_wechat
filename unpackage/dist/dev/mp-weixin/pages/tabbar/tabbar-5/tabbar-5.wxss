@@ -16,6 +16,7 @@
   min-width: 1500rpx;
   min-height: 1500rpx;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffe364), to(#ffda44));
+  background: -webkit-linear-gradient(#ffe364, #ffda44);
   background: -o-linear-gradient(#ffe364, #ffda44);
   background: linear-gradient(#ffe364, #ffda44);
   -webkit-animation-iteration-count: infinite;
@@ -27,14 +28,16 @@
   top: -1030rpx;
   -webkit-animation-name: rotate2-data-v-1e5de362;
           animation-name: rotate2-data-v-1e5de362;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   opacity: 0.7;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
 .background.data-v-1e5de362:after {
   top: -1030rpx;
-  border-radius: 44%;
+  -webkit-border-radius: 44%;
+          border-radius: 44%;
   opacity: 0.8;
   -webkit-animation-name: rotate1-data-v-1e5de362;
           animation-name: rotate1-data-v-1e5de362;
@@ -64,9 +67,18 @@
   width: 750rpx;
   z-index: 999;
 }
+.userInfo .getAuth.data-v-1e5de362 {
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  border: 1px solid #000;
+  padding: 5rpx;
+  -webkit-border-radius: 5rpx;
+          border-radius: 5rpx;
+}
 .userInfo .avatar.data-v-1e5de362 {
   border: 1px solid #fff;
-  border-radius: 25rpx;
+  -webkit-border-radius: 25rpx;
+          border-radius: 25rpx;
   width: 150rpx;
   height: 150rpx;
 }

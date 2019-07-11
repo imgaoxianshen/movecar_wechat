@@ -6,9 +6,13 @@
 			show-location
 			:markers="covers"
 			:include-points="covers"
+			@click="cancleCall"
 			>
 			<cover-view @click="changePosition" class="position">
 				<cover-image src="../../../static/img/icon/position.png" class="position-icon"></cover-image>
+			</cover-view>
+			<cover-view @click="openScan" class="position position-saoma">
+				<cover-image src="/static/img/icon/saoma.png" class="position-icon"></cover-image>
 			</cover-view>
 			<cover-view class="view">
 				<cover-view class="show-border">
@@ -37,20 +41,15 @@
 						</cover-view>
 					</block>
 					<block :key="index" v-for="(item,index) in list">
-						<cover-view class="top-other">
+						<cover-view class="top-other" @click="navToWebView(item.id, item.title)">
 							<cover-image class="top-other-img" :src="item.img"></cover-image>
 							<cover-view class="top-other-center">
 								<cover-view class="top-other-title">{{item.title}}</cover-view>
-								<!-- <cover-view class="top-other-desc">{{item.desc}}</cover-view> -->
 							</cover-view>
-							<cover-image class="top-other-call" src="../../../static/img/icon/plane.png" @click="chooseLocation(item.latitude, item.longitude)"></cover-image>
-							<cover-image class="top-other-call" src="../../../static/img/icon/callblack.png" @click="callAdvPhone(item.phone)"></cover-image>
+							<cover-image class="top-other-call" src="../../../static/img/icon/plane.png" @click.stop="chooseLocation(item.latitude, item.longitude)"></cover-image>
+							<cover-image class="top-other-call" src="../../../static/img/icon/callblack.png" @click.stop="callAdvPhone(item.phone)"></cover-image>
 						</cover-view>
 					</block>
-				</cover-view>
-				<cover-view @click="openScan" class="deep-button">
-					<cover-image class="saoma" src="/static/img/icon/saoma.png"></cover-image>
-					<cover-view>扫码挪车</cover-view>
 				</cover-view>
 			</cover-view>
         </map>
@@ -67,6 +66,7 @@
 				latitude: '',
 				longitude: '',
 				mapContext: {},
+				called: false,//是否已经打过电话了
 				callout: {
 					bgColor: 'red'
 				},
@@ -74,10 +74,12 @@
 				list: [],
 				mainItem: null,
 				id: '',
-				type: ''
+				type: ''				
 			};
 		},
 		onShow(){
+		},
+		onLoad(options){
 			uni.getLocation({
 			  type: 'gcj02',
 			  success: res => {
@@ -104,12 +106,16 @@
 			})
 			this.mapContext = uni.createMapContext('map',this)
 			this.getAdvList()
-		},
-		onLoad(options){
+			// 其他
 			let link = decodeURIComponent(options.q)
 			this.changeData(link)
 		},
 		methods: {
+			cancleCall(){
+				if(this.called){
+					this.mainItem = null
+				}
+			},
 			changeData(link){
 				let paramArr = link.split('=');
 				if (paramArr.length == 2){
@@ -157,7 +163,8 @@
 								id: v.id,
 								latitude: v.latitude,
 								longitude: v.longitude,
-								iconPath: '/static/img/icon/Location.png',
+								// iconPath: '/static/img/icon/Location.png',
+								iconPath: v.img,
 								width: '60rpx',
 								height: '60rpx',
 								callout:{
@@ -184,12 +191,12 @@
 						uni.navigateTo({
 							url: '../callPhone/callPhone?id='+this.id+'&type='+this.type
 						});
+					}else if(res.code == 204){
+						uni.switchTab({
+							url: '../tabbar-5/tabbar-5'
+						});	
 					}else if(res.code == 200){
 						this.mainItem = res.result
-						// this.needBindUser = false
-						// this.cards = res.result.card
-						// this.prefix = res.result.prefix
-						// this.address_code = res.result.address_code
 					}else{
 						showToast(res.msg)
 					}
@@ -204,6 +211,7 @@
 						uni.makePhoneCall({
 							phoneNumber: res.result //仅为示例
 						});
+						this.called = true
 					}
 				})
 			},
@@ -223,6 +231,11 @@
 			callAdvPhone(phone){
 				uni.makePhoneCall({
 					phoneNumber: phone //仅为示例
+				});
+			},
+			navToWebView(id, title){
+				uni.navigateTo({
+					url: '../web-view/web-view?id='+ id +'&title=' + title
 				});
 			}
 		}
@@ -244,32 +257,36 @@ page
 			justify-content: center
 			.position
 				position:absolute
-				bottom: 100upx
+				bottom: 380rpx
+				right: 20rpx
 				border-radius: 50%
 				background-color:white
-				width:100upx
-				height: 100upx
+				width:60upx
+				height: 60upx
 				display:flex
 				align-items: center
 				justify-content: center
 				box-shadow: 0 10upx 10upx #d1d1d1
 				.position-icon
-					width: 60upx
-					height: 60upx
+					width: 40upx
+					height: 40upx
+			.position-saoma
+				bottom: 300rpx
+				background-color: $orange
 			.view
 				position: fixed
-				bottom: 20rpx
-				left: 125rpx
-				width: 500rpx
+				bottom: 50rpx
+				left: 75rpx
+				width: 580rpx
 				display: flex
 				justify-content: center
 				flex-direction: column
 				align-items: center
 				.show-border
-					border: 1px solid #d1d1d1
-					box-shadow: 1px 1px 1px #d1d1d1
+					// border: 1px solid #d1d1d1
+					box-shadow: 1px 0px 1px #d1d1d1
 					border-radius: 10rpx
-					width: 500rpx
+					width: 580rpx
 					.top-other
 						display: flex
 						padding: 20rpx
@@ -282,7 +299,7 @@ page
 							width: 60rpx
 							height: 60rpx
 						.top-other-call
-							margin-right: 15rpx
+							margin-right: 25rpx
 							width: 40rpx
 							height: 40rpx
 						.top-other-center
@@ -313,6 +330,7 @@ page
 							display: flex
 							margin-top: 20rpx
 							.top-card-left
+								width: 50rpx
 								display: flex
 								align-items: center
 								justify-content: center
@@ -321,6 +339,8 @@ page
 								padding: 5rpx 10rpx
 								border: 1px solid $border-color 
 								border-radius: 10rpx
+								margin: 5rpx 0
+								letter-spacing: 5rpx
 							.top-card-point
 								padding: 5rpx 10rpx
 							.top-card-right
