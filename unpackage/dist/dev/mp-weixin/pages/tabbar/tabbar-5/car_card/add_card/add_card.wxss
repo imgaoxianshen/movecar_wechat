@@ -1,4 +1,4 @@
-.addCard-container.data-v-1d62db84 {
+.addCard-container.data-v-3ab6c514 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,7 +13,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.addCard-container .confirm.data-v-1d62db84 {
+.addCard-container .confirm.data-v-3ab6c514 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,10 +33,10 @@
   width: 400rpx;
   margin-top: 70rpx;
 }
-.addCard-container .add-car-title.data-v-1d62db84 {
+.addCard-container .add-car-title.data-v-3ab6c514 {
   margin-top: 100rpx;
 }
-.addCard-container .input-container.data-v-1d62db84 {
+.addCard-container .input-container.data-v-3ab6c514 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,12 +47,12 @@
           border-radius: 20rpx;
   height: 100rpx;
 }
-.addCard-container .input-container .input.data-v-1d62db84 {
+.addCard-container .input-container .input.data-v-3ab6c514 {
   width: 100%;
   height: 100%;
   border-bottom: 1px solid #d1d1d1;
 }
-.addCard-container .input-container .place-botton.data-v-1d62db84 {
+.addCard-container .input-container .place-botton.data-v-3ab6c514 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,24 +70,24 @@
   font-size: 40rpx;
   background-color: #ffda44;
 }
-.addCard-container .input-container .place-botton .arrow-down.data-v-1d62db84 {
+.addCard-container .input-container .place-botton .arrow-down.data-v-3ab6c514 {
   width: 30rpx;
   height: 30rpx;
 }
-.addCard-container .back.data-v-1d62db84 {
+.addCard-container .back.data-v-3ab6c514 {
   background-color: #000;
   opacity: 0.3;
   position: fixed;
   height: 100%;
   width: 100%;
 }
-.addCard-container .display.data-v-1d62db84 {
+.addCard-container .display.data-v-3ab6c514 {
   width: 750rpx;
   background-color: #fff;
   position: fixed;
   bottom: 0;
 }
-.addCard-container .display .place-container.data-v-1d62db84 {
+.addCard-container .display .place-container.data-v-3ab6c514 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,14 +106,14 @@
           justify-content: flex-start;
   z-index: 999;
 }
-.addCard-container .display .place-container .car-place.data-v-1d62db84 {
+.addCard-container .display .place-container .car-place.data-v-3ab6c514 {
   padding: 20rpx 6rpx;
   margin: 10rpx;
   background-color: #ffda44;
   width: 90rpx;
   text-align: center;
 }
-.addCard-container .display .add-car.data-v-1d62db84 {
+.addCard-container .display .add-car.data-v-3ab6c514 {
   padding: 10rpx;
   width: 100%;
   text-align: center;

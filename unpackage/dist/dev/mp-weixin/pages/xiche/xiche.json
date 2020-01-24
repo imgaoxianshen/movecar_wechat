@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "洗车",
+  "usingComponents": {
+    "vip": "/pages/vip-template/vip-template"
+  }
+}

@@ -3,6 +3,8 @@
 		<map
 			id="map" 
 			class="map" 
+			:latitude="latitude"
+			:longitude="longitude"
 			show-location
 			:markers="covers"
 			:include-points="covers"
@@ -11,58 +13,76 @@
 			<cover-view @click="changePosition" class="position">
 				<cover-image src="../../../static/img/icon/position.png" class="position-icon"></cover-image>
 			</cover-view>
-			<cover-view @click="openScan" class="position position-saoma">
-				<cover-image src="/static/img/icon/saoma.png" class="position-icon"></cover-image>
-			</cover-view>
-			<cover-view class="view">
-				<cover-view class="show-border">
-					<block v-if="mainItem != null">
-						<cover-view class="top-main">
-							<cover-view class="top-title">临时停车 请多关照</cover-view>
-							<cover-view class="top-card">
-								<cover-view class="top-card-left">
-									{{mainItem.prefix}}{{mainItem.address_code}}
-								</cover-view>
-								<cover-view class="top-card-point">·</cover-view>
-								<block :key="index" v-for="(item,index) in mainItem.card">
-									<cover-view class="top-card-right">{{item}}</cover-view>
-								</block>
-							</cover-view>
-							<cover-view class="top-card-notice">
-								<cover-view class="top-card-notice-button" @click="bindPhone">
-									<cover-image class="top-card-notice-phone-icon" src="../../../static/img/icon/call.png"></cover-image>
-									<cover-view>电话通知</cover-view>
-								</cover-view>
-								<cover-view class="top-card-notice-button" @click="sendMoveCarMsg">
-									<cover-image class="top-card-notice-phone-icon" src="../../../static/img/icon/messageWhite.png"></cover-image>
-									<cover-view>短信通知</cover-view>
-								</cover-view>
-							</cover-view>
-						</cover-view>
-					</block>
-					<block :key="index" v-for="(item,index) in list">
-						<cover-view class="top-other" @click="navToWebView(item.id, item.title)">
-							<cover-image class="top-other-img" :src="item.img"></cover-image>
-							<cover-view class="top-other-center">
-								<cover-view class="top-other-title">{{item.title}}</cover-view>
-							</cover-view>
-							<cover-image class="top-other-call" src="../../../static/img/icon/plane.png" @click.stop="chooseLocation(item.latitude, item.longitude)"></cover-image>
-							<cover-image class="top-other-call" src="../../../static/img/icon/callblack.png" @click.stop="callAdvPhone(item.phone)"></cover-image>
-						</cover-view>
-					</block>
-				</cover-view>
-			</cover-view>
         </map>
+		<!-- 内容 -->
+		<view class="index-container">
+			<view class="top-box">
+				<view class="top-box-item">
+					<image src="/static/img/icon/bycard.png"></image>
+					<text>代理加盟</text>
+				</view>
+				<view class="top-box-item">
+					<image src="/static/img/icon/bycard.png"></image>
+					<text>VIP会员</text>
+				</view>
+				<view class="top-box-item">
+					<image src="/static/img/icon/bycard.png"></image>
+					<text>购买挪车码</text>
+				</view>
+				<view class="top-box-item">
+					<image src="/static/img/icon/bycard.png"></image>
+					<text>一键挪车</text>
+				</view>
+			</view>
+			<block v-if="mainItem">
+				<view class="stop-car">
+					<view class="top">
+						临时停车 请多关照
+					</view>
+					<view class="middle">
+						<view class="card-left">{{mainItem.prefix}}{{mainItem.address_code}}</view>
+						<view class="card-point">•</view>
+						<block v-bind:key="index" v-for="(item, index) in mainItem.card">
+							<view class="card-single">{{item}}</view>
+						</block>
+					</view>
+					<view class="bottom">
+						<view class="tongzhi-phone"  @click="bindPhone">电话通知</view>
+						<view class="tongzhi-msg"  @click="sendMoveCarMsg">短信通知</view>
+					</view>
+				</view>
+			</block>
+			<block v-else>
+				<swiper class="swiper" indicator-dots="true" autoplay="true">
+					<block v-bind:key="index" v-for="(item,index) in adv_bottom">
+						<swiper-item>
+							<image mode="aspectFill" :src="item.img"></image>
+						</swiper-item>
+					</block>
+				</swiper>
+			</block>
+			
+			<view class="fujin">
+				<view class="line"></view>
+				<text>附近洗车店</text>
+			</view>
+			
+			<!-- 洗车列表 -->
+			<carList :list="washCarShops"></carList>
+		</view>
+
 	</view>
 </template>
 
 <script>
-	import {request, getQueryString, showToast} from 'common/js/common'
-	import {getAdvList, getCalllMsg, bindPhone, sendMoveCarCode} from 'common/js/requestUrl'
+	import {request, getQueryString, showToast, geoDistance} from 'common/js/common'
+	import {washCarList, getAdvOfIndex, getCalllMsg, bindPhone, sendMoveCarCode} from 'common/js/requestUrl'
+	import carList from '../../carlist-template/carlist-template.vue'
 	
 	export default {
 		data() {
 			return {
+				address: '',
 				latitude: '',
 				longitude: '',
 				mapContext: {},
@@ -71,46 +91,64 @@
 					bgColor: 'red'
 				},
 				covers: [],
-				list: [],
+				adv: {
+					far: 0,
+					title: '',
+					desc: '',
+					img: '/static/img/icon/avatar.jpg',
+					tag: ''
+				},
+				adv_bottom: [],
 				mainItem: null,
+				washCarShops: [],
 				id: '',
-				type: ''				
+				type: '',
 			};
 		},
+		components:{carList},
 		onShow(){
 		},
-		onLoad(options){
+		onLoad(options){			
+			this.mapContext = uni.createMapContext('map',this)
+			// 其他
+			// let link = decodeURIComponent(options.q)
+			// this.changeData(link)
+			this.id = uni.getStorageSync('index_id')
+			this.type = uni.getStorageSync('index_type')
+			// uni.removeStorageSync('index_id')
+			// uni.removeStorageSync('index_type')
+			
 			uni.getLocation({
 			  type: 'gcj02',
 			  success: res => {
+				uni.request({
+					header:{
+						"Content-Type": "application/text"
+					},
+					url:'https://apis.map.qq.com/ws/geocoder/v1/?location='+res.latitude+','+res.longitude+'&key=MVGBZ-R2U3U-W5CVY-2PQID-AT4VZ-PDF35',
+					success:(re) => {  
+						if(re.statusCode===200){
+							this.address = re.data.result.address
+						}
+					 }
+				});
+
 				this.latitude = res.latitude
 				this.longitude = res.longitude
-				this.covers.push({
-					id: 0,
-					latitude: this.latitude,
-					longitude: this.longitude,
-					iconPath: '/static/img/icon/Location.png',
-					width: '60rpx',
-					height: '60rpx',
-					callout:{
-						content: '我的位置',
-						display: 'ALWAYS',
-						padding: 10,
-						x: -40,
-						y: -40,
-						bgColor: '#fff',
-						borderRadius: 10
-					},
-				})
+			  },
+			  complete: res => {
+				this.loadData()
 			  }
 			})
-			this.mapContext = uni.createMapContext('map',this)
-			this.getAdvList()
-			// 其他
-			let link = decodeURIComponent(options.q)
-			this.changeData(link)
 		},
 		methods: {
+			async loadData(){
+				await this.getAdvOfIndex()
+				await this.getWashCarList()
+				if(this.id && this.type){
+					await this.getCalllMsg()
+				}
+			},
 			cancleCall(){
 				if(this.called){
 					this.mainItem = null
@@ -121,7 +159,7 @@
 				if (paramArr.length == 2){
 					var params = paramArr[1].split('_');
 					this.id = params[0];
-					this.type =params[1];
+					this.type = params[1];
 				}
 				
 				if(this.id && this.type){
@@ -154,52 +192,54 @@
 					}
 				});
 			},
-			getAdvList(){
-				request(getAdvList, {},(res)=> {
-					if(res.code == 200){
-						this.list = res.result.data
-						res.result.data.forEach((v) => {
-							this.covers.push({
-								id: v.id,
-								latitude: v.latitude,
-								longitude: v.longitude,
-								// iconPath: '/static/img/icon/Location.png',
-								iconPath: v.img,
-								width: '60rpx',
-								height: '60rpx',
-								callout:{
-									content: v.title,
-									display: 'ALWAYS',
-									padding: 10,
-									x: -40,
-									y: -40,
-									bgColor: '#fff',
-									borderRadius: 10
-								},
+			getAdvOfIndex() {
+				return new Promise(resolve => {
+					request(getAdvOfIndex, {},(res)=> {
+						if(res.code == 200){
+							this.adv = res.result.adv
+							this.adv.far = geoDistance(this.adv.latitude, this.adv.longitude, this.latitude, this.longitude)
+							this.adv_bottom = res.result.adv_bottom
+						}
+						resolve()
+					})
+				})
+			},
+			getWashCarList() {
+				return new Promise(resolve => {
+					request(washCarList, {},(res)=> {
+						if(res.code == 200){
+							let washCarShops = res.result.data
+							washCarShops.forEach((item,index) =>{
+								washCarShops[index].far = geoDistance(item.latitude, item.longitude, this.latitude, this.longitude)
 							})
-						})
-					}
+							this.washCarShops = washCarShops
+						}
+						resolve()
+					})
 				})
 			},
 			getCalllMsg(){
-				request(getCalllMsg,{
-					id : this.id,
-					type: this.type
-				},(res) => {
-					// 450表示未绑定
-					if(res.code == 450){
-						uni.navigateTo({
-							url: '../callPhone/callPhone?id='+this.id+'&type='+this.type
-						});
-					}else if(res.code == 204){
-						uni.switchTab({
-							url: '../tabbar-5/tabbar-5'
-						});	
-					}else if(res.code == 200){
-						this.mainItem = res.result
-					}else{
-						showToast(res.msg)
-					}
+				return new Promise(resolve => {
+					request(getCalllMsg,{
+						id : this.id,
+						type: this.type
+					},(res) => {
+						// 450表示未绑定
+						if(res.code == 450){
+							uni.navigateTo({
+								url: '../callPhone/callPhone?id='+this.id+'&type='+this.type
+							});
+						}else if(res.code == 204){
+							uni.switchTab({
+								url: '../tabbar-5/tabbar-5'
+							});	
+						}else if(res.code == 200){
+							this.mainItem = res.result
+						}else{
+							showToast(res.msg)
+						}
+						resolve()
+					})
 				})
 			},
 			bindPhone(){
@@ -219,6 +259,7 @@
 				request(sendMoveCarCode,{
 					id : this.id,
 					type: this.type,
+					address: this.address,
 					msg: '挡住了道路，请挪下车'
 				},(res) => {
 					if(res.code == 200){
@@ -237,6 +278,17 @@
 				uni.navigateTo({
 					url: '../web-view/web-view?id='+ id +'&title=' + title
 				});
+			},
+			navToSendCard(){
+				uni.navigateTo({
+					url: '../sendCard/sendCard'
+				});	
+			},
+			onShareAppMessage(res) {
+				return {
+				  title: '多少堵车事，历历不能忘',
+				  imageUrl: '/static/img/icon/share.jpg'
+				}
 			}
 		}
 	};
@@ -244,20 +296,16 @@
 
 <style lang="stylus" scoped>
 	@import "~common/stylus/variable"
-page
-	overflow: hidden
 	.content
-		width: 750upx
+		width: 750rpx
 		.map
-			position: fixed
-			top:0
-			width: 100%
-			height: 100%
+			width: 750rpx
+			height: 400rpx
 			display: flex
 			justify-content: center
 			.position
 				position:absolute
-				bottom: 380rpx
+				bottom: 150rpx
 				right: 20rpx
 				border-radius: 50%
 				background-color:white
@@ -270,116 +318,102 @@ page
 				.position-icon
 					width: 40upx
 					height: 40upx
-			.position-saoma
-				bottom: 300rpx
-				background-color: $orange
-			.view
-				position: fixed
-				bottom: 50rpx
-				left: 75rpx
-				width: 580rpx
+		.index-container
+			padding: 0 30rpx
+			position: relative
+			top: -110rpx
+			.top-box
 				display: flex
-				justify-content: center
-				flex-direction: column
+				z-index: 999
+				justify-content: space-around
 				align-items: center
-				.show-border
-					// border: 1px solid #d1d1d1
-					box-shadow: 1px 0px 1px #d1d1d1
-					border-radius: 10rpx
-					width: 580rpx
-					.top-other
-						display: flex
-						padding: 20rpx
-						align-items: center
-						background-color: white
-						opacity: .8
-						justify-content: space-around
-						.top-other-img
-							border-radius: 10rpx
-							width: 60rpx
-							height: 60rpx
-						.top-other-call
-							margin-right: 25rpx
-							width: 40rpx
-							height: 40rpx
-						.top-other-center
-							overflow: hidden
-							padding: 0 20rpx
-							flex: 1
-							.top-other-title
-								height: 60rpx
-								line-height: 60rpx
-								font-size: 30rpx
-								font-weight: 500
-								text-overflow: ellipsis
-							.top-other-desc
-								margin-top: 5rpx
-								font-size: 18rpx
-								text-overflow: ellipsis
-					.top-main
-						display: flex
-						flex-direction: column
-						align-items: center
-						height : 200rpx
-						padding: 20rpx
-						background-color: $orange
-						.top-title
-							font-size: 40rpx
-							font-weight: 300
-						.top-card
-							display: flex
-							margin-top: 20rpx
-							.top-card-left
-								width: 50rpx
-								display: flex
-								align-items: center
-								justify-content: center
-								font-size: 30rpx
-								background-color: $little-color
-								padding: 5rpx 10rpx
-								border: 1px solid $border-color 
-								border-radius: 10rpx
-								margin: 5rpx 0
-								letter-spacing: 5rpx
-							.top-card-point
-								padding: 5rpx 10rpx
-							.top-card-right
-								font-size: 30rpx
-								background-color: $little-color
-								padding: 5rpx 10rpx
-								border: 1px solid $border-color 
-								border-radius: 10rpx
-								margin: 5rpx
-						.top-card-notice
-							display: flex
-							margin-top: 20rpx
-							width: 100%
-							justify-content: space-around
-							font-size: 25rpx
-							.top-card-notice-button
-								display: flex
-								align-items: center
-								background-color: black
-								color: white
-								padding: 10rpx 25rpx
-								border-radius: 50rpx
-								font-weight: 200
-								.top-card-notice-phone-icon
-									width: 35rpx
-									height: 35rpx
-									margin-right: 10rpx
-				.deep-button
+				background-color: white
+				padding: 20rpx
+				border-radius: 20rpx
+				.top-box-item
 					display: flex
+					flex-direction: column
 					align-items: center
-					justify-content: center
-					background-color: $orange
-					width: 500rpx
-					height: 50rpx
-					padding: 10rpx 0
-					margin-top: 20upx
-					border-radius: 60upx
-					.saoma
-						width: 40rpx
-						height: 40rpx
-						margin-right: 10rpx
+					image
+						width: 60rpx
+						height: 60rpx
+					text
+						margin-top: 10rpx
+						font-size: 20rpx
+		.swiper
+			margin-top: 20rpx
+			image
+				width: 100%
+				height: 300rpx
+				border-radius: 10rpx
+		.stop-car
+			margin-top: 20rpx
+			width: 100%
+			height: 300rpx
+			border-radius: 10rpx
+			background-color: white
+			display: flex
+			flex-direction: column
+			box-shadow: 0 0 15rpx #ccc 
+			.top
+				height: 100rpx
+				text-align: center
+				line-height: 100rpx
+				margin: 0 auto
+			.middle
+				height: 100rpx
+				background-color: rgb(250, 250, 250)
+				display: flex
+				align-items: center
+				justify-content: center
+				.card-left
+					width: 100rpx
+					text-align: center
+					font-size: 40rpx
+					border: 1px solid grey
+					border-radius: 10rpx
+					letter-spacing: 10rpx
+					padding: 3rpx 10rpx
+				.card-point
+					letter-spacing: 10rpx
+					font-size: 40rpx
+					padding: 0 10rpx 0 20rpx
+				.card-single
+					font-size: 40rpx
+					border: 1px solid grey
+					border-radius: 10rpx
+					margin: 0 10rpx
+					width: 50rpx
+					text-align: center
+			.bottom
+				display: flex
+				justify-content: space-around
+				align-items: center
+				height: 100rpx
+				.tongzhi-phone
+					width: 250rpx
+					height: 70rpx
+					line-height: 70rpx
+					text-align:center
+					background: linear-gradient(to bottom, rgb(255,122, 111) , rgb(255, 59, 74))
+					color: white
+					border-radius: 10rpx
+					box-shadow: -5rpx 5rpx 10rpx #d1d1d1
+				.tongzhi-msg
+					width: 250rpx
+					height: 70rpx
+					line-height: 70rpx
+					text-align:center
+					background: linear-gradient(to bottom, rgb(198,130, 106) , rgb(168, 103, 79))
+					color: white
+					border-radius: 10rpx
+					box-shadow: -5rpx 5rpx 10rpx #d1d1d1
+		.fujin
+			display: flex
+			margin: 30rpx 0
+			.line
+				border-right: 8rpx solid grey
+			text
+				margin-left: 10rpx
+				font-size: 30rpx
 </style>

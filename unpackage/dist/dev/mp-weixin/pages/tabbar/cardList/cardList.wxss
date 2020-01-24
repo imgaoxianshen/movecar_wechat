@@ -1,28 +1,127 @@
-.carcard-container.data-v-1da47f4f {
+.useing-container.data-v-210139c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  -webkit-box-shadow: -3rpx -3rpx 2rpx #d1d1d1;
+          box-shadow: -3rpx -3rpx 2rpx #d1d1d1;
+}
+.useing-container .useing-line.data-v-210139c1 {
+  border-top: 1px solid #d1d1d1;
+  margin-top: 30rpx;
+}
+.useing-container .botton-container.data-v-210139c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.useing-container .botton-container .botton-right.data-v-210139c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.useing-container .botton-container .botton-right .botton-right-right.data-v-210139c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.useing-container .botton-container .botton-right .botton-right-right text.data-v-210139c1 {
+  margin: 0 20rpx 0 10rpx;
+  font-size: 25rpx;
+  font-weight: 300;
+}
+.useing-container .botton-container .botton-right .botton-right-left.data-v-210139c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.useing-container .botton-container .botton-right .botton-right-left text.data-v-210139c1 {
+  margin: 0 20rpx 0 10rpx;
+  font-size: 25rpx;
+  font-weight: 300;
+}
+.carcard-container.data-v-210139c1 {
   width: 750rpx;
 }
-.carcard-container .useing.data-v-1da47f4f {
+.carcard-container .background.data-v-210139c1 {
+  position: fixed;
+  height: 300rpx;
+  top: 0;
+  width: 750rpx;
+  background: -webkit-gradient(linear, left top, right top, from(#ffd617), to(#faff88));
+  background: -webkit-linear-gradient(left, #ffd617, #faff88);
+  background: -o-linear-gradient(left, #ffd617, #faff88);
+  background: linear-gradient(to right, #ffd617, #faff88);
+}
+.carcard-container .card-choosed.data-v-210139c1 {
+  position: relative;
+}
+.carcard-container .card-choosed .useing.data-v-210139c1 {
+  position: relative;
   font-size: 30rpx;
   font-weight: 300;
-  margin: 40rpx 0 10rpx 30rpx;
+  margin: 40rpx 0 10rpx 100rpx;
 }
-.carcard-container .useing-item.data-v-1da47f4f {
-  background-color: #ffda44;
+.carcard-container .useing-item.data-v-210139c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10rpx 0;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
-.carcard-container .useing-item .useing-item-left.data-v-1da47f4f {
+.carcard-container .useing-item .useing-logo.data-v-210139c1 {
+  width: 100rpx;
+  height: 100rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+}
+.carcard-container .useing-item .useing-item-left.data-v-210139c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,97 +132,60 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.carcard-container .useing-item .useing-item-left .item-card.data-v-1da47f4f {
+.carcard-container .useing-item .useing-item-left .item-card.data-v-210139c1 {
   margin-left: 30rpx;
   font-weight: 300;
   letter-spacing: 10rpx;
 }
-.carcard-container .useing-item .useing-item-left .item-phone.data-v-1da47f4f {
+.carcard-container .useing-item .useing-item-left .item-phone.data-v-210139c1 {
   font-weight: 300;
   letter-spacing: 3rpx;
   margin-left: 30rpx;
-  font-size: 35rpx;
+  font-size: 28rpx;
 }
-.carcard-container .useing-item .item-useing.data-v-1da47f4f {
+.carcard-container .useing-item .item-useing.data-v-210139c1 {
   font-weight: 300;
   font-size: 25rpx;
-  margin-right: 30rpx;
+  margin-left: 30rpx;
+  width: 100rpx;
 }
-.carcard-container .card-notice.data-v-1da47f4f {
+.carcard-container .useing-item .card-notice.data-v-210139c1 {
   font-weight: 300;
   letter-spacing: 5rpx;
   margin-top: 20rpx;
   font-size: 25rpx;
   margin: 20rpx 30rpx 20rpx 30rpx;
 }
-.carcard-container .card-notice-other.data-v-1da47f4f {
+.carcard-container .useing-item .card-notice-other.data-v-210139c1 {
   font-weight: 300;
   letter-spacing: 5rpx;
   margin-top: 20rpx;
   font-size: 30rpx;
   margin: 20rpx 30rpx 20rpx 30rpx;
 }
-.carcard-container .card-list.data-v-1da47f4f {
+.carcard-container .card-list.data-v-210139c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: 999;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fff;
-  margin-top: 30rpx;
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid #f1f1f1;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  padding-bottom: 30rpx;
 }
-.carcard-container .card-list .card-item.data-v-1da47f4f {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10rpx 0;
-  border-bottom: 1px solid #f1f1f1;
-}
-.carcard-container .card-list .card-item .card-item-left.data-v-1da47f4f {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.carcard-container .card-list .card-item .card-item-left .card-item-card.data-v-1da47f4f {
-  font-weight: 200;
-  letter-spacing: 10rpx;
-  margin-left: 30rpx;
-  font-size: 35rpx;
-}
-.carcard-container .card-list .card-item .card-item-left .card-item-phone.data-v-1da47f4f {
-  font-weight: 300;
-  letter-spacing: 3rpx;
-  margin-left: 30rpx;
-  font-size: 35rpx;
-}
-.carcard-container .card-list .card-item .card-unchoosed.data-v-1da47f4f {
-  margin-right: 30rpx;
-  font-weight: 200;
-  font-size: 25rpx;
-}
-.carcard-container .card-list .add-item.data-v-1da47f4f {
-  padding: 20rpx 0;
+.carcard-container .card-list .add-item.data-v-210139c1 {
+  background-color: #fce73d;
+  padding: 20rpx;
+  width: 400rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,12 +199,12 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.carcard-container .card-list .add-item .add-item-icon.data-v-1da47f4f {
+.carcard-container .card-list .add-item .add-item-icon.data-v-210139c1 {
   width: 30rpx;
   height: 30rpx;
   margin-right: 10rpx;
 }
-.carcard-container .card-list .add-item .add-item-text.data-v-1da47f4f {
+.carcard-container .card-list .add-item .add-item-text.data-v-210139c1 {
   font-weight: 300;
   font-size: 30rpx;
 }

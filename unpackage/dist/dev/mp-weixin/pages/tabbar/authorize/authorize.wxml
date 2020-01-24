@@ -1,2 +1,1 @@
-<import src="./authorize.vue.wxml" />
-    <template is="40680f0c" data="{{ ...$root['0'], $root }}"/>
+<view class="container data-v-32b0e595"><icon class="item-top-icon data-v-32b0e595" type="warn" size="50"></icon><view class="item data-v-32b0e595"><view class="item-top data-v-32b0e595">授权申请</view><view class="item-bottom data-v-32b0e595"><view class="item-bottom-msg data-v-32b0e595"><text class="item-bottom-text data-v-32b0e595">帮挪车小程序需要获得你的公开信息（昵称、头像）</text><button class="item-bottom-botton data-v-32b0e595" type="primary" hover-class="none" open-type="getUserInfo" withCredential="true" data-event-opts="{{[['getuserinfo',[['getUserInfo',['$event']]]]]}}" bindgetuserinfo="__e">获取头像昵称</button></view></view></view></view>

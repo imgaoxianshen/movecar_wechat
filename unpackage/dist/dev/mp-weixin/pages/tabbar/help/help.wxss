@@ -1,9 +1,9 @@
-.addCard-container.data-v-286700a2 {
+.addCard-container.data-v-128867be {
   background-color: #ffda44;
   opacity: 0.8;
   position: relative;
 }
-.addCard-container .background.data-v-286700a2 {
+.addCard-container .background.data-v-128867be {
   position: relative;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -12,8 +12,8 @@
   height: 130vh;
   overflow: hidden;
 }
-.addCard-container .background.data-v-286700a2:before,
-.addCard-container .background.data-v-286700a2:after {
+.addCard-container .background.data-v-128867be:before,
+.addCard-container .background.data-v-128867be:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -25,27 +25,27 @@
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-.addCard-container .background.data-v-286700a2:before {
+.addCard-container .background.data-v-128867be:before {
   top: 220rpx;
-  -webkit-animation-name: rotate2-data-v-286700a2;
-          animation-name: rotate2-data-v-286700a2;
+  -webkit-animation-name: rotate2-data-v-128867be;
+          animation-name: rotate2-data-v-128867be;
   -webkit-border-radius: 44%;
           border-radius: 44%;
   opacity: 1;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.addCard-container .background.data-v-286700a2:after {
+.addCard-container .background.data-v-128867be:after {
   top: 180rpx;
   -webkit-border-radius: 44%;
           border-radius: 44%;
   opacity: 0.8;
-  -webkit-animation-name: rotate1-data-v-286700a2;
-          animation-name: rotate1-data-v-286700a2;
+  -webkit-animation-name: rotate1-data-v-128867be;
+          animation-name: rotate1-data-v-128867be;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.addCard-container .background .title.data-v-286700a2 {
+.addCard-container .background .title.data-v-128867be {
   width: 750rpx;
   margin-top: 50rpx;
   letter-spacing: 10rpx;
@@ -53,7 +53,7 @@
   font-weight: 300;
   text-align: center;
 }
-.addCard-container .center.data-v-286700a2 {
+.addCard-container .center.data-v-128867be {
   position: absolute;
   top: 300rpx;
   padding: 0 50rpx 100rpx 50rpx;
@@ -67,7 +67,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.addCard-container .center .center-item-title.data-v-286700a2 {
+.addCard-container .center .center-item-title.data-v-128867be {
   font-size: 25rpx;
   background-color: #000;
   color: #fff;
@@ -75,11 +75,11 @@
   -webkit-border-radius: 30rpx;
           border-radius: 30rpx;
 }
-.addCard-container .center .center-item-desc.data-v-286700a2 {
+.addCard-container .center .center-item-desc.data-v-128867be {
   margin-top: 10rpx;
   font-size: 25rpx;
 }
-@-webkit-keyframes rotate1-data-v-286700a2 {
+@-webkit-keyframes rotate1-data-v-128867be {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -93,7 +93,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@keyframes rotate1-data-v-286700a2 {
+@keyframes rotate1-data-v-128867be {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -107,7 +107,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@-webkit-keyframes rotate2-data-v-286700a2 {
+@-webkit-keyframes rotate2-data-v-128867be {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -129,7 +129,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@keyframes rotate2-data-v-286700a2 {
+@keyframes rotate2-data-v-128867be {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);

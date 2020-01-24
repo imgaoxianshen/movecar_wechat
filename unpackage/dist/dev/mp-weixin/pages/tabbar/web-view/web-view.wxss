@@ -1,6 +1,6 @@
 .view-container {
   width: 710rpx;
-  padding: 20rpx;
+  padding: 20rpx 20rpx 130rpx 20rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,5 +14,98 @@
 }
 .view-container image {
   width: 0;
+}
+.tab {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  border-top: 1px solid #d1d1d1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tab button {
+  background-color: #fff;
+  line-height: normal;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.tab button::after {
+  border: none;
+}
+.tab .button-hover {
+  background-color: #fff;
+}
+.tab .tab-item {
+  padding: 10rpx 0 10rpx 0;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160rpx;
+}
+.tab .tab-item image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.tab .tab-item text {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  font-weight: 200;
+}
+.tab .tab-item-flex {
+  width: 200rpx;
+  background-color: #ffda44;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.tab .tab-item-flex image {
+  width: 50rpx;
+  height: 50rpx;
+  -webkit-border-radius: 5rpx;
+          border-radius: 5rpx;
+  margin-left: 10rpx;
+}
+.tab .tab-item-flex text {
+  font-weight: 200;
+  margin-right: 20rpx;
 }
 

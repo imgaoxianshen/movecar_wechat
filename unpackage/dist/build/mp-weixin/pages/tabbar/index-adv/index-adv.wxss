@@ -1,0 +1,34 @@
+.container {
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+}
+.container .index-adv-img-icon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180rpx;
+  width: 100%;
+  border-top: 1px solid #d1d1d1;
+}
+.container .index-adv-img {
+  height: 100%;
+  width: 100%;
+}
+.container .last_time {
+  position: fixed;
+  right: 20rpx;
+  top: 20rpx;
+  width: 80rpx;
+  -webkit-border-radius: 40rpx;
+          border-radius: 40rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+}
+
+page::after{position: fixed;left: -1000px;top: -1000px;content: url(https://cdn.dcloud.net.cn/img/shadow-grey.png)}

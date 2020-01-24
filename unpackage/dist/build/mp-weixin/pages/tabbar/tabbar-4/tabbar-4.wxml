@@ -1,2 +1,1 @@
-<import src="./tabbar-4.vue.wxml" />
-    <template is="180a0ed8" data="{{ ...$root['0'], $root }}"/>
+<view class="content">页面 - 4</view>

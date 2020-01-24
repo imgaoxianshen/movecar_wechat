@@ -1,29 +1,61 @@
 {
     "pages" : [
+		{
+            "path" : "pages/tabbar/index-adv/index-adv",
+            "style" : {}
+        },
         {
             "path" : "pages/tabbar/tabbar-1/tabbar-1",
             "style" : {}
         },
         {
             "path" : "pages/tabbar/orderList/orderList",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "我的订单"
+			}
         },
         {
             "path" : "pages/tabbar/sendCard/sendCard",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "购买挪车贴"
+			}
         },
         {
             "path" : "pages/tabbar/authorize/authorize",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "授权"
+			}
+        },
+		{
+            "path" : "pages/wallet/wallet",
+            "style" : {
+				"navigationBarTitleText": "钱包"
+			}
+        },
+		{
+            "path" : "pages/wash-order/wash-order",
+            "style" : {
+				"navigationBarTitleText": "提交订单"
+			}
+        },
+		{
+            "path" : "pages/invite/invite",
+            "style" : {
+				"navigationBarTitleText": "邀请好友"
+			}
+        },
+		{
+            "path" : "pages/xiche/xiche",
+            "style" : {
+				"navigationBarTitleText": "洗车"
+			}
         },
         {
-            "path" : "pages/tabbar/tabbar-5/tabbar-5"
+            "path" : "pages/tabbar/tabbar-5/tabbar-5",
+			"style":{
+				"navigationBarTitleText": "个人中心"
+			}
         },
-        //             "style": {  
-        // 				"backgroundColor": "yellow",
-        // 				"navigationBarTitleText": "我的",  
-        // 				"enablePullDownRefresh": true
-        // 			  } 
         {
             "path" : "pages/tabbar/tabbar-5/car_card/car_card",
             "style" : {}
@@ -31,7 +63,9 @@
         //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
             "path" : "pages/tabbar/tabbar-2/tabbar-2",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "洗车"
+			}
         },
         {
             "path" : "pages/tabbar/tabbar-3/tabbar-3",
@@ -39,18 +73,6 @@
         },
         {
             "path" : "pages/tabbar/tabbar-4/tabbar-4",
-            "style" : {}
-        },
-        {
-            "path" : "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-            "style" : {}
-        },
-        {
-            "path" : "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-            "style" : {}
-        },
-        {
-            "path" : "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
             "style" : {}
         },
         {
@@ -67,7 +89,9 @@
         },
         {
             "path" : "pages/tabbar/cardList/cardList",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "我的车牌"
+			}
         },
         {
             "path" : "pages/tabbar/addCard/addCard",
@@ -83,11 +107,19 @@
         }
         ,{
             "path" : "pages/tabbar/joinUs/joinUs",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "加入我们"
+			}
         }
         ,{
             "path" : "pages/tabbar/web-view/web-view",
             "style" : {}
+        }
+		,{
+            "path" : "pages/tabbar/coupon/coupon",
+            "style" : {
+				"navigationBarTitleText": "我的优惠卷"
+			}
         }
     ],
     "globalStyle" : {
@@ -108,38 +140,17 @@
                 "selectedIconPath" : "static/img/tabbar/homeactive.png",
                 "text" : "首页"
             },
-            //             {
-            //                 "pagePath" : "pages/tabbar/tabbar-2/tabbar-2",
-            //                 "iconPath" : "static/img/tabbar/guanzhu.png",
-            //                 "selectedIconPath" : "static/img/tabbar/guanzhuactive.png",
-            //                 "text" : "关注"
-            //             },
-            //             //#ifdef MP-WEIXIN
-            //             {
-            //                 "pagePath" : "pages/tabbar/tabbar-3/tabbar-3",
-            //                 "iconPath" : "static/img/tabbar/add.png",
-            //                 "selectedIconPath" : "static/img/tabbar/addactive.png",
-            //                 "text" : "添加"
-            //             },
-            //             //#endif
-            //             //#ifndef MP-WEIXIN
-            //             {
-            //                 "pagePath" : "pages/tabbar/tabbar-3/tabbar-3",
-            //                 "iconPath" : "static/img/tabbar/add.png",
-            //                 "selectedIconPath" : "static/img/tabbar/addactive.png"
-            //             },
-            //             //#endif
-            //             {
-            //                 "pagePath" : "pages/tabbar/tabbar-4/tabbar-4",
-            //                 "iconPath" : "static/img/tabbar/news.png",
-            //                 "selectedIconPath" : "static/img/tabbar/newsactive.png",
-            //                 "text" : "消息"
-            //             },
+			{
+                "pagePath" : "pages/tabbar/tabbar-2/tabbar-2",
+                "iconPath" : "static/img/tabbar/vip.png",
+                "selectedIconPath" : "static/img/tabbar/vipactive.png",
+                "text" : "洗车"
+            },
             {
                 "pagePath" : "pages/tabbar/tabbar-5/tabbar-5",
                 "iconPath" : "static/img/tabbar/me.png",
                 "selectedIconPath" : "static/img/tabbar/meactive.png",
-                "text" : "我"
+                "text" : "我的"
             }
         ]
     },

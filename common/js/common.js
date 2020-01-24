@@ -4,7 +4,8 @@ import uniFly from 'unifly';
 
 const storage = new Storages()
 
-uniFly.baseUrl = 'https://www.imgaoxianshen.cn';
+// uniFly.baseUrl = 'https://www.imgaoxianshen.cn';
+uniFly.baseUrl = 'http://192.168.0.101:9501'
 uniFly.timeOut = 20000
 
 function showToast(title, icon='none'){
@@ -24,7 +25,7 @@ uniFly.requestInterceptors.success = function(request) {
 }
 uniFly.responseInterceptors.success = function(request) {
   uni.hideLoading()
-  if(request.data.code != 200 && request.data.code != 450){
+  if(request.data.code != 200 && request.data.code != 450 && request.data.code != 900){
 	showToast(request.data.msg)
 	return Promise.resolve(request.data)
   }
@@ -53,9 +54,8 @@ async function getLoginAndRequest(url,data,cb, method){
 		showToast('登陆失败')
 	}else{
 		let code = res.code
-		
-		requestGet(loginUrl, {code}).then(res => {
 
+		await requestGet(loginUrl, {code}).then(res => {
 			if(res.code == 200){
 				storage.put('token', res.result, 24*60*60)
 				// 然后请求接口
@@ -72,8 +72,32 @@ async function getLoginAndRequest(url,data,cb, method){
 				showToast('登陆接口获取失败')
 			}
 		})
+		
 	}
+}
 
+function rad(d){
+  return d * Math.PI / 180.0;
+}
+/**
+ *
+ * @param lat1  纬度1
+ * @param lng1  经度1
+ * @param lat2  纬度2
+ * @param lng2  经度2
+ */
+function geoDistance(lat1, lng1, lat2, lng2) {
+	if(lat2 == '' || lng2 == ''){
+		return 0;
+	}
+	let radLat1 = rad(lat1);
+	let radLat2 = rad(lat2);
+	let a = radLat1 - radLat2;
+	let b = rad(lng1) - rad(lng2);
+	let s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+	s = s * 6378.137;// EARTH_RADIUS;
+	s = Math.round(s * 10000) / 10000; //输出为公里
+	return s.toFixed(1);
 }
 
 module.exports = {
@@ -110,6 +134,7 @@ module.exports = {
 		// }
 	},
 	showToast,
+	geoDistance,
 	getQueryString: (url,name) => {
 	  let reg = new RegExp('(^|&|/?)' + name + '=([^&|/?]*)(&|/?|$)', 'i')
 	  let r = url.substr(1).match(reg) 

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/tabbar/index-adv/index-adv",
     "pages/tabbar/tabbar-1/tabbar-1",
     "pages/tabbar/orderList/orderList",
     "pages/tabbar/sendCard/sendCard",
@@ -9,9 +10,6 @@
     "pages/tabbar/tabbar-2/tabbar-2",
     "pages/tabbar/tabbar-3/tabbar-3",
     "pages/tabbar/tabbar-4/tabbar-4",
-    "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-    "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-    "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
     "pages/tabbar/tabbar-5/car_card/add_card/add_card",
     "pages/tabbar/getCode/getCode",
     "pages/tabbar/callPhone/callPhone",
@@ -20,7 +18,8 @@
     "pages/tabbar/help/help",
     "pages/tabbar/bindSuccess/bindSuccess",
     "pages/tabbar/joinUs/joinUs",
-    "pages/tabbar/web-view/web-view"
+    "pages/tabbar/web-view/web-view",
+    "pages/tabbar/coupon/coupon"
   ],
   "subPackages": [],
   "window": {
@@ -29,7 +28,6 @@
     "navigationBarBackgroundColor": "#FFDA44",
     "backgroundColor": "#FFFFFF"
   },
-  "usingComponents": {},
   "tabBar": {
     "borderStyle": "white",
     "backgroundColor": "#FFFFFF",
@@ -43,6 +41,12 @@
         "text": "首页"
       },
       {
+        "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+        "iconPath": "static/img/tabbar/vip.png",
+        "selectedIconPath": "static/img/tabbar/vipactive.png",
+        "text": "会员福利"
+      },
+      {
         "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
         "iconPath": "static/img/tabbar/me.png",
         "selectedIconPath": "static/img/tabbar/meactive.png",
@@ -54,5 +58,6 @@
     "scope.userLocation": {
       "desc": "地理位置描述"
     }
-  }
+  },
+  "usingComponents": {}
 }

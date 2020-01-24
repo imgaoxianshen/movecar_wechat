@@ -1,0 +1,116 @@
+.vip-center-container.data-v-f1cc6ffe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.vip-center-container .none.data-v-f1cc6ffe {
+  font-size: 40rpx;
+  margin-top: 30rpx;
+}
+.vip-center-container .vip-top.data-v-f1cc6ffe {
+  padding: 30rpx 60rpx;
+  -webkit-border-radius: 8rpx 8rpx 0 0;
+          border-radius: 8rpx 8rpx 0 0;
+  margin-top: 40rpx;
+  width: 550rpx;
+  -webkit-box-shadow: 5rpx -5rpx 30rpx #d1d1d1;
+          box-shadow: 5rpx -5rpx 30rpx #d1d1d1;
+  color: #76421f;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.vip-center-container .vip-top .xiche-msg.data-v-f1cc6ffe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.vip-center-container .vip-top .xiche-msg .huiyuan.data-v-f1cc6ffe {
+  font-size: 40rpx;
+  font-weight: 900;
+  font-style: italic;
+  background: -webkit-gradient(linear, left top, right top, from(#5c3016), to(#c37933));
+  background: -webkit-linear-gradient(left, #5c3016, #c37933);
+  background: -o-linear-gradient(left, #5c3016, #c37933);
+  background: linear-gradient(to right, #5c3016, #c37933);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.vip-center-container .vip-top .xiche-msg .huiyuan-bottom-time.data-v-f1cc6ffe {
+  font-size: 25rpx;
+}
+.vip-center-container .vip-top .huiyuan-bottom-xufei.data-v-f1cc6ffe {
+  font-size: 25rpx;
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  -webkit-box-shadow: 5rpx -5rpx 30rpx #d1d1d1;
+          box-shadow: 5rpx -5rpx 30rpx #d1d1d1;
+  -webkit-border-radius: 30rpx;
+          border-radius: 30rpx;
+}
+.vip-center-container .vip-code.data-v-f1cc6ffe {
+  -webkit-border-radius: 0 0 8rpx 8rpx;
+          border-radius: 0 0 8rpx 8rpx;
+  width: 600rpx;
+  height: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 5rpx 5rpx 30rpx #d1d1d1;
+          box-shadow: 5rpx 5rpx 30rpx #d1d1d1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.vip-center-container .vip-code .vip-code-text.data-v-f1cc6ffe {
+  margin-top: 30rpx;
+}
+

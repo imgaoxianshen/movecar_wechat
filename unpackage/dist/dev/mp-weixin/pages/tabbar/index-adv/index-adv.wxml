@@ -1,0 +1,1 @@
+<view class="container"><view class="last_time _div">{{now}}</view><image class="index-adv-img" mode="widthFix" src="{{imgUrl}}"></image><image class="index-adv-img-icon" src="/static/img/icon/icon.jpg"></image></view>

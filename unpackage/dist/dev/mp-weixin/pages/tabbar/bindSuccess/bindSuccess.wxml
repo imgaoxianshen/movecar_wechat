@@ -1,2 +1,1 @@
-<import src="./bindSuccess.vue.wxml" />
-    <template is="afa7ea74" data="{{ ...$root['0'], $root }}"/>
+<view class="image-container"><image class="image-bindSuccess" src="{{bindSuccess}}"></image><view data-event-opts="{{[['tap',[['ToIndex',['$event']]]]]}}" class="into-index" bindtap="__e"></view></view>

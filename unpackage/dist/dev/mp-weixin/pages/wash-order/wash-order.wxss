@@ -1,0 +1,105 @@
+.wash-order-container.data-v-ba744888 {
+  padding: 0 30rpx;
+}
+.wash-order-container .pay.data-v-ba744888 {
+  position: fixed;
+  bottom: 40rpx;
+  width: 690rpx;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
+  font-size: 35rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #f6b327;
+  text-align: center;
+}
+.wash-order-container .top.data-v-ba744888 {
+  background-color: #fff;
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+}
+.wash-order-container .top .name.data-v-ba744888 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20rpx 40rpx;
+}
+.wash-order-container .top .name view.data-v-ba744888 {
+  font-size: 25rpx;
+  color: #808080;
+}
+.wash-order-container .top .name text.data-v-ba744888 {
+  font-size: 30rpx;
+}
+.wash-order-container .top .quan.data-v-ba744888 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20rpx 40rpx;
+}
+.wash-order-container .top .quan .left.data-v-ba744888 {
+  font-size: 25rpx;
+  color: #808080;
+}
+.wash-order-container .top .quan .right.data-v-ba744888 {
+  font-size: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wash-order-container .top .quan .right text.data-v-ba744888 {
+  color: #f6b327;
+  font-size: 30rpx;
+}
+.wash-order-container .top .quan .right image.data-v-ba744888 {
+  width: 30rpx;
+  height: 30rpx;
+}
+.wash-order-container .top .border.data-v-ba744888 {
+  border-bottom: 1rpx solid #ccc;
+}
+.wash-order-container .top .xiaoji.data-v-ba744888 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20rpx 40rpx;
+}
+.wash-order-container .top .xiaoji view.data-v-ba744888 {
+  font-size: 25rpx;
+  color: #808080;
+}
+.wash-order-container .top .xiaoji text.data-v-ba744888 {
+  font-size: 30rpx;
+  color: #ffa500;
+}
+

@@ -4,9 +4,9 @@
 			<img class="top-chetie" :src="chetie">
 			<view class="top-msg">
 				<text class="top-msg-name">精美挪车贴</text>
-				<text class="top-msg-detail">产品尺寸:80mm*90mm</text>
+				<text class="top-msg-detail">产品尺寸:80mm*55mm</text>
 				<text class="top-msg-detail">产品材质:可移不干胶</text>
-				<text class="top-msg-price">￥0.00</text>
+				<!-- <text class="top-msg-price">￥0.00</text> -->
 			</view>
 		</view>
 		<view class="num-container">
@@ -17,6 +17,7 @@
 				<image class="num_icon" @click="addNum" :src="add"></image>
 			</view>
 		</view>
+		<text class="notice">如需赠送亲朋好友，寄同一地址每份只增加1元工本费。</text>
 		<view class="choose-address">
 			<block v-if="!name">
 				<block v-if="authSetting">
@@ -47,8 +48,8 @@
 		<view class="deepIn">
 			<view class="price">
 				<text class="price-msg">合计:</text>
-				<text class="base">￥9.9</text>
-				<text class="huaxian">含邮费: ￥9.9</text>
+				<text class="base">￥{{8.9 + num}}</text>
+				<text class="huaxian">含邮费: ￥8.9</text>
 			</view>
 			<view @click="submit" class="submit">立即支付</view>
 		</view>
@@ -89,7 +90,7 @@
 		},
 		methods: {
 			addNum(){
-				if(this.num < 5){
+				if(this.num < 1000){
 					this.num += 1
 				}
 			},

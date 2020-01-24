@@ -1,9 +1,9 @@
-.addCard-container.data-v-caab28ea {
+.addCard-container.data-v-0edb6936 {
   background-color: #ffda44;
   opacity: 0.8;
   position: relative;
 }
-.addCard-container .back.data-v-caab28ea {
+.addCard-container .back.data-v-0edb6936 {
   position: fixed;
   top: 0;
   height: 100%;
@@ -12,7 +12,7 @@
   z-index: 999;
   opacity: 0.7;
 }
-.addCard-container .display.data-v-caab28ea {
+.addCard-container .display.data-v-0edb6936 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,13 +27,13 @@
   background-color: #fff;
   z-index: 1000;
 }
-.addCard-container .display .add-car.data-v-caab28ea {
+.addCard-container .display .add-car.data-v-0edb6936 {
   width: 100%;
   padding: 20rpx;
   text-align: center;
   border-bottom: 1px solid #d1d1d1;
 }
-.addCard-container .display .place-container.data-v-caab28ea {
+.addCard-container .display .place-container.data-v-0edb6936 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,7 +46,7 @@
       -ms-flex-pack: left;
           justify-content: left;
 }
-.addCard-container .display .place-container .car-place.data-v-caab28ea {
+.addCard-container .display .place-container .car-place.data-v-0edb6936 {
   -webkit-border-radius: 10rpx;
           border-radius: 10rpx;
   -webkit-box-shadow: 1rpx 3rpx 1rpx #d1d1d1;
@@ -55,7 +55,7 @@
   margin: 5rpx;
   background-color: #ffda44;
 }
-.addCard-container .background.data-v-caab28ea {
+.addCard-container .background.data-v-0edb6936 {
   position: relative;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -64,8 +64,8 @@
   height: 100vh;
   overflow: hidden;
 }
-.addCard-container .background.data-v-caab28ea:before,
-.addCard-container .background.data-v-caab28ea:after {
+.addCard-container .background.data-v-0edb6936:before,
+.addCard-container .background.data-v-0edb6936:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -77,27 +77,27 @@
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-.addCard-container .background.data-v-caab28ea:before {
+.addCard-container .background.data-v-0edb6936:before {
   top: 220rpx;
-  -webkit-animation-name: rotate2-data-v-caab28ea;
-          animation-name: rotate2-data-v-caab28ea;
+  -webkit-animation-name: rotate2-data-v-0edb6936;
+          animation-name: rotate2-data-v-0edb6936;
   -webkit-border-radius: 44%;
           border-radius: 44%;
   opacity: 1;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.addCard-container .background.data-v-caab28ea:after {
+.addCard-container .background.data-v-0edb6936:after {
   top: 180rpx;
   -webkit-border-radius: 44%;
           border-radius: 44%;
   opacity: 0.8;
-  -webkit-animation-name: rotate1-data-v-caab28ea;
-          animation-name: rotate1-data-v-caab28ea;
+  -webkit-animation-name: rotate1-data-v-0edb6936;
+          animation-name: rotate1-data-v-0edb6936;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }
-.addCard-container .background .title.data-v-caab28ea {
+.addCard-container .background .title.data-v-0edb6936 {
   width: 750rpx;
   margin-top: 50rpx;
   letter-spacing: 10rpx;
@@ -105,7 +105,7 @@
   font-weight: 300;
   text-align: center;
 }
-.addCard-container .center.data-v-caab28ea {
+.addCard-container .center.data-v-0edb6936 {
   width: 550rpx;
   position: absolute;
   top: 300rpx;
@@ -120,19 +120,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.addCard-container .center .tips.data-v-caab28ea {
+.addCard-container .center .tips.data-v-0edb6936 {
   font-size: 30rpx;
 }
-.addCard-container .center .desc.data-v-caab28ea {
+.addCard-container .center .desc.data-v-0edb6936 {
   margin-top: 20rpx;
   font-size: 25rpx;
   font-weight: 300;
 }
-.addCard-container .center .input_control.data-v-caab28ea {
+.addCard-container .center .input_control.data-v-0edb6936 {
   position: absolute;
   left: -200rpx;
 }
-.addCard-container .center .input-msg.data-v-caab28ea {
+.addCard-container .center .input-msg.data-v-0edb6936 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -144,7 +144,7 @@
           flex-direction: row;
   margin-top: 20rpx;
 }
-.addCard-container .center .input-msg .input.data-v-caab28ea {
+.addCard-container .center .input-msg .input.data-v-0edb6936 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,21 +153,21 @@
   -webkit-border-radius: 10rpx;
           border-radius: 10rpx;
 }
-.addCard-container .center .input-msg .input .input-name.data-v-caab28ea {
+.addCard-container .center .input-msg .input .input-name.data-v-0edb6936 {
   padding: 5rpx 15rpx;
   font-size: 40rpx;
   width: 30rpx;
   border-right: 1px dashed #000;
 }
-.addCard-container .center .input-msg .input .input-char.data-v-caab28ea {
+.addCard-container .center .input-msg .input .input-char.data-v-0edb6936 {
   padding: 5rpx 15rpx;
   width: 30rpx;
   font-size: 40rpx;
 }
-.addCard-container .center .input-msg .dot.data-v-caab28ea {
+.addCard-container .center .input-msg .dot.data-v-0edb6936 {
   margin: 0 10rpx;
 }
-.addCard-container .center .input-msg .input-one.data-v-caab28ea {
+.addCard-container .center .input-msg .input-one.data-v-0edb6936 {
   margin: 0 5rpx;
   padding: 5rpx 15rpx;
   border: 1px dashed #000;
@@ -176,7 +176,7 @@
   font-size: 40rpx;
   width: 30rpx;
 }
-.addCard-container .center .input-msg .input-one-list.data-v-caab28ea {
+.addCard-container .center .input-msg .input-one-list.data-v-0edb6936 {
   margin: 0 5rpx;
   padding: 5rpx 15rpx;
   border: 1px dashed #000;
@@ -197,15 +197,15 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.addCard-container .center .input-msg .input-one-list .input-icon.data-v-caab28ea {
+.addCard-container .center .input-msg .input-one-list .input-icon.data-v-0edb6936 {
   width: 30rpx;
   height: 30rpx;
   margin-top: 5rpx;
 }
-.addCard-container .center .input-msg .input-one-list .new-text.data-v-caab28ea {
+.addCard-container .center .input-msg .input-one-list .new-text.data-v-0edb6936 {
   font-size: 10rpx;
 }
-.addCard-container .center .get-code.data-v-caab28ea {
+.addCard-container .center .get-code.data-v-0edb6936 {
   margin-top: 40rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -222,13 +222,13 @@
   border: 1px solid #d1d1d1;
   text-align: center;
 }
-.addCard-container .center .get-code .get-button.data-v-caab28ea {
+.addCard-container .center .get-code .get-button.data-v-0edb6936 {
   font-size: 25rpx;
   width: 200rpx;
   text-align: center;
   border-left: 1px solid #d1d1d1;
 }
-.addCard-container .center .yanzheng.data-v-caab28ea {
+.addCard-container .center .yanzheng.data-v-0edb6936 {
   text-align: center;
   margin-top: 40rpx;
   width: 100%;
@@ -237,7 +237,7 @@
   -webkit-border-radius: 10rpx;
           border-radius: 10rpx;
 }
-.addCard-container .center .confirm.data-v-caab28ea {
+.addCard-container .center .confirm.data-v-0edb6936 {
   text-align: center;
   width: 100%;
   background-color: #ffda44;
@@ -247,7 +247,7 @@
   -webkit-border-radius: 40rpx;
           border-radius: 40rpx;
 }
-@-webkit-keyframes rotate1-data-v-caab28ea {
+@-webkit-keyframes rotate1-data-v-0edb6936 {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -261,7 +261,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@keyframes rotate1-data-v-caab28ea {
+@keyframes rotate1-data-v-0edb6936 {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -275,7 +275,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@-webkit-keyframes rotate2-data-v-caab28ea {
+@-webkit-keyframes rotate2-data-v-0edb6936 {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);
@@ -297,7 +297,7 @@
             transform: translate(-50%, 1%) rotateZ(360deg);
 }
 }
-@keyframes rotate2-data-v-caab28ea {
+@keyframes rotate2-data-v-0edb6936 {
 0% {
     -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
             transform: translate(-50%, 1%) rotateZ(0deg);

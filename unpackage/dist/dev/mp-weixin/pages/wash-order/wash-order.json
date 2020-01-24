@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "提交订单",
+  "usingComponents": {
+    "vip": "/pages/vip-template/vip-template"
+  }
+}

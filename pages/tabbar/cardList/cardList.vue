@@ -1,26 +1,65 @@
 <template>
 	<view class="carcard-container">
+		<view class="background"></view>
 		<view class="card-choosed">
 			<view class="useing">使用车辆</view>
-			<view class="useing-item">
-				<view class="useing-item-left">
-					<text class="item-card">{{usingCard}}</text>
-					<text class="item-phone">{{usingPhone}}</text>
+			<view class="useing-container">
+				<view class="useing-item">
+					<image class="useing-logo" :src="usingLogo"></image>
+					<view class="useing-item-left">
+						<text class="item-card">{{usingCard}}</text>
+						<text class="item-phone">{{usingPhone}}</text>
+					</view>
+					<text class="item-useing">{{usingCarName}}</text>
 				</view>
-				<text class="item-useing">正在使用</text>
+				<!-- <view class="useing-line"></view> -->
+				<!-- <view class="botton-container">
+					<view class="botton-left"></view>
+					<view class="botton-right">
+						<view class="botton-right-left"></view>
+						<view class="botton-right-right">
+							<icon type="clear" size="20" color="red"></icon>
+							<text>删除</text>
+						</view>
+					</view>
+				</view> -->
 			</view>
-			<view class="card-notice">请在您用车时选择对应的车牌号及电话号码</view>
-			<view class="card-notice-other">其他车辆</view>
+			<!-- <view class="card-notice">请在您用车时选择对应的车牌号及电话号码</view> -->
+			<view class="useing">其他车辆</view>
 		</view>
 		<view class="card-list">
-			<block wx:key="item" v-for="(item, key) in carcardList">
-				<view class="card-item" @click="changeCarChoosed(item.id, item.choosed)">
+			<block v-bind:key="item" v-for="(item, key) in carcardList">
+				<view class="useing-container">
+					<view class="useing-item">
+						<image class="useing-logo" :src="item.logo ? item.logo : '/static/img/icon/avatar.jpg'"></image>
+						<view class="useing-item-left">
+							<text class="item-card">{{item.prefix}}{{item.address_code}}·{{item.card}}</text>
+							<text class="item-phone">{{item.phone}}</text>
+						</view>
+						<text class="item-useing">{{item.name}}</text>
+					</view>
+					<view class="useing-line"></view>
+					<view class="botton-container">
+						<view class="botton-left"></view>
+						<view class="botton-right">
+							<view class="botton-right-left" @click="changeCarChoosed(item.id, item.choosed)">
+								<icon type="success" size="20"></icon>
+								<text>使用</text>
+							</view>
+							<view class="botton-right-right" @click="deleteCard(item.id)">
+								<icon type="clear" size="20" color="red"></icon>
+								<text>删除</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- <view class="card-item" @click="changeCarChoosed(item.id, item.choosed)">
 					<view class="card-item-left">
 						<view class="card-item-card">{{item.prefix}}{{item.address_code}}·{{item.card}}</view>
 						<view class="card-item-phone">{{item.phone}}</view>
 					</view>
 					<view class="card-unchoosed">点击使用</view>
-				</view>
+				</view> -->
 			</block>
 			<view class="add-item"  @click="navAddCard">
 				<image class="add-item-icon" :src="addCard"></image>
@@ -68,6 +107,8 @@
 				deleteIcon,
 				usingCard: '暂无车牌',
 				usingPhone: '暂无手机',
+				usingLogo: '/static/img/icon/avatar.jpg',
+				usingCarName: '',
 				carcardList: [],
 				choosedCard: {}
 			};
@@ -95,6 +136,17 @@
 								if(v.choosed == 1){
 									this.usingCard = v.prefix + v.address_code+'·'+v.card
 									this.usingPhone = v.phone
+									if(v.logo){
+										this.usingLogo = v.logo
+									}else{
+										this.usingLogo = '/static/img/icon/avatar.jpg'
+									}
+									if(v.name){
+										this.usingCarName = v.name
+									}else{
+										this.usingCarName = ''
+									}
+									
 								}else{
 									cardLists.push(v)
 								}
@@ -138,18 +190,64 @@
 
 <style lang="stylus" scoped>
 	@import "~common/stylus/variable"
-.carcard-container
-	width: 750upx
-	.useing
-		font-size: 30rpx
-		font-weight: 300
-		margin: 40rpx 0 10rpx 30rpx
-	.useing-item
-		background-color: $base-color
+.useing-container
+	display: flex
+	flex-direction: column
+	width: 600rpx
+	margin: 20rpx auto
+	background-color: white
+	padding: 20rpx 30rpx
+	border-radius: 10rpx
+	box-shadow: -3rpx -3rpx 2rpx #d1d1d1
+	.useing-line
+		border-top: 1px solid #d1d1d1
+		margin-top: 30rpx
+	.botton-container
 		display: flex
-		justify-content: space-between
 		align-items: center
-		padding: 10rpx 0
+		margin-top: 20rpx
+		justify-content: space-between
+		.botton-right
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.botton-right-right
+				display: flex
+				align-items: center
+				text
+					margin: 0 20rpx 0 10rpx
+					font-size: 25rpx
+					font-weight: 300
+			.botton-right-left
+				display: flex
+				align-items: center
+				text
+					margin: 0 20rpx 0 10rpx
+					font-size: 25rpx
+					font-weight: 300
+.carcard-container
+	width: 750rpx
+	.background
+		position: fixed
+		height: 300rpx
+		top: 0
+		width: 750rpx
+		background: linear-gradient(to right, rgb(255,214, 23) , rgb(250, 255, 136))
+	.card-choosed
+		position: relative
+		.useing
+			position: relative
+			font-size: 30rpx
+			font-weight: 300
+			margin: 40rpx 0 10rpx 100rpx
+	.useing-item
+		display: flex
+		align-items: center
+		justify-content: space-around
+		.useing-logo
+			width: 100rpx
+			height: 100rpx
+			border-radius: 10rpx
 		.useing-item-left
 			display: flex
 			flex-direction: column
@@ -161,55 +259,39 @@
 				font-weight: 300
 				letter-spacing: 3rpx
 				margin-left: 30rpx
-				font-size: 35rpx
+				font-size: 28rpx
 		.item-useing
 			font-weight: 300
 			font-size: 25rpx
-			margin-right: 30rpx
-	.card-notice
-		font-weight: 300
-		letter-spacing: 5rpx
-		margin-top: 20rpx
-		font-size: 25rpx
-		margin: 20rpx 30rpx 20rpx 30rpx
-	.card-notice-other
-		font-weight: 300
-		letter-spacing: 5rpx
-		margin-top: 20rpx
-		font-size: 30rpx
-		margin: 20rpx 30rpx 20rpx 30rpx
+			margin-left: 30rpx
+			width: 100rpx
+		.card-notice
+			font-weight: 300
+			letter-spacing: 5rpx
+			margin-top: 20rpx
+			font-size: 25rpx
+			margin: 20rpx 30rpx 20rpx 30rpx
+		.card-notice-other
+			font-weight: 300
+			letter-spacing: 5rpx
+			margin-top: 20rpx
+			font-size: 30rpx
+			margin: 20rpx 30rpx 20rpx 30rpx
 	.card-list
 		display: flex
+		z-index: 999
+		position: relative
 		flex-direction: column
-		background-color: white
-		margin-top: 30rpx
-		border-top: 1px solid #f1f1f1
-		border-bottom: 1px solid #f1f1f1
-		.card-item
-			display: flex
-			justify-content: space-between
-			align-items: center
-			padding: 10rpx 0
-			border-bottom: 1px solid #f1f1f1
-			.card-item-left
-				display: flex
-				flex-direction: column
-				.card-item-card
-					font-weight: 200
-					letter-spacing: 10rpx
-					margin-left: 30rpx
-					font-size: 35rpx
-				.card-item-phone
-					font-weight: 300
-					letter-spacing: 3rpx
-					margin-left: 30rpx
-					font-size: 35rpx
-			.card-unchoosed
-				margin-right: 30rpx
-				font-weight: 200
-				font-size: 25rpx
+		// background-color: white
+		margin-top: 10rpx
+		margin-bottom: 10rpx
+		padding-bottom: 30rpx
 		.add-item
-			padding: 20rpx 0
+			background-color: rgb(252, 231, 61)
+			padding: 20rpx
+			width: 400rpx
+			border-radius: 10rpx
+			margin: 0 auto
 			display: flex
 			align-items: center
 			justify-content: center

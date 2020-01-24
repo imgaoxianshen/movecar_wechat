@@ -60,6 +60,6 @@
                 "desc" : "地理位置描述"
             }
         },
-        "usingComponents" : false
+        "usingComponents" : true
     }
 }

@@ -8,6 +8,9 @@ module.exports = {
 	bindPhone: baseUrl + 'user/bindPhone',
 	getYanZhengCode: baseUrl + 'user/getYanZhengCode',
 	sendMoveCarCode: baseUrl + 'user/sendMoveCarCode',
+	getCarList: baseUrl + 'user/getCarList', //获取车型
+	getCarListSecond: baseUrl + 'user/getCarListSecond',
+	isNeedPay: baseUrl + 'user/isNeedPay',
 	
 	// carcard
 	getCarCardList: baseUrl + 'card/getCarCardList',
@@ -15,6 +18,7 @@ module.exports = {
 	changeChoose: baseUrl + 'card/changeChoose',
 	deleteCard: baseUrl + 'card/deleteCard',
 	addCarCardAndBindUser: baseUrl + 'card/addCarCardAndBindUser',
+	bindCardAndPay: baseUrl + 'card/bindCardAndPay',
 	
 	// pay
 	placeOrderAndPay: baseUrl+'order/placeOrderAndPay',
@@ -28,6 +32,8 @@ module.exports = {
 	updateUserInfo: baseUrl +'loginUser/updateUserInfo',
 	getUserInfo: baseUrl +'loginUser/getUserInfo',
 	bindUser: baseUrl +'loginUser/bindUser',//绑定挪车码
+	unBindCard: baseUrl + 'loginUser/unBindCard',
+	getIndexAdv: baseUrl + 'loginUser/getIndexAdv', //获取首屏加载
 	
 	// 获取小程序码
 	getWechatCode: baseUrl + 'code/getWechatCode',
@@ -35,7 +41,17 @@ module.exports = {
 	// adv
 	getAdvList: baseUrl + 'adv/getAdvList',
 	getAdvOfOne: baseUrl + 'adv/getAdvOfOne',
+	getAdvOfIndex: baseUrl + 'adv/getAdvOfIndex',
 	
 	// joinUs
 	addJoin: baseUrl + 'joinUs/addJoin',
+	
+	// 洗车
+	washCarList: baseUrl + 'washCar/getWashCarList',
+	getWashCarShop: baseUrl + 'washCar/getWashCarShop', //洗车店界面
+	getWashItemByIds: baseUrl + 'washCar/getWashItemByIds',
+	
+	// 优惠卷
+	getWashCouponList: baseUrl + 'coupon/getWashCouponList'
+	
 }

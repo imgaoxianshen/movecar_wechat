@@ -1,4 +1,4 @@
-.container.data-v-bcb2f2e2 {
+.container.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,13 +15,13 @@
   background-color: #f1f1f1;
   height: 100%;
 }
-.container .notice.data-v-bcb2f2e2 {
+.container .notice.data-v-b5f97dfe {
   width: 650rpx;
   margin-top: 40rpx;
   font-size: 25rpx;
   font-weight: 200;
 }
-.container .choose-address.data-v-bcb2f2e2 {
+.container .choose-address.data-v-b5f97dfe {
   width: 650rpx;
   min-height: 350rpx;
   padding: 20rpx;
@@ -30,7 +30,7 @@
           border-radius: 20rpx;
   margin-top: 40rpx;
 }
-.container .choose-address .choose-address-msg.data-v-bcb2f2e2 {
+.container .choose-address .choose-address-msg.data-v-b5f97dfe {
   font-weight: 200;
   width: 100%;
   height: 350rpx;
@@ -47,7 +47,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.container .num-container.data-v-bcb2f2e2 {
+.container .num-container.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,10 +63,10 @@
   -webkit-border-radius: 20rpx;
           border-radius: 20rpx;
 }
-.container .num-container .num-text.data-v-bcb2f2e2 {
+.container .num-container .num-text.data-v-b5f97dfe {
   font-weight: 200;
 }
-.container .num-container .num-desc.data-v-bcb2f2e2 {
+.container .num-container .num-desc.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,14 +80,14 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.container .num-container .num-desc .num_icon.data-v-bcb2f2e2 {
+.container .num-container .num-desc .num_icon.data-v-b5f97dfe {
   width: 40rpx;
   height: 40rpx;
 }
-.container .num-container .num-desc .num.data-v-bcb2f2e2 {
+.container .num-container .num-desc .num.data-v-b5f97dfe {
   font-size: 30rpx;
 }
-.container .deepIn.data-v-bcb2f2e2 {
+.container .deepIn.data-v-b5f97dfe {
   position: fixed;
   width: 750rpx;
   bottom: 0;
@@ -107,7 +107,7 @@
   line-height: 100rpx;
   font-weight: 200;
 }
-.container .deepIn .submit.data-v-bcb2f2e2 {
+.container .deepIn .submit.data-v-b5f97dfe {
   height: 100%;
   width: 500rpx;
   background-color: #ffda44;
@@ -115,25 +115,25 @@
   font-size: 35rpx;
   font-weight: 100;
 }
-.container .deepIn .price.data-v-bcb2f2e2 {
+.container .deepIn .price.data-v-b5f97dfe {
   padding-left: 10rpx;
   background-color: #fff;
   height: 100%;
   width: 100%;
 }
-.container .deepIn .price .huaxian.data-v-bcb2f2e2 {
+.container .deepIn .price .huaxian.data-v-b5f97dfe {
   margin-left: 20rpx;
   font-size: 30rpx;
 }
-.container .deepIn .price .base.data-v-bcb2f2e2 {
+.container .deepIn .price .base.data-v-b5f97dfe {
   color: #f00;
 }
-.container .deepIn .price .price-msg.data-v-bcb2f2e2 {
+.container .deepIn .price .price-msg.data-v-b5f97dfe {
   font-size: 35rpx;
   font-weight: 200;
   margin-left: 20rpx;
 }
-.container .container-img.data-v-bcb2f2e2 {
+.container .container-img.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,11 +149,11 @@
   height: 400rpx;
   background-color: #ffe364;
 }
-.container .container-img .top-chetie.data-v-bcb2f2e2 {
+.container .container-img .top-chetie.data-v-b5f97dfe {
   height: 300rpx;
   width: 200rpx;
 }
-.container .container-img .top-msg.data-v-bcb2f2e2 {
+.container .container-img .top-msg.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,22 +172,22 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.container .container-img .top-msg .top-msg-name.data-v-bcb2f2e2 {
+.container .container-img .top-msg .top-msg-name.data-v-b5f97dfe {
   font-size: 45rpx;
   font-weight: 200;
   margin-bottom: 20rpx;
 }
-.container .container-img .top-msg .top-msg-detail.data-v-bcb2f2e2 {
+.container .container-img .top-msg .top-msg-detail.data-v-b5f97dfe {
   font-size: 30rpx;
   font-weight: 200;
 }
-.container .container-img .top-msg .top-msg-price.data-v-bcb2f2e2 {
+.container .container-img .top-msg .top-msg-price.data-v-b5f97dfe {
   font-size: 50rpx;
   color: #f00;
   font-weight: 200;
   margin-top: 30rpx;
 }
-.container .addressMsg.data-v-bcb2f2e2 {
+.container .addressMsg.data-v-b5f97dfe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,12 +200,12 @@
   background-color: #fff;
   font-weight: 200;
 }
-.container .addressMsg .choose-address.data-v-bcb2f2e2 {
+.container .addressMsg .choose-address.data-v-b5f97dfe {
   color: #000;
   background-color: #f1f1f1;
   width: 600rpx;
 }
-.container .addressMsg .address-item.data-v-bcb2f2e2 {
+.container .addressMsg .address-item.data-v-b5f97dfe {
   padding: 5rpx 0;
 }
 

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "洗车",
+  "usingComponents": {
+    "car-list": "/pages/carlist-template/carlist-template",
+    "vip": "/pages/vip-template/vip-template"
+  }
 }
